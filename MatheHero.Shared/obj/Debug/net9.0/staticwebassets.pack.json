@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\MatheHero.Shared.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MatheHero.Shared.atixt52v5g.bundle.scp.css"
+      "PackagePath": "staticwebassets\\MatheHero.Shared.pqutx30653.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\app.css",
@@ -55,6 +55,10 @@
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\popups\\loginPopup.css",
       "PackagePath": "staticwebassets\\css\\global\\popups\\loginPopup.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\popups\\popup.css",
+      "PackagePath": "staticwebassets\\css\\global\\popups\\popup.css"
     },
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_Book.svg",

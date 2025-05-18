@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Web\\wwwroot\\js\\culture.js",
+      "PackagePath": "staticwebassets\\js\\culture.js"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.MatheHero.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.MatheHero.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.build.MatheHero.Web.props",
+      "PackagePath": "build\\MatheHero.Web.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.MatheHero.Web.props",
+      "PackagePath": "buildMultiTargeting\\MatheHero.Web.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildTransitive.MatheHero.Web.props",
+      "PackagePath": "buildTransitive\\MatheHero.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

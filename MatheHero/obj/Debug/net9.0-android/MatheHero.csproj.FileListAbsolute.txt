@@ -1518,3 +1518,7 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-android\assets\wwwroot\_content\MatheHero.Shared\MatheHero.Shared.atixt52v5g.bundle.scp.css.gz
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-android\assets\wwwroot\_content\MatheHero.Shared\MatheHero.Shared.atixt52v5g.bundle.scp.css.br
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-android\assets\wwwroot\_content\MatheHero.Shared\MatheHero.Shared.atixt52v5g.bundle.scp.css
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-android\MatheHero.sourcelink.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-android\assets\wwwroot\_content\MatheHero.Shared\css\global\popups\popup.css.gz
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-android\assets\wwwroot\_content\MatheHero.Shared\css\global\popups\popup.css.br
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-android\assets\wwwroot\_content\MatheHero.Shared\css\global\popups\popup.css

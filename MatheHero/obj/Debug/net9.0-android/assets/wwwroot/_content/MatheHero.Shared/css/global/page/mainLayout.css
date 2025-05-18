@@ -3,7 +3,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 .body {
@@ -12,7 +11,6 @@ html, body {
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    /*overflow: hidden;*/
 }
     body.company-screen-background {
         background-color: white;
@@ -25,7 +23,6 @@ body.main-content-background {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    /*overflow: hidden;*/
 }
 
 .custom-spaceline {

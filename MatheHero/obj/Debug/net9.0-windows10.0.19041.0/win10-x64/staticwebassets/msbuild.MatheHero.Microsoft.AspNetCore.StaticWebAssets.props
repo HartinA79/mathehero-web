@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
-      <Fingerprint>3ewy2cvga9</Fingerprint>
-      <Integrity>e7oQ3tqr2I4Xsdy9WifkG/oxsxzEBJpy6petKCC4zDA=</Integrity>
+      <Fingerprint>ggc7zrc2a5</Fingerprint>
+      <Integrity>0Mk0DZmiuC9eYJvkKJ8e81VfZ8gdwfcvEYcv/MB8eWU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.styles.css'))</OriginalItemSpec>

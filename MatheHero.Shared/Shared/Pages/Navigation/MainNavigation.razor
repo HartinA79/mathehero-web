@@ -2,10 +2,13 @@
 @using MatheHero.Shared.Helper
 @using MatheHero.Shared.Models
 @using MatheHero.Shared.Resources.Shared.Pages
+@using MatheHero.Shared.Shared.Interface
 @using MatheHero.Shared.Shared.Pages.Header
 @using MatheHero.Shared.Shared.Service
 
 @inject IStringLocalizer<BaseStringLocalizer> _baseLocalizer
+@inject IPlatformService Platform
+
 
 <div class="nav-main-content">
     <nav class="nav-top-tab">
@@ -37,9 +40,15 @@
 
     private int selectedTabId = 1;
 
+    private bool menuOpen = false;
+
     private void ChangeComponentPage(int index)
     {
         selectedTabId = index;
         StateHasChanged();
     }
+
+    private void ToggleSettings() => menuOpen = !menuOpen;
+
+    private void CloseMenu() => menuOpen = false;
 }

@@ -610,7 +610,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000407664085"
+          "Quality": "0.000617665225"
         }
       ],
       "ResponseHeaders": [
@@ -628,7 +628,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2452"
+          "Value": "1618"
         },
         {
           "Name": "Content-Type",
@@ -636,7 +636,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GQfGIrs3yyaOPo0hwLHoOKyGh23mNGeEFCuJwfEZ2Nk=\""
+          "Value": "\"HY6frczbJU8iQAZEoCxjlm8G6FVsC1KC9TEhxFXSHPY=\""
         },
         {
           "Name": "ETag",
@@ -644,7 +644,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:11:02 GMT"
+          "Value": "Sun, 18 May 2025 06:05:33 GMT"
         },
         {
           "Name": "Vary",
@@ -730,7 +730,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2452"
+          "Value": "1618"
         },
         {
           "Name": "Content-Type",
@@ -738,11 +738,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GQfGIrs3yyaOPo0hwLHoOKyGh23mNGeEFCuJwfEZ2Nk=\""
+          "Value": "\"HY6frczbJU8iQAZEoCxjlm8G6FVsC1KC9TEhxFXSHPY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:11:02 GMT"
+          "Value": "Sun, 18 May 2025 06:05:33 GMT"
         },
         {
           "Name": "Vary",
@@ -756,7 +756,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-GQfGIrs3yyaOPo0hwLHoOKyGh23mNGeEFCuJwfEZ2Nk="
+          "Value": "sha256-HY6frczbJU8iQAZEoCxjlm8G6FVsC1KC9TEhxFXSHPY="
         },
         {
           "Name": "label",
@@ -879,7 +879,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000407664085"
+          "Quality": "0.000617665225"
         }
       ],
       "ResponseHeaders": [
@@ -897,7 +897,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2452"
+          "Value": "1618"
         },
         {
           "Name": "Content-Type",
@@ -905,7 +905,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GQfGIrs3yyaOPo0hwLHoOKyGh23mNGeEFCuJwfEZ2Nk=\""
+          "Value": "\"HY6frczbJU8iQAZEoCxjlm8G6FVsC1KC9TEhxFXSHPY=\""
         },
         {
           "Name": "ETag",
@@ -913,7 +913,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:11:02 GMT"
+          "Value": "Sun, 18 May 2025 06:05:33 GMT"
         },
         {
           "Name": "Vary",
@@ -983,7 +983,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2452"
+          "Value": "1618"
         },
         {
           "Name": "Content-Type",
@@ -991,11 +991,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GQfGIrs3yyaOPo0hwLHoOKyGh23mNGeEFCuJwfEZ2Nk=\""
+          "Value": "\"HY6frczbJU8iQAZEoCxjlm8G6FVsC1KC9TEhxFXSHPY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:11:02 GMT"
+          "Value": "Sun, 18 May 2025 06:05:33 GMT"
         },
         {
           "Name": "Vary",
@@ -1005,7 +1005,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GQfGIrs3yyaOPo0hwLHoOKyGh23mNGeEFCuJwfEZ2Nk="
+          "Value": "sha256-HY6frczbJU8iQAZEoCxjlm8G6FVsC1KC9TEhxFXSHPY="
         }
       ]
     },
@@ -1061,7 +1061,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004587155963"
+          "Quality": "0.004524886878"
         }
       ],
       "ResponseHeaders": [
@@ -1079,7 +1079,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "217"
+          "Value": "220"
         },
         {
           "Name": "Content-Type",
@@ -1087,15 +1087,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Axzfuh6ZWI2l9VjQluH+gzM1f2VgJAkUYcBE2cPOhLw=\""
+          "Value": "\"VkkkaJxUwDTArUNT7I2jtGsXBdM/az4e1o9deCwzITw=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk=\""
+          "Value": "W/\"07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         },
         {
           "Name": "Vary",
@@ -1105,7 +1105,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk="
+          "Value": "sha256-07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8="
         }
       ]
     },
@@ -1116,7 +1116,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.006666666667"
+          "Quality": "0.006410256410"
         }
       ],
       "ResponseHeaders": [
@@ -1134,7 +1134,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "149"
+          "Value": "155"
         },
         {
           "Name": "Content-Type",
@@ -1142,15 +1142,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dlPcNHUCk4L2amg8vHpIrNuZpJB8LkvTOluot6ghbkU=\""
+          "Value": "\"XXN8g3mFnmHv15cfJRZTWvMoAc+91gXJIIsr/enFUtE=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk=\""
+          "Value": "W/\"07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         },
         {
           "Name": "Vary",
@@ -1160,7 +1160,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk="
+          "Value": "sha256-07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8="
         }
       ]
     },
@@ -1179,7 +1179,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "505"
+          "Value": "550"
         },
         {
           "Name": "Content-Type",
@@ -1187,17 +1187,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk=\""
+          "Value": "\"07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk="
+          "Value": "sha256-07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8="
         }
       ]
     },
@@ -1220,7 +1220,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "149"
+          "Value": "155"
         },
         {
           "Name": "Content-Type",
@@ -1228,11 +1228,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dlPcNHUCk4L2amg8vHpIrNuZpJB8LkvTOluot6ghbkU=\""
+          "Value": "\"XXN8g3mFnmHv15cfJRZTWvMoAc+91gXJIIsr/enFUtE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         },
         {
           "Name": "Vary",
@@ -1242,7 +1242,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dlPcNHUCk4L2amg8vHpIrNuZpJB8LkvTOluot6ghbkU="
+          "Value": "sha256-XXN8g3mFnmHv15cfJRZTWvMoAc+91gXJIIsr/enFUtE="
         }
       ]
     },
@@ -1265,7 +1265,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "217"
+          "Value": "220"
         },
         {
           "Name": "Content-Type",
@@ -1273,11 +1273,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Axzfuh6ZWI2l9VjQluH+gzM1f2VgJAkUYcBE2cPOhLw=\""
+          "Value": "\"VkkkaJxUwDTArUNT7I2jtGsXBdM/az4e1o9deCwzITw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         },
         {
           "Name": "Vary",
@@ -1287,18 +1287,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Axzfuh6ZWI2l9VjQluH+gzM1f2VgJAkUYcBE2cPOhLw="
+          "Value": "sha256-VkkkaJxUwDTArUNT7I2jtGsXBdM/az4e1o9deCwzITw="
         }
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/app.g9b2cgvw1t.css",
+      "Route": "_content/MatheHero.Shared/app.vtubfqn3bd.css",
       "AssetFile": "_content/MatheHero.Shared/app.css.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.004587155963"
+          "Quality": "0.004524886878"
         }
       ],
       "ResponseHeaders": [
@@ -1316,7 +1316,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "217"
+          "Value": "220"
         },
         {
           "Name": "Content-Type",
@@ -1324,15 +1324,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Axzfuh6ZWI2l9VjQluH+gzM1f2VgJAkUYcBE2cPOhLw=\""
+          "Value": "\"VkkkaJxUwDTArUNT7I2jtGsXBdM/az4e1o9deCwzITw=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk=\""
+          "Value": "W/\"07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         },
         {
           "Name": "Vary",
@@ -1342,11 +1342,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "g9b2cgvw1t"
+          "Value": "vtubfqn3bd"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk="
+          "Value": "sha256-07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8="
         },
         {
           "Name": "label",
@@ -1355,13 +1355,13 @@
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/app.g9b2cgvw1t.css",
+      "Route": "_content/MatheHero.Shared/app.vtubfqn3bd.css",
       "AssetFile": "_content/MatheHero.Shared/app.css.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.006666666667"
+          "Quality": "0.006410256410"
         }
       ],
       "ResponseHeaders": [
@@ -1379,7 +1379,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "149"
+          "Value": "155"
         },
         {
           "Name": "Content-Type",
@@ -1387,15 +1387,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dlPcNHUCk4L2amg8vHpIrNuZpJB8LkvTOluot6ghbkU=\""
+          "Value": "\"XXN8g3mFnmHv15cfJRZTWvMoAc+91gXJIIsr/enFUtE=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk=\""
+          "Value": "W/\"07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         },
         {
           "Name": "Vary",
@@ -1405,11 +1405,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "g9b2cgvw1t"
+          "Value": "vtubfqn3bd"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk="
+          "Value": "sha256-07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8="
         },
         {
           "Name": "label",
@@ -1418,7 +1418,7 @@
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/app.g9b2cgvw1t.css",
+      "Route": "_content/MatheHero.Shared/app.vtubfqn3bd.css",
       "AssetFile": "_content/MatheHero.Shared/app.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1432,7 +1432,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "505"
+          "Value": "550"
         },
         {
           "Name": "Content-Type",
@@ -1440,21 +1440,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk=\""
+          "Value": "\"07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "g9b2cgvw1t"
+          "Value": "vtubfqn3bd"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fJ6gHszJPIn8Kj3aQ6X+3/MFdZBqqbnAMLfnZb8kIzk="
+          "Value": "sha256-07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8="
         },
         {
           "Name": "label",
@@ -1463,7 +1463,7 @@
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/app.g9b2cgvw1t.css.br",
+      "Route": "_content/MatheHero.Shared/app.vtubfqn3bd.css.br",
       "AssetFile": "_content/MatheHero.Shared/app.css.br",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1481,7 +1481,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "149"
+          "Value": "155"
         },
         {
           "Name": "Content-Type",
@@ -1489,11 +1489,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dlPcNHUCk4L2amg8vHpIrNuZpJB8LkvTOluot6ghbkU=\""
+          "Value": "\"XXN8g3mFnmHv15cfJRZTWvMoAc+91gXJIIsr/enFUtE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         },
         {
           "Name": "Vary",
@@ -1503,11 +1503,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "g9b2cgvw1t"
+          "Value": "vtubfqn3bd"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dlPcNHUCk4L2amg8vHpIrNuZpJB8LkvTOluot6ghbkU="
+          "Value": "sha256-XXN8g3mFnmHv15cfJRZTWvMoAc+91gXJIIsr/enFUtE="
         },
         {
           "Name": "label",
@@ -1516,7 +1516,7 @@
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/app.g9b2cgvw1t.css.gz",
+      "Route": "_content/MatheHero.Shared/app.vtubfqn3bd.css.gz",
       "AssetFile": "_content/MatheHero.Shared/app.css.gz",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1534,7 +1534,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "217"
+          "Value": "220"
         },
         {
           "Name": "Content-Type",
@@ -1542,11 +1542,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Axzfuh6ZWI2l9VjQluH+gzM1f2VgJAkUYcBE2cPOhLw=\""
+          "Value": "\"VkkkaJxUwDTArUNT7I2jtGsXBdM/az4e1o9deCwzITw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 14 May 2025 04:28:58 GMT"
+          "Value": "Sun, 18 May 2025 05:22:21 GMT"
         },
         {
           "Name": "Vary",
@@ -1556,11 +1556,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "g9b2cgvw1t"
+          "Value": "vtubfqn3bd"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Axzfuh6ZWI2l9VjQluH+gzM1f2VgJAkUYcBE2cPOhLw="
+          "Value": "sha256-VkkkaJxUwDTArUNT7I2jtGsXBdM/az4e1o9deCwzITw="
         },
         {
           "Name": "label",
@@ -6715,7 +6715,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000558659218"
+          "Quality": "0.000563697858"
         }
       ],
       "ResponseHeaders": [
@@ -6733,7 +6733,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1789"
+          "Value": "1773"
         },
         {
           "Name": "Content-Type",
@@ -6741,15 +6741,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ag1vvLwCYnvrIXcnu+tcyc3VeXqPRjv3+lz0kLUjvnE=\""
+          "Value": "\"p2gB745BFELzOaBLRevpoLV1EMxxTKx0zt1ZJDMHLXI=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw=\""
+          "Value": "W/\"J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         },
         {
           "Name": "Vary",
@@ -6759,7 +6759,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw="
+          "Value": "sha256-J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM="
         }
       ]
     },
@@ -6770,7 +6770,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000486381323"
+          "Quality": "0.000492368291"
         }
       ],
       "ResponseHeaders": [
@@ -6788,7 +6788,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2055"
+          "Value": "2030"
         },
         {
           "Name": "Content-Type",
@@ -6796,15 +6796,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"phr4w+LSNp85E7rEhJnWnx/5uJJoxxCP52/xJdemVug=\""
+          "Value": "\"UH4RbhTC7cL5gXTdhtjXLPHGhj62mz5Hl4oZNqzbfxA=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw=\""
+          "Value": "W/\"J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         },
         {
           "Name": "Vary",
@@ -6814,7 +6814,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw="
+          "Value": "sha256-J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM="
         }
       ]
     },
@@ -6833,7 +6833,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4698"
+          "Value": "4621"
         },
         {
           "Name": "Content-Type",
@@ -6841,17 +6841,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw=\""
+          "Value": "\"J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw="
+          "Value": "sha256-J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM="
         }
       ]
     },
@@ -6874,7 +6874,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1789"
+          "Value": "1773"
         },
         {
           "Name": "Content-Type",
@@ -6882,11 +6882,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ag1vvLwCYnvrIXcnu+tcyc3VeXqPRjv3+lz0kLUjvnE=\""
+          "Value": "\"p2gB745BFELzOaBLRevpoLV1EMxxTKx0zt1ZJDMHLXI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         },
         {
           "Name": "Vary",
@@ -6896,7 +6896,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ag1vvLwCYnvrIXcnu+tcyc3VeXqPRjv3+lz0kLUjvnE="
+          "Value": "sha256-p2gB745BFELzOaBLRevpoLV1EMxxTKx0zt1ZJDMHLXI="
         }
       ]
     },
@@ -6919,7 +6919,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2055"
+          "Value": "2030"
         },
         {
           "Name": "Content-Type",
@@ -6927,11 +6927,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"phr4w+LSNp85E7rEhJnWnx/5uJJoxxCP52/xJdemVug=\""
+          "Value": "\"UH4RbhTC7cL5gXTdhtjXLPHGhj62mz5Hl4oZNqzbfxA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         },
         {
           "Name": "Vary",
@@ -6941,18 +6941,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-phr4w+LSNp85E7rEhJnWnx/5uJJoxxCP52/xJdemVug="
+          "Value": "sha256-UH4RbhTC7cL5gXTdhtjXLPHGhj62mz5Hl4oZNqzbfxA="
         }
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.f02to8r1ac.css",
+      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.pstw8q60bw.css",
       "AssetFile": "_content/MatheHero.Shared/css/global/page/mainLayout.css.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "br",
-          "Quality": "0.000558659218"
+          "Quality": "0.000563697858"
         }
       ],
       "ResponseHeaders": [
@@ -6970,7 +6970,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1789"
+          "Value": "1773"
         },
         {
           "Name": "Content-Type",
@@ -6978,15 +6978,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ag1vvLwCYnvrIXcnu+tcyc3VeXqPRjv3+lz0kLUjvnE=\""
+          "Value": "\"p2gB745BFELzOaBLRevpoLV1EMxxTKx0zt1ZJDMHLXI=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw=\""
+          "Value": "W/\"J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         },
         {
           "Name": "Vary",
@@ -6996,11 +6996,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f02to8r1ac"
+          "Value": "pstw8q60bw"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw="
+          "Value": "sha256-J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM="
         },
         {
           "Name": "label",
@@ -7009,13 +7009,13 @@
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.f02to8r1ac.css",
+      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.pstw8q60bw.css",
       "AssetFile": "_content/MatheHero.Shared/css/global/page/mainLayout.css.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000486381323"
+          "Quality": "0.000492368291"
         }
       ],
       "ResponseHeaders": [
@@ -7033,7 +7033,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2055"
+          "Value": "2030"
         },
         {
           "Name": "Content-Type",
@@ -7041,15 +7041,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"phr4w+LSNp85E7rEhJnWnx/5uJJoxxCP52/xJdemVug=\""
+          "Value": "\"UH4RbhTC7cL5gXTdhtjXLPHGhj62mz5Hl4oZNqzbfxA=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw=\""
+          "Value": "W/\"J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         },
         {
           "Name": "Vary",
@@ -7059,11 +7059,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f02to8r1ac"
+          "Value": "pstw8q60bw"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw="
+          "Value": "sha256-J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM="
         },
         {
           "Name": "label",
@@ -7072,7 +7072,7 @@
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.f02to8r1ac.css",
+      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.pstw8q60bw.css",
       "AssetFile": "_content/MatheHero.Shared/css/global/page/mainLayout.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7086,7 +7086,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4698"
+          "Value": "4621"
         },
         {
           "Name": "Content-Type",
@@ -7094,21 +7094,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw=\""
+          "Value": "\"J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f02to8r1ac"
+          "Value": "pstw8q60bw"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-b9cfqorfON13uNaP8jl7rsnqRpp+4lRg3taZyTqwAcw="
+          "Value": "sha256-J5FBZYW/oPGPmIadsLfYnlAhqh1gUvgxuZmiMPYVGcM="
         },
         {
           "Name": "label",
@@ -7117,7 +7117,7 @@
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.f02to8r1ac.css.br",
+      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.pstw8q60bw.css.br",
       "AssetFile": "_content/MatheHero.Shared/css/global/page/mainLayout.css.br",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7135,7 +7135,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1789"
+          "Value": "1773"
         },
         {
           "Name": "Content-Type",
@@ -7143,11 +7143,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ag1vvLwCYnvrIXcnu+tcyc3VeXqPRjv3+lz0kLUjvnE=\""
+          "Value": "\"p2gB745BFELzOaBLRevpoLV1EMxxTKx0zt1ZJDMHLXI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         },
         {
           "Name": "Vary",
@@ -7157,11 +7157,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f02to8r1ac"
+          "Value": "pstw8q60bw"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Ag1vvLwCYnvrIXcnu+tcyc3VeXqPRjv3+lz0kLUjvnE="
+          "Value": "sha256-p2gB745BFELzOaBLRevpoLV1EMxxTKx0zt1ZJDMHLXI="
         },
         {
           "Name": "label",
@@ -7170,7 +7170,7 @@
       ]
     },
     {
-      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.f02to8r1ac.css.gz",
+      "Route": "_content/MatheHero.Shared/css/global/page/mainLayout.pstw8q60bw.css.gz",
       "AssetFile": "_content/MatheHero.Shared/css/global/page/mainLayout.css.gz",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7188,7 +7188,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2055"
+          "Value": "2030"
         },
         {
           "Name": "Content-Type",
@@ -7196,11 +7196,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"phr4w+LSNp85E7rEhJnWnx/5uJJoxxCP52/xJdemVug=\""
+          "Value": "\"UH4RbhTC7cL5gXTdhtjXLPHGhj62mz5Hl4oZNqzbfxA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 17 May 2025 07:00:22 GMT"
+          "Value": "Sun, 18 May 2025 05:24:49 GMT"
         },
         {
           "Name": "Vary",
@@ -7210,11 +7210,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f02to8r1ac"
+          "Value": "pstw8q60bw"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-phr4w+LSNp85E7rEhJnWnx/5uJJoxxCP52/xJdemVug="
+          "Value": "sha256-UH4RbhTC7cL5gXTdhtjXLPHGhj62mz5Hl4oZNqzbfxA="
         },
         {
           "Name": "label",
@@ -7733,6 +7733,520 @@
         {
           "Name": "integrity",
           "Value": "sha256-6ZPDi1c/KTqnEZ0aA2/ZkUzyKXGtwOGNHSphVwVUWYE="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.4r2pwxs15n.css",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003257328990"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RQPcWdE4OGJOEOuxIMxvPHjQIqavbKbpD7e+6HPDolQ=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4r2pwxs15n"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MatheHero.Shared/css/global/popups/popup.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.4r2pwxs15n.css",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.004347826087"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "229"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xh4+YI61SjQem+yumoFh/EShvlao9q8KGxgPvQ24RrY=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4r2pwxs15n"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MatheHero.Shared/css/global/popups/popup.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.4r2pwxs15n.css",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "783"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4r2pwxs15n"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MatheHero.Shared/css/global/popups/popup.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.4r2pwxs15n.css.br",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "229"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xh4+YI61SjQem+yumoFh/EShvlao9q8KGxgPvQ24RrY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4r2pwxs15n"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xh4+YI61SjQem+yumoFh/EShvlao9q8KGxgPvQ24RrY="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MatheHero.Shared/css/global/popups/popup.css.br"
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.4r2pwxs15n.css.gz",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RQPcWdE4OGJOEOuxIMxvPHjQIqavbKbpD7e+6HPDolQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4r2pwxs15n"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RQPcWdE4OGJOEOuxIMxvPHjQIqavbKbpD7e+6HPDolQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MatheHero.Shared/css/global/popups/popup.css.gz"
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.css",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003257328990"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RQPcWdE4OGJOEOuxIMxvPHjQIqavbKbpD7e+6HPDolQ=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.css",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.004347826087"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "229"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xh4+YI61SjQem+yumoFh/EShvlao9q8KGxgPvQ24RrY=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.css",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "783"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.css.br",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "229"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Xh4+YI61SjQem+yumoFh/EShvlao9q8KGxgPvQ24RrY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Xh4+YI61SjQem+yumoFh/EShvlao9q8KGxgPvQ24RrY="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MatheHero.Shared/css/global/popups/popup.css.gz",
+      "AssetFile": "_content/MatheHero.Shared/css/global/popups/popup.css.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RQPcWdE4OGJOEOuxIMxvPHjQIqavbKbpD7e+6HPDolQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 05:58:56 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RQPcWdE4OGJOEOuxIMxvPHjQIqavbKbpD7e+6HPDolQ="
         }
       ]
     },

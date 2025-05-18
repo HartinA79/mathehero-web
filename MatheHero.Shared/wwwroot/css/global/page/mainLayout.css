@@ -7,12 +7,9 @@ html, body {
 }
 
 .body {
-    margin: 0;
-    padding: 0;
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    /*overflow: hidden;*/
 }
     body.company-screen-background {
         background-color: white;
@@ -22,10 +19,6 @@ html, body {
 body.main-content-background {
     background: url('../../images/MainBackground.png') no-repeat center center fixed;
     background-size: cover;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    /*overflow: hidden;*/
 }
 
 .custom-spaceline {

@@ -3,14 +3,14 @@
     <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/app.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-fJ6gHszJPIn8Kj3aQ6X\u002B3/MFdZBqqbnAMLfnZb8kIzk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"505"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022fJ6gHszJPIn8Kj3aQ6X\u002B3/MFdZBqqbnAMLfnZb8kIzk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 04:28:58 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"550"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u002207dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 05:22:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/app.g9b2cgvw1t.css">
+    <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/app.vtubfqn3bd.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"g9b2cgvw1t"},{"Name":"integrity","Value":"sha256-fJ6gHszJPIn8Kj3aQ6X\u002B3/MFdZBqqbnAMLfnZb8kIzk="},{"Name":"label","Value":"_content/MatheHero.Shared/app.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"505"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022fJ6gHszJPIn8Kj3aQ6X\u002B3/MFdZBqqbnAMLfnZb8kIzk=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 04:28:58 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vtubfqn3bd"},{"Name":"integrity","Value":"sha256-07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8="},{"Name":"label","Value":"_content/MatheHero.Shared/app.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"550"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u002207dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 05:22:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/bootstrap/bootstrap.min.6gzpyzhau4.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\bootstrap\bootstrap.min.css'))</AssetFile>
@@ -100,13 +100,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\navigation\mainNavigation.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7mirguw96l"},{"Name":"integrity","Value":"sha256-AeGm/Juegtq9xYdQ8x0IAruHOTq\u002BXXmJXrF/n\u002BnjawE="},{"Name":"label","Value":"_content/MatheHero.Shared/css/global/navigation/mainNavigation.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3037"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AeGm/Juegtq9xYdQ8x0IAruHOTq\u002BXXmJXrF/n\u002BnjawE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 04:37:58 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3037"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AeGm/Juegtq9xYdQ8x0IAruHOTq\u002BXXmJXrF/n\u002BnjawE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 06:17:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/global/navigation/mainNavigation.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\navigation\mainNavigation.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-AeGm/Juegtq9xYdQ8x0IAruHOTq\u002BXXmJXrF/n\u002BnjawE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3037"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AeGm/Juegtq9xYdQ8x0IAruHOTq\u002BXXmJXrF/n\u002BnjawE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 14 May 2025 04:37:58 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3037"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022AeGm/Juegtq9xYdQ8x0IAruHOTq\u002BXXmJXrF/n\u002BnjawE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 06:17:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/global/page/companyScreen.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\page\companyScreen.css'))</AssetFile>
@@ -135,14 +135,14 @@
     <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/global/page/mainLayout.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\page\mainLayout.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-b9cfqorfON13uNaP8jl7rsnqRpp\u002B4lRg3taZyTqwAcw="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4698"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022b9cfqorfON13uNaP8jl7rsnqRpp\u002B4lRg3taZyTqwAcw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 07:00:22 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PFHZsTo7FT0JbYIIqXS6ZtCp6nX7xbN/dp/1ImYlLt4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4556"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022PFHZsTo7FT0JbYIIqXS6ZtCp6nX7xbN/dp/1ImYlLt4=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 06:26:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/global/page/mainLayout.f02to8r1ac.css">
+    <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/global/page/mainLayout.k2qt4dl03d.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\page\mainLayout.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"f02to8r1ac"},{"Name":"integrity","Value":"sha256-b9cfqorfON13uNaP8jl7rsnqRpp\u002B4lRg3taZyTqwAcw="},{"Name":"label","Value":"_content/MatheHero.Shared/css/global/page/mainLayout.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4698"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022b9cfqorfON13uNaP8jl7rsnqRpp\u002B4lRg3taZyTqwAcw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 07:00:22 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"k2qt4dl03d"},{"Name":"integrity","Value":"sha256-PFHZsTo7FT0JbYIIqXS6ZtCp6nX7xbN/dp/1ImYlLt4="},{"Name":"label","Value":"_content/MatheHero.Shared/css/global/page/mainLayout.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4556"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022PFHZsTo7FT0JbYIIqXS6ZtCp6nX7xbN/dp/1ImYlLt4=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 06:26:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/global/popups/loginPopup.1gd2d06usj.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\popups\loginPopup.css'))</AssetFile>
@@ -155,6 +155,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kb38u0LgxCsuR\u002BxLS/XD6\u002BaxRBoguur3lKt0Zh2McA0="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5108"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022kb38u0LgxCsuR\u002BxLS/XD6\u002BaxRBoguur3lKt0Zh2McA0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 07:25:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/global/popups/popup.4r2pwxs15n.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\popups\popup.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4r2pwxs15n"},{"Name":"integrity","Value":"sha256-MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv\u002BawQ="},{"Name":"label","Value":"_content/MatheHero.Shared/css/global/popups/popup.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"783"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv\u002BawQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 05:58:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/global/popups/popup.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\popups\popup.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv\u002BawQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"783"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv\u002BawQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 05:58:56 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/css/icons/Icon_Book.clevhvqpt2.svg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\icons\Icon_Book.svg'))</AssetFile>
@@ -396,17 +408,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2kMly/QDFE2DDpYSEhuT8b\u002BjheS4me3LsQF59BH5Jps="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"639"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00222kMly/QDFE2DDpYSEhuT8b\u002BjheS4me3LsQF59BH5Jps=\u0022"},{"Name":"Last-Modified","Value":"Thu, 27 Mar 2025 19:29:07 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/MatheHero.Shared.atixt52v5g.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.Shared.atixt52v5g.bundle.scp.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"atixt52v5g"},{"Name":"integrity","Value":"sha256-fi4hGDhLP\u002BF5hmaXB5fYnKjbPR3\u002BXFcXBtp5NusmFA0="},{"Name":"label","Value":"_content/MatheHero.Shared/MatheHero.Shared.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10899"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022fi4hGDhLP\u002BF5hmaXB5fYnKjbPR3\u002BXFcXBtp5NusmFA0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 07:11:02 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/MatheHero.Shared.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.Shared.atixt52v5g.bundle.scp.css'))</AssetFile>
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.Shared.pqutx30653.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-fi4hGDhLP\u002BF5hmaXB5fYnKjbPR3\u002BXFcXBtp5NusmFA0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"10899"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022fi4hGDhLP\u002BF5hmaXB5fYnKjbPR3\u002BXFcXBtp5NusmFA0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 07:11:02 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-H5JmdzHyQHnIpNipGe6EFOctDLgJkmWOaYWaCe524lQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7186"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022H5JmdzHyQHnIpNipGe6EFOctDLgJkmWOaYWaCe524lQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 06:05:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MatheHero.Shared/MatheHero.Shared.pqutx30653.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.Shared.pqutx30653.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pqutx30653"},{"Name":"integrity","Value":"sha256-H5JmdzHyQHnIpNipGe6EFOctDLgJkmWOaYWaCe524lQ="},{"Name":"label","Value":"_content/MatheHero.Shared/MatheHero.Shared.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7186"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022H5JmdzHyQHnIpNipGe6EFOctDLgJkmWOaYWaCe524lQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 18 May 2025 06:05:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

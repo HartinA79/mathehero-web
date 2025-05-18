@@ -1,0 +1,17 @@
+.btn-menu-primary {
+    color: var(--col_white);
+    background: var(--col_button_bg);
+    height: var(--button_standardsize);
+    width: 10em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: var(--text_size_X);
+    font-weight: 200;
+    border: 1px solid var(--col_selected);
+    border-radius: 5px;
+}
+
+    .btn-menu-primary:hover {
+        box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem var(--col_main_light);
+        color: var(--col_white);
+    }
