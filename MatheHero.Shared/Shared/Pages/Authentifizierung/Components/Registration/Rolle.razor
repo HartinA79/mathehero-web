@@ -1,0 +1,42 @@
+﻿@page "/registration/rolle"
+
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+
+@inject IStringLocalizer<Registration> _localizer
+
+<div class="form-group text-center">
+	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.WerBistDu]</label>
+	<div class="d-flex justify-content-around mt-2">
+		<button type="button" class="@GetButtonRolle("Schüler")" @onclick="@(() => SelectRolle("Schüler"))">@_localizer[RegistrationResourceKeys.Schueler]</button>
+		<button type="button" class="@GetButtonRolle("Lehrer")" @onclick="@(() => SelectRolle("Lehrer"))">@_localizer[RegistrationResourceKeys.Lehrer]</button>
+	</div>
+</div>
+
+<div class="text-center mt-3">
+	<button class="btn btn-menu-primary" @onclick="OnNext" disabled="@string.IsNullOrEmpty(selectedRolle)">@_localizer[RegistrationResourceKeys.Weiter]</button>
+</div>
+
+
+@code {
+	[Parameter]
+	public RegisterModel Model { get; set; }
+
+	[Parameter]
+	public EventCallback OnNext { get; set; }
+
+	private string? selectedRolle;
+
+	private async Task SelectRolle(string rolle)
+	{
+		selectedRolle = rolle;
+		Model.Rolle = rolle;
+		await Task.CompletedTask;
+	}
+
+	private string GetButtonRolle(string rolle)
+	{
+		return selectedRolle == rolle ? "btn btn-selected mx-2" : "btn btn-disabled mx-2";
+	}
+}

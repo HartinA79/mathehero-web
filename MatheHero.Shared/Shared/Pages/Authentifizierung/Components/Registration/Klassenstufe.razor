@@ -1,0 +1,47 @@
+﻿@page "/registration/klassenstufe"
+
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+
+@inject IStringLocalizer<Registration> _localizer
+
+<div class="form-group text-center">
+	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.InWelcheKlasse]</label>
+	<div class="popup-grid mt-2">
+		<button type="button" class="@GetButtonClass(1)" @onclick="@(() => SelectKlasse(1))">@_localizer[RegistrationResourceKeys.Klasse1]</button>
+		<button type="button" class="@GetButtonClass(2)" @onclick="@(() => SelectKlasse(2))">@_localizer[RegistrationResourceKeys.Klasse2]</button>
+		<button type="button" class="@GetButtonClass(3)" @onclick="@(() => SelectKlasse(3))">@_localizer[RegistrationResourceKeys.Klasse3]</button>
+		<button type="button" class="@GetButtonClass(4)" @onclick="@(() => SelectKlasse(4))">@_localizer[RegistrationResourceKeys.Klasse4]</button>
+	</div>
+</div>
+
+<div class="text-center mt-3">
+	@* <button class="btn btn-menu-primary" @onclick="OnBack">@_localizer[RegistrationResourceKeys.Zurueck]</button> *@
+	<button class="btn btn-menu-primary" @onclick="OnNext" disabled="@(selectedKlasse == 0)">@_localizer[RegistrationResourceKeys.Weiter]</button>
+</div>
+
+@code {
+	[Parameter]
+	public RegisterModel Model { get; set; }
+
+	[Parameter]
+	public EventCallback OnNext { get; set; }
+
+	[Parameter]
+	public EventCallback OnBack { get; set; }
+
+	private int selectedKlasse = 0;
+
+	private async Task SelectKlasse(int clickedClass)
+	{
+		selectedKlasse = clickedClass;
+		Model.KlassenStufe = clickedClass;
+		await Task.CompletedTask;
+	}
+
+	private string GetButtonClass(int clickedClass)
+	{
+		return selectedKlasse == clickedClass ? "btn btn-selected mx-2" : "btn btn-disabled mx-2";
+	}
+}

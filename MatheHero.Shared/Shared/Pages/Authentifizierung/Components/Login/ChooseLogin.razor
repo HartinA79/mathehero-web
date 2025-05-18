@@ -1,0 +1,43 @@
+﻿@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Interface
+
+@inject IAuthService _authService
+@inject NavigationManager Navigation
+@inject IPlatformService Platform
+@inject IStringLocalizer<Login> _localizer
+
+<div class="choose-login-container">
+	<button class="btn btn-login-button-primary full-width mb-3" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Email)">
+		<i class="fas fa-envelope me-2"></i> @_localizer[LoginResourceKeys.LoginEmail]
+	</button>
+
+	@* <button class="btn btn-login-button-primary full-width mb-3" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Google)">
+		<i class="fab fa-google me-2"></i> @_localizer[LoginResourceKeys.LoginGoogle]
+	</button> *@
+
+	<hr class="my-4" />
+
+	<button class="btn btn-login-button-primary full-width" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Gast)">
+		<i class="fas fa-user-secret me-2"></i> @_localizer[LoginResourceKeys.LoginGast]
+	</button>
+</div>
+
+@code {
+	[Parameter]
+	public EventCallback<LoginView> OnSelectLogin { get; set; }
+
+	private async Task DoLoginAnonymouslyAsync()
+	{
+		var loginResult = await _authService.LoginAnonymouslyAsync();
+
+		if (!string.IsNullOrWhiteSpace(loginResult.IdToken))
+		{
+			if (Platform.IsRunningInMaui())
+				Navigation.NavigateTo("/home");
+			else
+				Navigation.NavigateTo("/home", forceLoad: true);
+		}
+	}
+}

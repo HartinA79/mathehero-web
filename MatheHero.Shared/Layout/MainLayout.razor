@@ -1,0 +1,35 @@
+﻿@using MatheHero.Shared.Shared.Pages.Toast
+@using MatheHero.Shared.Shared.Pages.Header
+
+@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+
+<div class="page">
+    <main>
+        <article class="content px-4">
+            <Header />
+
+           <Toast />
+
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !Navigation.Uri.EndsWith("/loadingscreen"))
+        {
+            await JS.InvokeVoidAsync("document.body.classList.add", "main-content-background");
+            await JS.InvokeVoidAsync("document.body.classList.remove", "company-screen-background");
+        }
+    }
+}

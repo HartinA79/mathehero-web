@@ -1,0 +1,13 @@
+@import url('css/general/globalVariables.css');
+@import url('css/global/page/mainLayout.css');
+@import url('css/global/navigation/mainNavigation.css');
+@import url('css/global/page/companyScreen.css');
+@import url('css/global/page/loadingScreen.css');
+@import url('css/global/popups/loginPopup.css');
+@import url('css/global/button/loginButton.css');
+@import url('css/global/button/menuButton.css');
+
+@font-face {
+    font-family: 'Humor';
+    src: url('fonts/Humor.ttf') format('truetype');
+}

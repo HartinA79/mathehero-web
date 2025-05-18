@@ -1,0 +1,48 @@
+﻿@page "/login"
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung.Components
+@using MatheHero.Shared.Shared.Pages.Authentifizierung.Components.Login
+@using Microsoft.Extensions.Localization
+
+@inject IStringLocalizer<Login> _localizer
+
+<div class="login-popup-container">
+	<div class="login-popup-body">
+		<h3 class="popup-header-text">
+			@if (currentView == LoginView.Gast) {
+				@_localizer[LoginResourceKeys.AnmeldungGast]
+			} 
+			else
+			{
+				@_localizer[LoginResourceKeys.Anmeldung]
+			}
+		</h3>
+
+		@RenderActiveComponent()
+
+		<div class="text-center mt-4">
+			<NavLink class="my-nav-link" href="/registration">
+				<span class="popup-text-label">@_localizer[LoginResourceKeys.KeinAccount]</span>
+			</NavLink>
+		</div>
+	</div>
+</div>
+
+@code {
+	private LoginView currentView = LoginView.Choose;
+
+	private RenderFragment RenderActiveComponent() => currentView switch
+	{
+		LoginView.Email => @<EmailLogin OnBack="()=>currentView = LoginView.Choose" />,
+		LoginView.Google => @<GoogleLogin OnBack="()=>currentView = LoginView.Choose" />,
+		LoginView.Gast => @<GastLogin OnBack="()=>currentView = LoginView.Choose" />,
+		_ => @<ChooseLogin OnSelectLogin="OnSelectLogin" />
+	};
+
+	private void OnSelectLogin(LoginView selected)
+	{
+		currentView = selected;
+	}
+}

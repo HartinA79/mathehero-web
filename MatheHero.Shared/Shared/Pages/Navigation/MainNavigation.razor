@@ -1,0 +1,45 @@
+﻿@using System.Globalization
+@using MatheHero.Shared.Helper
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages
+@using MatheHero.Shared.Shared.Pages.Header
+@using MatheHero.Shared.Shared.Service
+
+@inject IStringLocalizer<BaseStringLocalizer> _baseLocalizer
+
+<div class="nav-main-content">
+    <nav class="nav-top-tab">
+        <NavLink class="@($"nav-tab-item {(selectedTabId == 1 ? "active" : "")}")" @onclick="@(() => ChangeComponentPage(1))" Match="NavLinkMatch.All">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_List.svg" />
+            <span class="nav-item-label">@_baseLocalizer[BaseStringLocalizerResourceKeys.Uebungsaufgaben]</span>
+        </NavLink>
+        <NavLink class="@($"nav-tab-item {(selectedTabId == 2 ? "active" : "")}")" @onclick="@(() => ChangeComponentPage(2))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_Book.svg" />
+            <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Lernmaterial]</span>
+        </NavLink>
+        <NavLink class="@($"nav-tab-item {(selectedTabId == 3 ? "active" : "")}")" @onclick="@(() => ChangeComponentPage(3))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_Chat.svg" />
+            <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Nachrichten]</span>
+        </NavLink>
+        <NavLink class="@($"nav-tab-item {(selectedTabId == 4 ? "active" : "")}")" @onclick="@(() => ChangeComponentPage(4))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_Games.svg" />
+            <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Spiele]</span>
+        </NavLink>
+    </nav>
+</div>
+
+@code {
+    [Parameter]
+    public AuthResult AuthResult { get; set; }
+
+    [Parameter]
+    public UserModel UserModel { get; set; }
+
+    private int selectedTabId = 1;
+
+    private void ChangeComponentPage(int index)
+    {
+        selectedTabId = index;
+        StateHasChanged();
+    }
+}

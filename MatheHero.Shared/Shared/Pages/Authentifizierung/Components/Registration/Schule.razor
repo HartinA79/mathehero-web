@@ -1,0 +1,233 @@
+﻿@page "/registration/schule"
+
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Interface
+@using System.Globalization
+
+@inject IFirestoreService _firestoreService
+@inject IStringLocalizer<Registration> _localizer
+
+@if (isInitialized)
+{
+	<div class="form-group text-center">
+		<h4 class="popup-headersmall-text">@_localizer[RegistrationResourceKeys.HeaderSchuleWaehlen]</h4>
+
+		<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.LandWaehlen]</label>
+		<select class="form-control mb-4" @bind="SelectedCountry">
+			<option value="">@_localizer[RegistrationResourceKeys.PlaceholderLandWaehlen]</option>
+			@foreach(var land in landList)
+			{
+				<option value="@land.DokumentId">@land.Name</option>
+			}
+		</select>
+
+		@if (isCountrySelected)
+		{
+			<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.RegionWaehlen]</label>
+			<select class="form-control mb-4" @bind="SelectedRegion">
+				<option value="">@_localizer[RegistrationResourceKeys.PlaceholderRegionWaehlen]</option>
+				@foreach (var region in regionList)
+				{
+					<option value="@region.DokumentId">@region.Name</option>
+				}
+			</select>
+		}
+
+		@if (isRegionSelected)
+		{
+			<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.SearchInfo]</label>
+			<input type="text" class="form-control mb-4" value="@SearchTerm" @oninput="OnSearchInputChanged" placeholder="@_localizer[RegistrationResourceKeys.PlaceholderSearchInfo]" />
+
+		}
+
+		@if (FilteredSchools.Any() && SelectedSchool is null)
+		{
+			<div class="school-list mt-3">
+				@foreach (var school in FilteredSchools)
+				{
+					<div class="school-item" @onclick="() => SelectSchool(school)">
+						<strong>@school.Name</strong><br />
+						<small>@school.Adresse, @school.ZipCode @school.Ort</small>
+					</div>
+				}
+			</div>
+		}
+
+		@if (SelectedSchool is not null)
+		{
+			<div class="selected-school mt-3">
+				<p>@_localizer[RegistrationResourceKeys.GewaehlteSchule]</p>
+				<strong>@SelectedSchool.Name</strong><br />
+				<small>@SelectedSchool.Adresse, @SelectedSchool.ZipCode @SelectedSchool.Ort</small>
+			</div>
+		}
+
+		@if (isLoading)
+		{
+			<div class="spinner-overlay">
+				<div class="spinner-border text-primary" role="status">
+					<span class="visually-hidden">Lade...</span>
+				</div>
+			</div>
+		}
+	</div>
+
+	@if (!isCountrySelected)
+	{
+		<div class="text-muted mt-4">
+			<small>@_localizer[RegistrationResourceKeys.HinweisSchuleWaehlen]</small>
+		</div>
+	}
+
+	<div class="text-center mt-3">
+		@* <button class="btn btn-menu-primary" @onclick="OnBack">@_localizer[RegistrationResourceKeys.Zurueck]</button> *@
+		<button class="btn btn-menu-primary" @onclick="OnNext">@_localizer[RegistrationResourceKeys.Weiter]</button>
+	</div>
+}
+
+@code {
+	[Parameter]
+	public RegisterModel Model { get; set; }
+
+	[Parameter]
+	public EventCallback OnNext { get; set; }
+
+	[Parameter]
+	public EventCallback OnBack { get; set; }
+
+	private List<LandModel> landList = new();
+
+	private List<RegionModel> regionList = new();
+
+	private List<SchuleModel> schoolList = new();
+
+	private List<SchuleModel> FilteredSchools = [];
+
+	private string selectedCountry = "";
+
+	private SchuleModel? SelectedSchool;
+
+	private string SelectedCountry
+	{
+		get => selectedCountry;
+		set
+		{
+			if (selectedCountry != value)
+			{
+				selectedCountry = value;
+				SelectCountryChanged();
+			}
+		}
+	}
+
+	private string selectedRegion = "";
+
+	private string SelectedRegion
+	{
+		get => selectedRegion;
+		set
+		{
+			if (selectedRegion != value)
+			{
+				selectedRegion = value;
+				SelectRegionChanged();
+			}
+		}
+	}
+
+	private string SearchTerm = "";
+
+	private string currentCulture;
+
+	private bool isInitialized = false;
+
+	private bool isCountrySelected = false;
+
+	private bool isRegionSelected = false;
+
+	private bool isLoading = false;
+
+	protected override async Task OnInitializedAsync()
+	{
+		currentCulture = CultureInfo.CurrentCulture.Name;
+
+		landList = await _firestoreService.GetAllCountriesByLanguageAsync(currentCulture);
+
+		isInitialized = true;
+	}
+
+	private async Task SelectCountryChanged()
+	{
+		isLoading = true;
+		regionList.Clear();
+		StateHasChanged();
+
+		regionList = await _firestoreService.GetAllRegionsByCountryAsync(selectedCountry, currentCulture);
+
+
+		if (regionList.Count > 0)
+		{
+			isCountrySelected = true;
+		}
+		isLoading = false;
+		StateHasChanged();
+	}
+
+	private async Task SelectRegionChanged()
+	{
+		isLoading = true;
+		schoolList.Clear();
+		StateHasChanged();
+
+		schoolList = await _firestoreService.GetSchoolsByCountryAndRegionAsync(selectedCountry, selectedRegion);
+
+		FilteredSchools = schoolList;
+
+		if (schoolList.Count > 0)
+			isRegionSelected = true;
+
+		isLoading = false;
+		StateHasChanged();
+	}
+
+	private async Task OnSearchInputChanged(ChangeEventArgs e)
+	{
+		SearchTerm = e.Value?.ToString() ?? "";
+		SelectedSchool = null;
+		FilterSchools();
+	}
+
+	private void FilterSchools()
+	{
+		if (string.IsNullOrWhiteSpace(SelectedRegion))
+		{
+			FilteredSchools = [];
+			return;
+		}
+
+		if (string.IsNullOrWhiteSpace(SearchTerm))
+		{
+			FilteredSchools = schoolList;
+		}
+		else
+		{
+			string search = SearchTerm.ToLower();
+
+			FilteredSchools = schoolList.Where(x => 
+				(!string.IsNullOrWhiteSpace(x.Name) && x.Name.ToLower().Contains(search)) ||
+				(!string.IsNullOrWhiteSpace(x.Adresse) && x.Adresse.ToLower().Contains(search)) ||
+				(!string.IsNullOrWhiteSpace(x.Ort) && x.Ort.ToLower().Contains(search)) ||
+				x.ZipCode.ToString().Contains(search)
+			).ToList();
+		}
+		StateHasChanged();
+	}
+
+	private async Task SelectSchool(SchuleModel school)
+	{
+		SelectedSchool = school;
+		Model.SchulId = school.DocumentId;
+	}
+}

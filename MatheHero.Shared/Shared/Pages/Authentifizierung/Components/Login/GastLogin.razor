@@ -1,0 +1,76 @@
+﻿@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Service
+
+@inject IStringLocalizer<Login> _localizer
+@inject IAuthService _authService
+@inject IFirestoreService _firestoreService
+@inject AuthStateService AuthStateService
+@inject NavigationManager Navigation
+@inject IPlatformService Platform
+
+<div class="form-group">
+	<label class="input-label-text text-center">@_localizer[LoginResourceKeys.GastLoginInfo]</label>
+	<div class="custom-spaceline"></div>
+	<div class="class-button-grid mt-2">
+		<button type="button" class="@GetButtonClass(1)" @onclick="@(() => SelectClass(1))">@_localizer[LoginResourceKeys.Klasse1]</button>
+		<button type="button" class="@GetButtonClass(2)" @onclick="@(() => SelectClass(2))">@_localizer[LoginResourceKeys.Klasse2]</button>
+		<button type="button" class="@GetButtonClass(3)" @onclick="@(() => SelectClass(3))">@_localizer[LoginResourceKeys.Klasse3]</button>
+		<button type="button" class="@GetButtonClass(4)" @onclick="@(() => SelectClass(4))">@_localizer[LoginResourceKeys.Klasse4]</button>
+	</div>
+
+	<div class="custom-spaceline"></div>
+	<div class="form-group">
+		<label class="popup-text-label">@_localizer[LoginResourceKeys.Benutzername]</label>
+		<input type="text" class="form-control" @bind="userName" placeholder="@_localizer[LoginResourceKeys.PlaceholderBenutzername]" />
+	</div>
+</div>
+<div class="text-center mt-2">
+	<button class="btn btn-menu-primary" @onclick="OnBack">@_localizer[LoginResourceKeys.Zurueck]</button>
+	<button class="btn btn-menu-primary"  @onclick="DoLoginAsync">
+		<span role="status" aria-hidden="true">@_localizer[LoginResourceKeys.Weiter]</span>
+	</button>
+</div>
+
+@code {
+	[Parameter]
+	public EventCallback OnBack { get; set; }
+
+	private SignInModel SignInModel = new();
+
+	private int selectedClass = 0;
+
+	private string userName = "";
+
+	private async Task SelectClass(int clickedClass) => selectedClass = clickedClass;
+
+	private string GetButtonClass(int clickedClass)
+	{
+		return selectedClass == clickedClass ? "btn btn-selected mx-2" : "btn btn-disabled mx-2";
+	}
+
+	private async Task DoLoginAsync()
+	{
+		var result = await _authService.LoginAnonymouslyAsync();
+
+		if (!string.IsNullOrWhiteSpace(result.IdToken))
+		{
+			var userDoc = await _firestoreService.GetUserByUserIdAsync(result.IdToken, result.LocalId);
+
+			userDoc.Rolle = "Guest";
+			userDoc.UserName = userName;
+			userDoc.AvatarPfad = "";
+			userDoc.Email = "";
+			userDoc.Klassenstufe = selectedClass;
+
+			AuthStateService.SetUser(result, userDoc);
+
+			if (Platform.IsRunningInMaui())
+				Navigation.NavigateTo("/home");
+			else
+				Navigation.NavigateTo("/home", forceLoad: true);
+		}
+	}
+}

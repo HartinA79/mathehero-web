@@ -1,0 +1,47 @@
+﻿@page "/registration/avatar"
+
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Service
+
+@inject IStringLocalizer<Registration> _localizer
+@inject AvatarService AvatarService
+
+<div class="form-group text-center">
+	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.AvatarWaehlen]</label>
+
+	<div class="popup-grid">
+		@foreach (var avatar in AvatarService.Avatare)
+		{
+			<img src="@avatar.Link" class="@(selectedAvatar == avatar.Link ? "selected" : "")" @onclick="@(() => SelectAvatar(avatar.Link))" />
+		}
+
+	</div>
+</div>
+
+<div class="text-center mt-3">
+	@* <button class="btn btn-menu-primary" @onclick="OnBack">@_localizer[RegistrationResourceKeys.Zurueck]</button> *@
+	<button class="btn btn-menu-primary" @onclick="OnNext">@_localizer[RegistrationResourceKeys.Weiter]</button>
+</div>
+
+@code {
+	[Parameter]
+	public RegisterModel Model { get; set; }
+
+	[Parameter]
+	public EventCallback OnNext { get; set; }
+
+	[Parameter]
+	public EventCallback OnBack { get; set; }
+
+	private string? selectedAvatar;
+
+	private async Task SelectAvatar(string avatar)
+	{
+		selectedAvatar = avatar;
+		Model.AvatarPfad = avatar;
+
+		await Task.CompletedTask;
+	}
+}

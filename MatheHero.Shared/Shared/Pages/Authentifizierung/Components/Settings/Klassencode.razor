@@ -1,0 +1,31 @@
+﻿@page "/klassencode"
+@using MatheHero.Shared.Models
+
+<EditForm Model="@userModel" OnValidSubmit="DoAssignToClass">
+	<DataAnnotationsValidator />
+	<div class="login-popup-body">
+		<h3 class="popup-header-text">Einer Klasse beitreten</h3>
+
+		<div class="form-group">
+			<label class="input-label-text">Gib hier den Klassencode ein</label>
+			<input class="form-control" type="text" @bind-value="userModel.ClassCode" />
+		</div>
+	</div>
+
+	<div class="text-center">
+		<button class="btn btn-menu-primary" type="submit">
+			<span role="status" aria-hidden="true">
+				Beitreten
+			</span>
+		</button>
+	</div>
+</EditForm>
+
+@code {
+	private UserModel userModel = new UserModel();
+
+	private async Task DoAssignToClass()
+	{
+		await Task.CompletedTask;
+	}
+}

@@ -1,0 +1,9 @@
+﻿@using MatheHero.Shared.Models
+<h3>GoogleLogin</h3>
+
+@code {
+	[Parameter]
+	public EventCallback OnBack { get; set; }
+
+	private SignInModel SignInModel = new();
+}

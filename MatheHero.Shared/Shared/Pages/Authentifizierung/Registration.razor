@@ -1,0 +1,44 @@
+﻿@page "/registration"
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung.Components
+@using MatheHero.Shared.Shared.Pages.Authentifizierung.Components.Registration
+
+@using MatheHero.Shared.Shared.Pages.Toast
+
+@inject IStringLocalizer<Registration> _localizer
+
+<div class="login-popup-container">
+	<div class="login-popup-body">
+		<h3 class="popup-header-text">@_localizer[RegistrationResourceKeys.Registrierung]</h3>
+
+		@RenderActiveComponent()
+
+		<div class="text-center mt-2">
+			<NavLink class="my-nav-link" href="/login">
+				<span class="popup-text-label">@_localizer[RegistrationResourceKeys.ZumLogin]</span>
+			</NavLink>
+		</div>
+	</div>
+</div>
+
+@code {
+	RegisterModel Model = new();
+
+	private RegisterView currentView = RegisterView.Rolle;
+
+	private RenderFragment RenderActiveComponent() => currentView switch
+	{
+		RegisterView.Rolle =>@<Rolle OnNext="()=>currentView = RegisterView.Klassenstufe" Model="Model" />,
+		RegisterView.Klassenstufe =>@<Klassenstufe OnBack="()=>currentView = RegisterView.Rolle" OnNext="()=>currentView = RegisterView.Avatar" Model="Model" />,
+		RegisterView.Avatar =>@<Avatar OnBack="()=>currentView = RegisterView.Klassenstufe" OnNext="()=>currentView = RegisterView.Schule" Model="Model" />,
+		RegisterView.Schule =>@<Schule OnBack="()=>currentView = RegisterView.Avatar" OnNext="()=>currentView = RegisterView.User" Model="Model" />,
+		RegisterView.User =>@<User OnBack="()=>currentView = RegisterView.SchuleLand" OnRegister="RegisterNewUser" Model="Model" />,
+		_ =>@<div>Unbekannter Schritt</div>
+	};
+
+	private async void RegisterNewUser()
+	{
+		var temp = Model;
+	}
+}

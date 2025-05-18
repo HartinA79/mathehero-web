@@ -1,0 +1,60 @@
+﻿@using MatheHero.Shared.Models
+@using MatheHero.Shared.Shared.Service
+
+@inject ToastService ToastService
+@inject IStringLocalizer<Toast> _localizer
+
+<div class="my-toast-container">
+	@if (visible)
+	{
+		<div class="my-toast @toastCssClass">
+			@if (currentToast.Message != "")
+			{
+				@currentToast.Message
+			}
+		</div>
+	}
+</div>
+
+@code {
+	private bool visible = false;
+
+	private ToastMessage currentToast;
+
+	private string toastCssClass;
+
+	protected override void OnInitialized()
+	{
+		ToastService.OnShow += ShowToast;
+	}
+
+	private async void ShowToast(ToastMessage message)
+	{
+		currentToast = message;
+
+		if (message.EnumMessage != MessageType.DEFAULT)
+			currentToast.Message = _localizer[Enum.GetName(currentToast.EnumMessage) ?? currentToast.EnumMessage.ToString()];
+
+		toastCssClass = message.Type switch
+		{
+			ToastType.Success => "my-toast-success",
+			ToastType.Warning => "my-toast-warning",
+			ToastType.Error => "my-toast-error",
+			_ => "my-toast-info"
+		};
+
+		visible = true;
+		await InvokeAsync(StateHasChanged);
+
+		await Task.Delay(message.Duration);
+
+		visible = false;
+		await InvokeAsync(StateHasChanged);
+	}
+
+	public void Dispose()
+	{
+		ToastService.OnShow -= ShowToast;
+	}
+}
+

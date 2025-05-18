@@ -1,0 +1,121 @@
+﻿@page "/registration/user"
+
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+
+@inject IStringLocalizer<Registration> _localizer
+@inject IAuthService _authService
+@inject IFirestoreService _firestoreService
+@inject AuthStateService AuthStateService
+@inject NavigationManager Navigation
+@inject IPlatformService Platform
+@inject ToastService ToastService
+
+<div class="form-group">
+	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.Benutzername]</label>
+	<input type="text" class="form-control mb-2" @bind="Model.UserName" placeholder="@_localizer[RegistrationResourceKeys.PlaceholderBenutzername]" />
+
+	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.Email]</label>
+	<input type="text" class="form-control mb-2" @bind="Model.Email" placeholder="@_localizer[RegistrationResourceKeys.PlaceholderEmail]" />
+
+	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.Passwort]</label>
+	<input type="text" class="form-control mb-2" @bind="Model.Password" placeholder="@_localizer[RegistrationResourceKeys.PlaceholderPasswort]" />
+</div>
+
+@if (isLoading)
+{
+	<div class="spinner-overlay">
+		<div class="spinner-border text-primary" role="status">
+			<span class="visually-hidden">Lade...</span>
+		</div>
+	</div>
+}
+
+<div class="text-center mt-1">
+	@* <button class="btn btn-menu-primary" @onclick="OnBack">@_localizer[RegistrationResourceKeys.Zurueck]</button> *@
+	<button class="btn btn-menu-primary" @onclick="RegisterClicked">@_localizer[RegistrationResourceKeys.Weiter]</button>
+</div>
+
+@code {
+	[Parameter]
+	public RegisterModel Model { get; set; }
+
+	[Parameter]
+	public EventCallback OnRegister { get; set; }
+
+	[Parameter]
+	public EventCallback OnBack { get; set; }
+
+	private UserModel userToRegister = new();
+
+	private bool isLoading = false;
+
+	public async Task RegisterClicked()
+	{
+		if (string.IsNullOrWhiteSpace(Model.UserName) || string.IsNullOrWhiteSpace(Model.Email) || string.IsNullOrWhiteSpace(Model.Password))
+		{
+			ToastService.ShowToast("", MessageType.USER_INPUT_MISSING, ToastType.Warning);
+			return;
+		}
+
+		isLoading = true;
+		StateHasChanged();
+
+		var result = await _authService.RegisterAsync(Model.Email, Model.Password, Model.UserName);
+
+		if (!string.IsNullOrEmpty(result.IdToken))
+		{
+			var loginResult = await _authService.LoginAsync(Model.Email, Model.Password);
+
+			if (!string.IsNullOrEmpty(loginResult.IdToken))
+			{
+				userToRegister.UserId = result.LocalId;
+				userToRegister.AvatarPfad = Model.AvatarPfad;
+				userToRegister.Email = Model.Email;
+				userToRegister.Klassenstufe = Model.KlassenStufe;
+				userToRegister.Rolle = Model.Rolle;
+				userToRegister.SchulId = Model.SchulId;
+				userToRegister.UserName = Model.UserName;
+
+				var addResult = await _firestoreService.AddNewUser(userToRegister);
+
+				if (!addResult.Success)
+				{
+					isLoading = false;
+					StateHasChanged();
+
+					ToastService.ShowToast(addResult.Message, MessageType.DEFAULT, ToastType.Error);
+					return;
+				}
+				else
+				{
+					isLoading = false;
+					StateHasChanged();
+
+					ToastService.ShowToast(_localizer[RegistrationResourceKeys.SuccessUser], MessageType.DEFAULT, ToastType.Success);
+
+					Navigation.NavigateTo("/home");
+				}
+			}
+		}
+	}
+
+	private async Task DoLoginAsync(string _email, string _password)
+	{
+		var result = await _authService.LoginAsync(_email, _password);
+
+		if (!string.IsNullOrWhiteSpace(result.IdToken))
+		{
+			var userDoc = await _firestoreService.GetUserByUserIdAsync(result.IdToken, result.LocalId);
+
+			AuthStateService.SetUser(result, userDoc);
+
+			if (Platform.IsRunningInMaui())
+				Navigation.NavigateTo("/home");
+			else
+				Navigation.NavigateTo("/home", forceLoad: true);
+		}
+	}
+}

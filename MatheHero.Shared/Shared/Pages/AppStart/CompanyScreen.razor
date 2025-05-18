@@ -1,0 +1,67 @@
+﻿@page "/"
+
+@using System.Globalization
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Service
+
+@inject NavigationManager Navigation
+@inject ILanguageService LanguageService
+@inject IPlatformService Platform
+@inject IJSRuntime JS
+
+<div class="company-screen-container">
+	<img src="_content/MatheHero.Shared/css/images/HAvision.png" alt="Ladevorgang" class="company-picture" />
+</div>
+
+@code {
+	private int maxTime = 100;
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			await JS.InvokeVoidAsync("document.body.classList.remove", "main-content-background");
+			await JS.InvokeVoidAsync("document.body.classList.add", "company-screen-background");
+
+			await CalculateLoadingTime();
+
+			var cultureCode = await LanguageService.LoadCultureAsync();
+			LanguageService.SetCulture(cultureCode);
+
+			var region = RegionInfo.CurrentRegion;
+			var countryCode = region.TwoLetterISORegionName;
+
+			if (Platform.IsRunningInMaui())
+			{
+				Navigation.NavigateTo("/loadingscreen");
+			}
+			else
+			{
+				Navigation.NavigateTo("/loadingscreen", forceLoad: true);
+			}
+		}
+	}
+
+	private async Task CalculateLoadingTime()
+	{
+		for (int i = 0; i <= maxTime; i++)
+		{
+			await Task.Delay(20);
+		}
+	}
+
+	string CreateCultureFromCountry(string countryCode)
+	{
+		return countryCode switch
+		{
+			"DE" => "de-DE",
+			"AT" => "de-DE",
+			"US" => "en-US",
+			"FR" => "fr-FR",
+			"ES" => "es-ES",
+			"IT" => "it-IT",
+			// ... beliebig erweitern
+			_ => "en-US" // Fallback
+		};
+	}
+}

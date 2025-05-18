@@ -1,0 +1,161 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\MatheHero.Shared.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MatheHero.Shared.atixt52v5g.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\general\\globalVariables.css",
+      "PackagePath": "staticwebassets\\css\\general\\globalVariables.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\button\\circleButton.css",
+      "PackagePath": "staticwebassets\\css\\global\\button\\circleButton.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\button\\loginButton.css",
+      "PackagePath": "staticwebassets\\css\\global\\button\\loginButton.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\button\\menuButton.css",
+      "PackagePath": "staticwebassets\\css\\global\\button\\menuButton.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\button\\toggleSwitch.css",
+      "PackagePath": "staticwebassets\\css\\global\\button\\toggleSwitch.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\navigation\\mainNavigation.css",
+      "PackagePath": "staticwebassets\\css\\global\\navigation\\mainNavigation.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\page\\companyScreen.css",
+      "PackagePath": "staticwebassets\\css\\global\\page\\companyScreen.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\page\\loadingScreen.css",
+      "PackagePath": "staticwebassets\\css\\global\\page\\loadingScreen.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\page\\mainLayout.css",
+      "PackagePath": "staticwebassets\\css\\global\\page\\mainLayout.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\popups\\loginPopup.css",
+      "PackagePath": "staticwebassets\\css\\global\\popups\\loginPopup.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_Book.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_Book.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_Chat.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_Chat.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_DE.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_DE.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_EN.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_EN.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_Games.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_Games.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_IT.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_IT.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_Info_white.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_Info_white.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_List.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_List.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_ToastFehler.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_ToastFehler.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_ToastOK.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_ToastOK.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_ToastWarnung.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\Icon_ToastWarnung.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\UserInfo_close.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\UserInfo_close.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\UserInfo_open.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\UserInfo_open.svg"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\images\\HAvision.png",
+      "PackagePath": "staticwebassets\\css\\images\\HAvision.png"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\images\\MainBackground.png",
+      "PackagePath": "staticwebassets\\css\\images\\MainBackground.png"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\images\\MainBackground.png.meta",
+      "PackagePath": "staticwebassets\\css\\images\\MainBackground.png.meta"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\images\\MatheHeroCharacter.png",
+      "PackagePath": "staticwebassets\\css\\images\\MatheHeroCharacter.png"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\fonts\\Humor.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Humor.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\fonts\\Humor.ttf.meta",
+      "PackagePath": "staticwebassets\\fonts\\Humor.ttf.meta"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MatheHero.Shared.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MatheHero.Shared.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.MatheHero.Shared.props",
+      "PackagePath": "build\\MatheHero.Shared.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.MatheHero.Shared.props",
+      "PackagePath": "buildMultiTargeting\\MatheHero.Shared.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.MatheHero.Shared.props",
+      "PackagePath": "buildTransitive\\MatheHero.Shared.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

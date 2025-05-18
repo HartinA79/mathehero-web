@@ -1,0 +1,73 @@
+﻿@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Service
+
+@inject IStringLocalizer<Login> _localizer
+@inject IAuthService _authService
+@inject IFirestoreService _firestoreService
+@inject AuthStateService AuthStateService
+@inject NavigationManager Navigation
+@inject IPlatformService Platform
+
+<EditForm Model="@SignInModel" OnValidSubmit="DoLoginAsync">
+	<DataAnnotationsValidator />
+	<div class="form-group">
+		<label class="input-label-text">@_localizer[LoginResourceKeys.Email]</label>
+		<input class="form-control" type="email" @bind-value="@SignInModel.Email" />
+		<ValidationMessage For="@(() => SignInModel.Email)" />
+	</div>
+
+	<div class="form-group">
+		<label class="input-label-text">@_localizer[LoginResourceKeys.Passwort]</label>
+		<input class="form-control" type="password" @bind-value="@SignInModel.Password" />
+		<ValidationMessage For="@(() => SignInModel.Password)" />
+	</div>
+
+	<div class="text-center">
+		<button class="btn btn-menu-primary" type="button" @onclick="OnBack">@_localizer[LoginResourceKeys.Zurueck]</button>
+		<button class="btn btn-menu-primary" type="submit">
+			<span role="status" aria-hidden="true">
+				@_localizer[LoginResourceKeys.Anmelden]
+			</span>
+		</button>
+	</div>
+</EditForm>
+
+@code {
+	[Parameter]
+	public EventCallback OnBack { get; set; }
+
+	private SignInModel SignInModel = new();
+
+	private async Task DoLoginAsync()
+	{
+		var result = await _authService.LoginAsync(SignInModel.Email, SignInModel.Password);
+
+		if (result != null)
+		{
+			if (!string.IsNullOrWhiteSpace(result.IdToken))
+			{
+				var userDoc = await _firestoreService.GetUserByUserIdAsync(result.IdToken, result.LocalId);
+
+				AuthStateService.SetUser(result, userDoc);
+
+				if (Platform.IsRunningInMaui())
+				{
+					if (AuthStateService.CurrentUser.Rolle == "Lehrer")
+						Navigation.NavigateTo("/mainteacher");
+					else if (AuthStateService.CurrentUser.Rolle == "Schüler")
+						Navigation.NavigateTo("/mainstudent");
+				}
+				else
+				{
+					if (AuthStateService.CurrentUser.Rolle == "Lehrer")
+						Navigation.NavigateTo("/mainteacher", forceLoad: true);
+					else if (AuthStateService.CurrentUser.Rolle == "Schüler")
+						Navigation.NavigateTo("/mainstudent", forceLoad: true);
+				}
+			}
+		}
+	}
+}

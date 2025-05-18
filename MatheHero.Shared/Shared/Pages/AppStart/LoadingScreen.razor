@@ -1,0 +1,135 @@
+﻿@page "/loadingscreen"
+
+@using MatheHero.Shared.Helper
+@using MatheHero.Shared.Resources.Shared.Pages.AppStart
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Service
+
+@inject IStringLocalizer<LoadingScreen> _localizer
+@inject IAuthService _authService
+@inject IFirestoreService _firestoreService
+@inject IPlatformService Platform
+@inject ILanguageService LanguageService
+@inject NavigationManager Navigation
+@inject AvatarService AvatarService
+@inject SchulService SchulService
+@inject IAuthStorageService AuthStorage
+@inject AuthStateService AuthStateService
+@inject IJSRuntime JS
+
+<div class="loading-screen-container">
+	<div class="loading-screen-content">
+		<h1 class="header-text">MATHE - HERO</h1>
+		<img src="_content/MatheHero.Shared/css/images/MatheHeroCharacter.png" alt="App-Image" class="loading-image" />
+		<progress max="@MaxValue" value="@ProgressValue"></progress>
+		<p class="label-text">@_localizer[LoadingScreenResourceKeys.LabelText]</p>
+	</div>
+</div>
+
+@code {
+	private int ProgressValue = 0;
+	private int MaxValue = 100;
+
+	//private AuthResult CurrentUser = new AuthResult();
+
+	// OnAfterRenderAsync(bool firstRender)
+	// if (firstRender)
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (!firstRender)
+			return;
+
+		await JS.InvokeVoidAsync("document.body.classList.remove", "company-screen-background");
+		await JS.InvokeVoidAsync("document.body.classList.add", "main-content-background");
+
+		var progressTask = FillProgressBarAsync();
+		var authTask = CheckAuthAsync();
+		var avatarList = _firestoreService.GetAllAvatarPathsAsync();
+		var schoolList = _firestoreService.GetAllSchoolsAsync();
+
+		await Task.WhenAll(progressTask, authTask, avatarList, schoolList);
+
+		if (avatarList != null) AvatarService.SetAvatars(avatarList.Result);
+
+		if (schoolList != null) SchulService.SetSchulen(schoolList.Result);
+
+		if (string.IsNullOrEmpty(authTask.Result.IdToken))
+		{
+			var stored = await AuthStorage.LoadAuthAsync();
+			if (stored != null)
+			{
+				var userDoc = await _firestoreService.GetUserByUserIdAsync(stored.IdToken, stored.LocalId);
+
+				AuthStateService.SetUser(stored, userDoc);
+
+				if (!string.IsNullOrEmpty(AuthStateService.CurrentAuth.IdToken) && AuthStateService.CurrentUser.UserId != null)
+				{
+					if (Platform.IsRunningInMaui())
+					{
+						if (AuthStateService.CurrentUser.Rolle == "Lehrer")
+							Navigation.NavigateTo("/mainteacher");
+						else if (AuthStateService.CurrentUser.Rolle == "Schüler")
+							Navigation.NavigateTo("/mainstudent");
+					}
+					else
+					{
+						if (AuthStateService.CurrentUser.Rolle == "Lehrer")
+							Navigation.NavigateTo("/mainteacher", forceLoad: true);
+						else if (AuthStateService.CurrentUser.Rolle == "Schüler")
+							Navigation.NavigateTo("/mainstudent", forceLoad: true);
+					}
+				}
+				else
+				{
+					if (Platform.IsRunningInMaui())
+						Navigation.NavigateTo("/login");
+					else
+						Navigation.NavigateTo("/login", forceLoad: true);
+				}
+
+				//tokenExpiry = DateTimeOffset.UtcNow.AddSeconds(int.Parse(stored.ExpiresIn)).Subtract(TimeSpan.FromMinutes(1));
+			}
+			else
+			{
+				if (Platform.IsRunningInMaui())
+					Navigation.NavigateTo("/login");
+				else
+					Navigation.NavigateTo("/login", forceLoad: true);
+			}
+		}
+		else
+		{
+			if (Platform.IsRunningInMaui())
+				Navigation.NavigateTo("/login");
+			else
+				Navigation.NavigateTo("/login", forceLoad: true);
+		}
+		
+	}
+
+	private async Task FillProgressBarAsync()
+	{
+		for (int i = 0; i <= MaxValue; i++)
+		{
+			ProgressValue = i;
+			StateHasChanged();
+			await Task.Delay(40);
+		}
+	}
+
+	private async Task<AuthResult> CheckAuthAsync()
+	{
+		var token = await _authService.GetIdTokenAsync();
+
+		if (!string.IsNullOrEmpty(token))
+		{
+			var result = await _authService.GetAuthUserAsync();
+			return result;
+		}
+		else
+		{
+			return new AuthResult();
+		}
+	}
+}

@@ -1,0 +1,2 @@
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\wwwroot\js\culture.js
+wwwroot\js\culture.js

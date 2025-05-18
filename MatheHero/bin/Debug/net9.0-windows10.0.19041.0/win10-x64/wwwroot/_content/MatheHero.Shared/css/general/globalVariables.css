@@ -1,0 +1,38 @@
+:root {
+    /*Farben*/
+    --default-text-color: #2E2A1C;
+    --hover-text-color: #7B693E;
+    --active-text-color: #584E34;
+    --disabled-text-color: #52524F;
+    --col_main: #2E2A1C;
+    --col_main_intermediate_dark: #584E34;
+    --col_main_intermediate: #7B693E;
+    --col_main_light: #C2AC74;
+    --col_user_menu: #D5D5D5;
+    --col_user_menu_border: #433B28;
+    --col_dark: #2E2A1C;
+    --col_highlight: #F2EDDC;
+    --col_disabled: #52524F;
+    --col_selected: #948965;
+    --col_white: white;
+    --col_black: black;
+    --col_lightgray: lightgray;
+    /*Schriftgrößen*/
+    --font-base: 1.1em;
+    --font-large: 1.5em;
+    --font-header: 4.5em;
+    --font-title: 2.5em;
+    --text_size_XS: 14px;
+    --text_size_S: 16px;
+    --text_size_M: 18px;
+    --text_size_L: 22px;
+    --text_size_XL: 28px;
+    --text_size_XXL: 35px;
+    --text_size_XXXL: 40px;
+    /*Buttons*/
+    --col_button_bg: linear-gradient(to bottom, var(--col_main_intermediate_dark), var(--col_main_light));
+    --col_button_login: linear-gradient(to bottom, var(--col_main_light), var(--col_white));
+    --button_standardsize: 40px;
+    /*Hintergrund*/
+    --header_height: 80px;
+}

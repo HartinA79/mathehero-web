@@ -1,0 +1,11 @@
+.btn-login-button-primary {
+    color: var(--col_dark);
+    background: var(--col_highlight);
+    border-color: var(--col_selected);
+}
+
+.btn-login-button-primary:hover {
+    background: var(--col_selected);
+    border-color: var(--col_hightlight);
+    color: var(--col_white);
+}

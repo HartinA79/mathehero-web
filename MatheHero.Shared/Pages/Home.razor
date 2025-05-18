@@ -1,0 +1,78 @@
+﻿@page "/home"
+@using MatheHero.Shared.Helper
+@using MatheHero.Shared.Services
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Header
+@using MatheHero.Shared.Shared.Service
+
+@inject IFormFactor FormFactor
+@inject IAuthService _authService
+@inject NavigationManager Navigation
+@inject IPlatformService Platform
+@inject AuthStateService AuthStateService
+
+@if (isAuthorized)
+{
+	<div class="login-popup-container">
+		<div class="login-popup-body">
+			@* <p>Willkommen! @AuthStateService.CurrentUser.Rolle</p> *@
+			<p class="btn-menu-primary" @onclick="Logout">Abmelden</p>
+		</div>
+	</div>
+}
+else
+{
+	<div class="login-popup-container">
+		<div class="login-popup-body">
+			<p>Kein Zugriff</p>
+			<p class="btn-menu-primary" @onclick="Logout">Abmelden</p>
+		</div>
+	</div>
+}
+
+@code {
+	private string factor => FormFactor.GetFormFactor();
+	private string platform => FormFactor.GetPlatform();
+
+	//private bool _isInitialized = false;
+	private bool isAuthorized = false;
+
+	private AuthResult CurrentUser = new AuthResult();
+
+	protected override async Task OnInitializedAsync()
+	{
+		isAuthorized = true;
+		// if (!AuthStateService.IsAuthenticated || (
+		// 	AuthStateService.CurrentUser.Rolle != "Student" && 
+		// 	AuthStateService.CurrentUser.Rolle != "Teacher" && 
+		// 	AuthStateService.CurrentUser.Rolle != "Gast"))
+		// {
+		// 	Navigation.NavigateTo("/unauthorized");
+		// }
+		// else
+		// {
+		// 	isAuthorized = true;
+		// }
+		// var stored = await AuthStorage.LoadAuthAsync();
+		// if (stored != null)
+		// {
+		// 	CurrentUser = stored;
+		// 	//tokenExpiry = DateTimeOffset.UtcNow.AddSeconds(int.Parse(stored.ExpiresIn)).Subtract(TimeSpan.FromMinutes(1));
+		// }
+
+		// _isInitialized = true;
+	}
+
+	private async Task Logout()
+	{
+		await _authService.LogoutAsync();
+
+		AuthStateService.Clear();
+
+		if (Platform.IsRunningInMaui())
+			Navigation.NavigateTo("/login");
+		else
+			Navigation.NavigateTo("/login", forceLoad: true);
+	}
+}
