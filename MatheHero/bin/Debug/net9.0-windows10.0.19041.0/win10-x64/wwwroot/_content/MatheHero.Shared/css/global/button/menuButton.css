@@ -1,4 +1,4 @@
-.btn-menu-primary {
+/*.btn-menu-primary {
     color: var(--col_white);
     background: var(--col_button_bg);
     height: var(--button_standardsize);
@@ -14,4 +14,4 @@
     .btn-menu-primary:hover {
         box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem var(--col_main_light);
         color: var(--col_white);
-    }
+    }*/

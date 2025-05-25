@@ -5,23 +5,18 @@
 @inject NavigationManager Navigation
 @inject IJSRuntime JS
 
-<div class="page">
-    <main>
-        <article class="content px-4">
-            <Header />
+@if (!Navigation.Uri.EndsWith("/") && !Navigation.Uri.Contains("loadingscreen"))
+{
+    @* <Header /> *@
+}
 
-           <Toast />
+<main class="@(Navigation.Uri.EndsWith("/") ? "container-fluid" : "container")">
+    @Body
+</main>
 
-            @Body
-        </article>
-    </main>
-</div>
-
-<div id="blazor-error-ui" data-nosnippet>
-    An unhandled error has occurred.
-    <a href="." class="reload">Reload</a>
-    <span class="dismiss">🗙</span>
-</div>
+@* <footer class="text-center mt-3 mb-3">
+    © 2025 – MatheHero
+</footer> *@
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)

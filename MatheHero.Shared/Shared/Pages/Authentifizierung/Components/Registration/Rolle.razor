@@ -7,15 +7,21 @@
 @inject IStringLocalizer<Registration> _localizer
 
 <div class="form-group text-center">
-	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.WerBistDu]</label>
-	<div class="d-flex justify-content-around mt-2">
-		<button type="button" class="@GetButtonRolle("Schüler")" @onclick="@(() => SelectRolle("Schüler"))">@_localizer[RegistrationResourceKeys.Schueler]</button>
-		<button type="button" class="@GetButtonRolle("Lehrer")" @onclick="@(() => SelectRolle("Lehrer"))">@_localizer[RegistrationResourceKeys.Lehrer]</button>
+	<label class="popup-text-label mb-2" style="font-weight:600;">@_localizer[RegistrationResourceKeys.WerBistDu]</label>
+	<div class="gast-actions">
+		<button type="button" class="btn-choose @GetButtonRolle("Schüler")" @onclick="@(() => SelectRolle("Schüler"))">
+			<i class="fa fa-user-graduate me-2"></i>
+			@_localizer[RegistrationResourceKeys.Schueler]
+		</button>
+		<button type="button" class="btn-choose @GetButtonRolle("Lehrer")" @onclick="@(() => SelectRolle("Lehrer"))">
+            <i class="fa fa-chalkboard-teacher me-2"></i>
+            @_localizer[RegistrationResourceKeys.Lehrer]
+        </button>
 	</div>
 </div>
 
-<div class="text-center mt-3">
-	<button class="btn btn-menu-primary" @onclick="OnNext" disabled="@string.IsNullOrEmpty(selectedRolle)">@_localizer[RegistrationResourceKeys.Weiter]</button>
+<div class="mt-3 text-center">
+	<button class="btn-login btn-outline" @onclick="OnNext" disabled="@string.IsNullOrEmpty(selectedRolle)">@_localizer[RegistrationResourceKeys.Weiter]</button>
 </div>
 
 
@@ -37,6 +43,6 @@
 
 	private string GetButtonRolle(string rolle)
 	{
-		return selectedRolle == rolle ? "btn btn-selected mx-2" : "btn btn-disabled mx-2";
+		return selectedRolle == rolle ? "btn-selected" : "btn-disabled";
 	}
 }

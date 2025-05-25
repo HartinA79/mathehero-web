@@ -9,9 +9,9 @@
 @inject AvatarService AvatarService
 
 <div class="form-group text-center">
-	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.AvatarWaehlen]</label>
+	<label class="popup-text-label mb-2" style="font-weight:600;">@_localizer[RegistrationResourceKeys.AvatarWaehlen]</label>
 
-	<div class="popup-grid">
+	<div class="avatar-grid mt-2">
 		@foreach (var avatar in AvatarService.Avatare)
 		{
 			<img src="@avatar.Link" class="@(selectedAvatar == avatar.Link ? "selected" : "")" @onclick="@(() => SelectAvatar(avatar.Link))" />
@@ -20,9 +20,9 @@
 	</div>
 </div>
 
-<div class="text-center mt-3">
+<div class="mt-3 text-center d-flex gap-2">
 	@* <button class="btn btn-menu-primary" @onclick="OnBack">@_localizer[RegistrationResourceKeys.Zurueck]</button> *@
-	<button class="btn btn-menu-primary" @onclick="OnNext">@_localizer[RegistrationResourceKeys.Weiter]</button>
+	<button class="btn-login flex-1" @onclick="OnNext">@_localizer[RegistrationResourceKeys.Weiter]</button>
 </div>
 
 @code {

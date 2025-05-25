@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MatheHero.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4aa0f36996123f70d33c44dcccd94083eeda2f25")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9b9f28ac51d7b347a528b625f1a683dc8ff48dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("MatheHero.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MatheHero.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

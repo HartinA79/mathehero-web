@@ -15,53 +15,61 @@
 
 @if (_isInitialized)
 {
-    @if (!string.IsNullOrWhiteSpace(currentAuth?.IdToken) && !string.IsNullOrWhiteSpace(currentUser.UserName))
-    {
-        <div class="header-container">
-            <div class="left-header-content" @onclick="ToggleMenu">
-                @if (!string.IsNullOrWhiteSpace(currentUser.AvatarPfad))
-                {
-                    <img src="@currentUser.AvatarPfad" class="header-avatar" />
-                }
-                <div class="header-user-info">
-                    <div class="header-username">@_baseLocalizer[BaseStringLocalizerResourceKeys.WelcomeText], @currentUser.UserName</div>
-                </div>
+    var noUser = string.IsNullOrWhiteSpace(currentAuth?.IdToken)
+                 || string.IsNullOrWhiteSpace(currentUser?.UserName);
+
+    <header class="header header-bar @(noUser ? "header-center" : "")">
+
+        @if (!noUser)
+        {
+            <!-- ▸ ANGEMELDET: Avatar + Begrüßung -->
+            <div class="flex flex-center gap-2" @onclick="ToggleMenu" style="cursor:pointer;">
+                <img src="@currentUser.AvatarPfad" class="avatar-icon" />
+                <span class="welcome-text">
+                    @_baseLocalizer[BaseStringLocalizerResourceKeys.WelcomeUser],
+                    <strong>@currentUser.UserName</strong>
+                </span>
             </div>
-            <div class="right-header-container">
-                @foreach (var culture in _availableCultures.Where(c => c.Code != currentCulture))
-                {
-                    <img src="@culture.FlagPath" class="flag-icon" title="@culture.DisplayName" @onclick="() => ChangeCulture(culture.Code)" />
-                }
-            </div>
+            <p class="user-menu-link" @onclick="UserLogout">
+                @_baseLocalizer[BaseStringLocalizerResourceKeys.Abmelden]
+            </p>
+        }
+        else
+        {
+            <!-- ▸ GAST: App-Name mittig -->
+            <span class="@(Platform.IsRunningInMaui() ? "header-app-name-maui" : "header-app-name-web")">MATHE&nbsp;–&nbsp;HERO</span>
+        }
+
+        <!-- ▸ Rechts: Flaggen -->
+        <div class="flex gap-2 ml-auto">
+            @foreach (var culture in _availableCultures.Where(c => c.Code != currentCulture))
+            {
+                <img src="@culture.FlagPath"
+                     class="flag-icon"
+                     alt="@culture.DisplayName"
+                     title="@culture.DisplayName"
+                     @onclick="() => ChangeCulture(culture.Code)" />
+            }
         </div>
 
+        <!-- ▸ Dropdown-Menü -->
         @if (_isShowMenu)
         {
-            <div class="header-user-menu @(_isShowMenu ? "header-show" : "")">
-                <p class="header-user-menu-link">@_baseLocalizer[BaseStringLocalizerResourceKeys.Profil]</p>
-                <p class="header-user-menu-link">@_baseLocalizer[BaseStringLocalizerResourceKeys.Einstellungen]</p>
-                <p class="header-user-menu-link" @onclick="GoToKlassenCode">@_baseLocalizer[BaseStringLocalizerResourceKeys.KlasseBeitreten]</p>
-                <p class="header-user-menu-link" @onclick="UserLogout">@_baseLocalizer[BaseStringLocalizerResourceKeys.Abmelden]</p>
-                <p class="header-user-menu-link" @onclick="ToggleMenu">@_baseLocalizer[BaseStringLocalizerResourceKeys.Schliessen]</p>
+            <div class="user-menu card">
+                <p class="user-menu-link">@_baseLocalizer[BaseStringLocalizerResourceKeys.Profil]</p>
+                <p class="user-menu-link">@_baseLocalizer[BaseStringLocalizerResourceKeys.Einstellungen]</p>
+                <p class="user-menu-link" @onclick="GoToKlassenCode">
+                    @_baseLocalizer[BaseStringLocalizerResourceKeys.KlasseBeitreten]
+                </p>
+                <p class="user-menu-link" @onclick="UserLogout">
+                    @_baseLocalizer[BaseStringLocalizerResourceKeys.Abmelden]
+                </p>
+                <p class="user-menu-link" @onclick="ToggleMenu">
+                    @_baseLocalizer[BaseStringLocalizerResourceKeys.Schliessen]
+                </p>
             </div>
         }
-    }
-    else
-    {
-        if (!Navigation.Uri.EndsWith("/") && !Navigation.Uri.EndsWith("/loadingscreen"))
-        {
-
-            <div class="header-container no-user">
-                <div class="header-app-name">MATHE - HERO</div>
-                <div class="flag-container-centered">
-                    @foreach (var culture in _availableCultures.Where(c => c.Code != currentCulture))
-                    {
-                        <img src="@culture.FlagPath" class="flag-icon" title="@culture.DisplayName" @onclick="() => ChangeCulture(culture.Code)" />
-                    }
-                </div>
-            </div>
-        }
-    }
+    </header>
 }
 
 @code {

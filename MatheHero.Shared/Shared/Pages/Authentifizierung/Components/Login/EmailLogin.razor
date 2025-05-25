@@ -14,23 +14,28 @@
 <EditForm Model="@SignInModel" OnValidSubmit="DoLoginAsync">
 	<DataAnnotationsValidator />
 	<div class="form-group">
-		<label class="input-label-text">@_localizer[LoginResourceKeys.Email]</label>
+		<label>@_localizer[LoginResourceKeys.Email]</label>
 		<input class="form-control" type="email" @bind-value="@SignInModel.Email" />
 		<ValidationMessage For="@(() => SignInModel.Email)" />
 	</div>
 
 	<div class="form-group">
-		<label class="input-label-text">@_localizer[LoginResourceKeys.Passwort]</label>
-		<input class="form-control" type="password" @bind-value="@SignInModel.Password" />
+		<label>@_localizer[LoginResourceKeys.Passwort]</label>
+		<div style="position: relative;">
+			<input class="form-control" type="@(ShowPassword ? "text" : "password")" @bind-value="@SignInModel.Password" />
+			<button type="button" @onclick="TogglePasswordVisibility" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+				<i class="fa @(ShowPassword ? "fa-eye-slash" : "fa-eye")"></i>
+			</button>
+		</div>
 		<ValidationMessage For="@(() => SignInModel.Password)" />
+		@* <input class="form-control" type="password" @bind-value="@SignInModel.Password" />
+		<ValidationMessage For="@(() => SignInModel.Password)" /> *@
 	</div>
 
-	<div class="text-center">
-		<button class="btn btn-menu-primary" type="button" @onclick="OnBack">@_localizer[LoginResourceKeys.Zurueck]</button>
-		<button class="btn btn-menu-primary" type="submit">
-			<span role="status" aria-hidden="true">
-				@_localizer[LoginResourceKeys.Anmelden]
-			</span>
+	<div class="flex gap-2 mt-3">
+		<button class="btn btn-outline flex-1" type="button" @onclick="OnBack">@_localizer[LoginResourceKeys.Zurueck]</button>
+		<button class="btn-login flex-1y" type="submit">
+			@_localizer[LoginResourceKeys.Anmelden]
 		</button>
 	</div>
 </EditForm>
@@ -40,6 +45,13 @@
 	public EventCallback OnBack { get; set; }
 
 	private SignInModel SignInModel = new();
+
+	private bool ShowPassword = false;
+
+	private void TogglePasswordVisibility()
+	{
+		ShowPassword = !ShowPassword;
+	}
 
 	private async Task DoLoginAsync()
 	{
@@ -56,16 +68,16 @@
 				if (Platform.IsRunningInMaui())
 				{
 					if (AuthStateService.CurrentUser.Rolle == "Lehrer")
-						Navigation.NavigateTo("/mainteacher");
+						Navigation.NavigateTo("/dashboard");
 					else if (AuthStateService.CurrentUser.Rolle == "Schüler")
-						Navigation.NavigateTo("/mainstudent");
+						Navigation.NavigateTo("/dashboard");
 				}
 				else
 				{
 					if (AuthStateService.CurrentUser.Rolle == "Lehrer")
-						Navigation.NavigateTo("/mainteacher", forceLoad: true);
+						Navigation.NavigateTo("/dashboard", forceLoad: true);
 					else if (AuthStateService.CurrentUser.Rolle == "Schüler")
-						Navigation.NavigateTo("/mainstudent", forceLoad: true);
+						Navigation.NavigateTo("/dashboard", forceLoad: true);
 				}
 			}
 		}

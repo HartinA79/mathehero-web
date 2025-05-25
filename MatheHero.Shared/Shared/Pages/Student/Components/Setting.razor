@@ -1,0 +1,89 @@
+﻿@page "/student/settings"
+
+@using MatheHero.Shared.Resources.Shared.Pages
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Pages.Student.Components.SettingComponents
+@using MatheHero.Shared.Resources.Shared.Pages.Student.Components
+
+@inject AuthStateService AuthStateService
+@inject IStringLocalizer<BaseStringLocalizer> _baseLocalizer
+@inject IStringLocalizer<Setting> _localizer
+@inject NavigationManager Navigation
+@inject IAuthService _authService
+@inject IPlatformService Platform
+
+@layout StudentLayout
+
+<div class="container my-4">
+    <div class="flex flex-column gap-3">
+
+        <h2 class="card text-center mb-2">
+            <i class="fa fa-cog"></i> @_localizer[SettingResourceKeys.Einstellungen]
+        </h2>
+
+        <section class="grid grid-2 gap-3">
+            <button class="card btn flex flex-column flex-center" @onclick="() => LoadComponent(typeof(ProfileSettingsComponent))">
+                <i class="fa fa-user-edit fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.ProfilAendern]</span>
+            </button>
+
+            <button class="card btn flex flex-column flex-center" @onclick="() => LoadComponent(typeof(AppSettingsComponent))">
+                <i class="fa fa-sliders-h fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.AppEinstellungen]</span>
+            </button>
+
+            <button class="card btn flex flex-column flex-center" @onclick="() => LoadComponent(typeof(ClassJoinComponent))">
+                <i class="fa fa-users fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.KlasseBeitreten]</span>
+            </button>
+
+            <button class="card btn flex flex-column flex-center" @onclick="() => LoadComponent(typeof(LanguageSettingsComponent))">
+                <i class="fa fa-language fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.SpracheAendern]</span>
+            </button>
+
+            <button class="card btn flex flex-column flex-center" @onclick="Logout">
+                <i class="fa fa-sign-out-alt fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.Abmelden]</span>
+            </button>
+
+            <NavLink href="/dashboard" class="card btn flex flex-column flex-center">
+                <i class="fa fa-arrow-left fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.ZurueckZumDashboard]</span>
+            </NavLink>
+        </section>
+
+        <section class="card flex-1 mt-3">
+            @if (ActiveComponent != null)
+            {
+                <DynamicComponent Type="ActiveComponent" />
+            }
+            else
+            {
+                <p class="text-center">@_localizer[SettingResourceKeys.SettingInfoText]</p>
+            }
+        </section>
+
+    </div>
+</div>
+
+@code {
+    private Type ActiveComponent { get; set; }
+
+    private void LoadComponent(Type componentType)
+    {
+        ActiveComponent = componentType;
+    }
+
+    private async Task Logout()
+    {
+        await _authService.LogoutAsync();
+
+        AuthStateService.Clear();
+
+        if (Platform.IsRunningInMaui())
+            Navigation.NavigateTo("/login");
+        else
+            Navigation.NavigateTo("/login", forceLoad: true);
+    }
+}

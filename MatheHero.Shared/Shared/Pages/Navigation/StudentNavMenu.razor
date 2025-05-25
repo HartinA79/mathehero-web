@@ -1,0 +1,131 @@
+﻿@using System.Globalization
+@using MatheHero.Shared.Helper
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Pages.Header
+@using MatheHero.Shared.Shared.Service
+
+@inject IStringLocalizer<BaseStringLocalizer> _baseLocalizer
+@inject IPlatformService Platform
+@inject NavigationManager Navigation
+
+<nav class="student-nav">
+    @if (Platform.IsRunningInMaui())
+    {
+        <ul class="nav-mobile">
+            <li>
+                <NavLink href="/student/dashboard" class="nav-link" activeClass="active">
+                    <i class="fa fa-home"></i>
+                    Dashboard
+                </NavLink>
+            </li>
+            <li>
+                <NavLink href="/student/exercises" class="nav-link" activeClass="active">
+                    <i class="fa fa-list"></i><span>Übungen</span>
+                </NavLink>
+            </li>
+            <li>
+                <NavLink href="/student/learning" class="nav-link" activeClass="active">
+                    <i class="fa fa-book"></i><span>Lernen</span>
+                </NavLink>
+            </li>
+            <li>
+                <NavLink href="/student/messages" class="nav-link" activeClass="active">
+                    <i class="fa fa-comments"></i><span>Nachr.</span>
+                </NavLink>
+            </li>
+            <li>
+                <NavLink href="/student/games" class="nav-link" activeClass="active">
+                    <i class="fa fa-gamepad"></i><span>Spiele</span>
+                </NavLink>
+            </li>
+        </ul>
+    }
+    else
+    {
+        <ul class="nav-desktop flex gap-4 justify-center p-2">
+            <li><NavLink href="/student/dashboard" class="nav-item px-3 py-2" activeClass="active">Dashboard</NavLink></li>
+            <li><NavLink href="/student/exercises" class="nav-item px-3 py-2" activeClass="active">Übungsaufgaben</NavLink></li>
+            <li><NavLink href="/student/learning" class="nav-item px-3 py-2" activeClass="active">Lernmaterial</NavLink></li>
+            <li><NavLink href="/student/messages" class="nav-item px-3 py-2" activeClass="active">Nachrichten</NavLink></li>
+            <li><NavLink href="/student/games" class="nav-item px-3 py-2" activeClass="active">Spiele</NavLink></li>
+        </ul>
+    }
+</nav>
+
+@*<nav class="bg-white shadow-md">
+    <ul class="flex justify-around md:justify-center gap-2 md:gap-4 p-2 md:px-6">
+        <li class="flex-1 md:flex-none">
+            <NavLink href="/student/exercises"
+                     class="nav-item block text-center py-2"
+                     activeClass="active">
+                Übungsaufgaben
+            </NavLink>
+        </li>
+        <li class="flex-1 md:flex-none">
+            <NavLink href="/student/learning"
+                     class="nav-item block text-center py-2"
+                     activeClass="active">
+                Lernmaterial
+            </NavLink>
+        </li>
+        <li class="flex-1 md:flex-none">
+            <NavLink href="/student/messages"
+                     class="nav-item block text-center py-2"
+                     activeClass="active">
+                Nachrichten
+            </NavLink>
+        </li>
+        <li class="flex-1 md:flex-none">
+            <NavLink href="/student/games"
+                     class="nav-item block text-center py-2"
+                     activeClass="active">
+                Spiele
+            </NavLink>
+        </li>
+    </ul>
+</nav>
+
+ <div class="nav-main-content">
+    <nav class="nav-top-tab">
+        <NavLink class="@($"nav-tab-item {(selectedTabId == 1 ? "active" : "")}")" @onclick="@(() => ChangeComponentPage(1))" Match="NavLinkMatch.All">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_List.svg" />
+            <span class="nav-item-label">@_baseLocalizer[BaseStringLocalizerResourceKeys.Uebungsaufgaben]</span>
+        </NavLink>
+        <NavLink class="@($"nav-tab-item {(selectedTabId == 2 ? "active" : "")}")" @onclick="@(() => ChangeComponentPage(2))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_Book.svg" />
+            <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Lernmaterial]</span>
+        </NavLink>
+        <NavLink class="@($"nav-tab-item {(selectedTabId == 3 ? "active" : "")}")" @onclick="@(() => ChangeComponentPage(3))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_Chat.svg" />
+            <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Nachrichten]</span>
+        </NavLink>
+        <NavLink class="@($"nav-tab-item {(selectedTabId == 4 ? "active" : "")}")" @onclick="@(() => ChangeComponentPage(4))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_Games.svg" />
+            <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Spiele]</span>
+        </NavLink>
+    </nav>
+</div> *@
+
+@code {
+    [Parameter]
+    public AuthResult AuthResult { get; set; }
+
+    [Parameter]
+    public UserModel UserModel { get; set; }
+
+    private int selectedTabId = 1;
+
+    private bool menuOpen = false;
+
+    private void ChangeComponentPage(int index)
+    {
+        selectedTabId = index;
+        StateHasChanged();
+    }
+
+    private void ToggleSettings() => menuOpen = !menuOpen;
+
+    private void CloseMenu() => menuOpen = false;
+}

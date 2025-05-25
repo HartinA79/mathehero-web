@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\MatheHero.Shared.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MatheHero.Shared.pqutx30653.bundle.scp.css"
+      "PackagePath": "staticwebassets\\MatheHero.Shared.omsygzxpbh.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\app.css",
@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\css\\global\\button\\toggleSwitch.css"
     },
     {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\links\\links.css",
+      "PackagePath": "staticwebassets\\css\\global\\links\\links.css"
+    },
+    {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\navigation\\mainNavigation.css",
       "PackagePath": "staticwebassets\\css\\global\\navigation\\mainNavigation.css"
     },
@@ -53,12 +57,16 @@
       "PackagePath": "staticwebassets\\css\\global\\page\\mainLayout.css"
     },
     {
-      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\popups\\loginPopup.css",
-      "PackagePath": "staticwebassets\\css\\global\\popups\\loginPopup.css"
-    },
-    {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\popups\\popup.css",
       "PackagePath": "staticwebassets\\css\\global\\popups\\popup.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\global\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\global\\text\\text.css",
+      "PackagePath": "staticwebassets\\css\\global\\text\\text.css"
     },
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\css\\icons\\Icon_Book.svg",
@@ -131,6 +139,18 @@
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\fonts\\ComicNeue-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ComicNeue-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\fonts\\ComicNeue-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ComicNeue-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\fonts\\ComicNeue-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ComicNeue-Regular.ttf"
     },
     {
       "Id": "C:\\Users\\ahart\\Documents\\HAvision\\MatheHeroNeu\\MatheHero\\MatheHero\\MatheHero.Shared\\wwwroot\\fonts\\Humor.ttf",

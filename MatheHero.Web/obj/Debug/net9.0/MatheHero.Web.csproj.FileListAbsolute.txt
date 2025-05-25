@@ -1,7 +1,13 @@
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\MatheHero.Shared.staticwebassets.runtime.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\MatheHero.Shared.staticwebassets.endpoints.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\web.config
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\appsettings.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\appsettings.Development.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\appsettings.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\MatheHero.Web.deps.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\MatheHero.Web.runtimeconfig.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\MatheHero.Web.staticwebassets.endpoints.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\MatheHero.Web.staticwebassets.runtime.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\MatheHero.Web.staticwebassets.endpoints.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\MatheHero.Web.exe
@@ -36,8 +42,10 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\MatheHero.Web.AssemblyInfo.cs
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\MatheHero.Web.csproj.CoreCompileInputs.cache
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\MatheHero.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\MatheHero.Web.sourcelink.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\scopedcss\bundle\MatheHero.Web.styles.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\compressed\3nhs1vyms9-u7wbj6kpxl.gz
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\compressed\9b1diu2d6r-8e9tan0s9s.gz
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -54,11 +62,3 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\MatheHero.Web.pdb
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\MatheHero.Web.genruntimeconfig.cache
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\ref\MatheHero.Web.dll
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\web.config
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\appsettings.Development.json
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\appsettings.json
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\MatheHero.Web.deps.json
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\MatheHero.Web.runtimeconfig.json
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\bin\Debug\net9.0\publish\MatheHero.Web.staticwebassets.endpoints.json
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\MatheHero.Web.sourcelink.json
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Web\obj\Debug\net9.0\compressed\9b1diu2d6r-tz471qsb4v.gz

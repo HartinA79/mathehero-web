@@ -1,4 +1,0 @@
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\wwwroot\index.html
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\wwwroot\app.css
-wwwroot\app.css
-wwwroot\index.html

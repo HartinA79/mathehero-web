@@ -18,7 +18,9 @@
 
         public const string Schliessen = nameof(Schliessen);
 
-        public const string WelcomeText = nameof(WelcomeText);
+        public const string WelcomeUser = nameof(WelcomeUser);
+
+        public const string WelcomeMessage = nameof(WelcomeMessage);
 
         public const string Uebungsaufgaben = nameof(Uebungsaufgaben);
 
@@ -29,5 +31,11 @@
         public const string Spiele = nameof(Spiele);
 
         public const string KlasseBeitreten = nameof(KlasseBeitreten);
+
+        public const string LernfortschrittHeader = nameof(LernfortschrittHeader);
+
+        public const string LernfortschrittMessageStart = nameof(LernfortschrittMessageStart);
+
+        public const string LernfortschrittMessageEnd = nameof(LernfortschrittMessageEnd);
     }
 }

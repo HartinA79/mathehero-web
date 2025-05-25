@@ -1,0 +1,28 @@
+/*.my-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--default-text-color);
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+    font-size: var(--font-base);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+    .my-nav-link:hover,
+    .my-nav-link:focus {
+        color: var(--hover-text-color);
+        text-decoration: none;
+    }
+
+    .my-nav-link.disabled {
+        color: var(--disabled-text-color);
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .my-nav-link.active {
+        color: var(--active-text-color);
+        font-weight: 500;
+    }
+*/

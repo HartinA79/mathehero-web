@@ -138,6 +138,15 @@
   <data name="KlasseBeitreten" xml:space="preserve">
     <value>Klassencode</value>
   </data>
+  <data name="LernfortschrittHeader" xml:space="preserve">
+    <value>Dein Lernfortschritt</value>
+  </data>
+  <data name="LernfortschrittMessageEnd" xml:space="preserve">
+    <value>deiner Lernziele erreicht!</value>
+  </data>
+  <data name="LernfortschrittMessageStart" xml:space="preserve">
+    <value>Du hast bereits</value>
+  </data>
   <data name="Lernmaterial" xml:space="preserve">
     <value>Lernmaterial</value>
   </data>
@@ -156,7 +165,10 @@
   <data name="Uebungsaufgaben" xml:space="preserve">
     <value>Übungsaufgaben</value>
   </data>
-  <data name="WelcomeText" xml:space="preserve">
-    <value>Hallo</value>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Schön, dass du wieder da bist. Bereit, Neues zu lernen?</value>
+  </data>
+  <data name="WelcomeUser" xml:space="preserve">
+    <value>Willkommen zurück,</value>
   </data>
 </root>

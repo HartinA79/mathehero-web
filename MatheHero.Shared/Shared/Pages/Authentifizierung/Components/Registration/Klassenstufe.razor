@@ -7,18 +7,18 @@
 @inject IStringLocalizer<Registration> _localizer
 
 <div class="form-group text-center">
-	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.InWelcheKlasse]</label>
-	<div class="popup-grid mt-2">
-		<button type="button" class="@GetButtonClass(1)" @onclick="@(() => SelectKlasse(1))">@_localizer[RegistrationResourceKeys.Klasse1]</button>
-		<button type="button" class="@GetButtonClass(2)" @onclick="@(() => SelectKlasse(2))">@_localizer[RegistrationResourceKeys.Klasse2]</button>
-		<button type="button" class="@GetButtonClass(3)" @onclick="@(() => SelectKlasse(3))">@_localizer[RegistrationResourceKeys.Klasse3]</button>
-		<button type="button" class="@GetButtonClass(4)" @onclick="@(() => SelectKlasse(4))">@_localizer[RegistrationResourceKeys.Klasse4]</button>
+	<label class="popup-text-label mb-2" style="font-weight:600;">@_localizer[RegistrationResourceKeys.InWelcheKlasse]</label>
+	<div class="gast-actions">
+		<button type="button" class="btn-choose @GetButtonClass(1)" @onclick="@(() => SelectKlasse(1))">@_localizer[RegistrationResourceKeys.Klasse1]</button>
+		<button type="button" class="btn-choose @GetButtonClass(2)" @onclick="@(() => SelectKlasse(2))">@_localizer[RegistrationResourceKeys.Klasse2]</button>
+		<button type="button" class="btn-choose @GetButtonClass(3)" @onclick="@(() => SelectKlasse(3))">@_localizer[RegistrationResourceKeys.Klasse3]</button>
+		<button type="button" class="btn-choose @GetButtonClass(4)" @onclick="@(() => SelectKlasse(4))">@_localizer[RegistrationResourceKeys.Klasse4]</button>
 	</div>
 </div>
 
-<div class="text-center mt-3">
+<div class="mt-3 text-center d-flex gap-2">
 	@* <button class="btn btn-menu-primary" @onclick="OnBack">@_localizer[RegistrationResourceKeys.Zurueck]</button> *@
-	<button class="btn btn-menu-primary" @onclick="OnNext" disabled="@(selectedKlasse == 0)">@_localizer[RegistrationResourceKeys.Weiter]</button>
+	<button class="btn-login flex-1" @onclick="OnNext" disabled="@(selectedKlasse == 0)">@_localizer[RegistrationResourceKeys.Weiter]</button>
 </div>
 
 @code {
@@ -42,6 +42,6 @@
 
 	private string GetButtonClass(int clickedClass)
 	{
-		return selectedKlasse == clickedClass ? "btn btn-selected mx-2" : "btn btn-disabled mx-2";
+		return selectedKlasse == clickedClass ? "btn-selected" : "btn-disabled";
 	}
 }

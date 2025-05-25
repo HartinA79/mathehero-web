@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>iioic14d3h</Fingerprint>
-      <Integrity>ZgOYl5m6IQCmWazNdDii47ZziNU3W/2F0uIgBnAsdQc=</Integrity>
+      <Fingerprint>ivy7dhjnck</Fingerprint>
+      <Integrity>Tq35eBrEqPUp1/MBOwdCw3yRXFQj6U1NXYdm+Um1N2M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
-      <Fingerprint>5fcvsqxczv</Fingerprint>
-      <Integrity>oaTDmZB5jg4Av+C0iYS5n3az6XldCG6JFMPGo28Gm18=</Integrity>
+      <Fingerprint>8e9tan0s9s</Fingerprint>
+      <Integrity>0NqBd1jT1NlwR6VqxxbdnYsHTD2ZzPTJlMj0yK/Bi4w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.styles.css'))</OriginalItemSpec>

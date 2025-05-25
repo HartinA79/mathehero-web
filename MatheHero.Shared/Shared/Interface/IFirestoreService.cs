@@ -30,6 +30,8 @@ namespace MatheHero.Shared.Shared.Interface
 
         Task<FirestoreResult> AddNewUser(UserModel user);
 
+        Task<FirestoreResult> UpdateUserAsync(string idToken, UserModel user);
+
         Task<List<T>> GetDocumentByFieldAsync<T>(string idToken, string collection, string field, string value);
 
         Task SetDocumentAsync<T>(string idToken, string collection, string documentId, T data);

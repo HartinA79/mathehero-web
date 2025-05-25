@@ -8,19 +8,19 @@
 @inject IPlatformService Platform
 @inject IStringLocalizer<Login> _localizer
 
-<div class="choose-login-container">
-	<button class="btn btn-login-button-primary full-width mb-3" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Email)">
-		<i class="fas fa-envelope me-2"></i> @_localizer[LoginResourceKeys.LoginEmail]
+<div class="login-actions">
+	<button class="btn-login" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Email)">
+		<i class="fa fa-envelope me-2"></i> @_localizer[LoginResourceKeys.LoginEmail]
 	</button>
 
-	@* <button class="btn btn-login-button-primary full-width mb-3" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Google)">
+	 <button class="btn-login btn-google" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Google)">
 		<i class="fab fa-google me-2"></i> @_localizer[LoginResourceKeys.LoginGoogle]
-	</button> *@
+	</button> 
 
 	<hr class="my-4" />
 
-	<button class="btn btn-login-button-primary full-width" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Gast)">
-		<i class="fas fa-user-secret me-2"></i> @_localizer[LoginResourceKeys.LoginGast]
+	<button class="btn-login btn-guest" @onclick="() => OnSelectLogin.InvokeAsync(LoginView.Gast)">
+		<i class="fa fa-user me-2"></i> @_localizer[LoginResourceKeys.LoginGast]
 	</button>
 </div>
 

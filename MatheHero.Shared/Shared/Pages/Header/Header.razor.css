@@ -1,5 +1,5 @@
-.header-container { /*.header*/
-    display: flex;
+/*.header-container {*/ /*.header*/
+    /*display: flex;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 0.5rem;
@@ -16,8 +16,8 @@
     box-sizing: border-box;
 }
 
-.left-header-content { /*left-header*/
-    display: flex;
+.left-header-content {*/ /*left-header*/
+    /*display: flex;
     align-items: center;
     gap: 0.8rem;
     flex: 0 1 auto;
@@ -25,26 +25,26 @@
     z-index: 9998;
 }
 
-.header-avatar { /*avatar*/
-    width: 35px;
+.header-avatar {*/ /*avatar*/
+    /*width: 35px;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.header-user-info { /*user-info*/
-    display: flex;
+.header-user-info {*/ /*user-info*/
+    /*display: flex;
     flex-direction: column;
 }
 
-.header-username { /*username*/
-    font-size: var(--text_size_M);
+.header-username {*/ /*username*/
+    /*font-size: var(--text_size_M);
     font-weight: 400;
     color: var(--col_white);
 }
 
-.header-app-name { /*app-name*/
-    font-size: var(--text_size_XXXL);
+.header-app-name {*/ /*app-name*/
+    /*font-size: var(--text_size_XXXL);
     font-weight: 800;
     flex: 1 1 auto;
     text-align: center;
@@ -52,8 +52,8 @@
     letter-spacing: 4px;
 }
 
-.header-user-menu { /*user-menu*/
-    position: absolute;
+.header-user-menu {*/ /*user-menu*/
+    /*position: absolute;
     top: calc(var(--header_height, 70px) + 5px);
     left: 1rem;
     background-color: #7B693E;
@@ -67,19 +67,19 @@
     flex-direction: column;
     opacity: 0;
     transform: scaleY(0.95);
-    transform-origin: top;
+    transform-origin: top;*/
     /*pointer-events: none;*/
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    /*transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-    .header-user-menu.header-show { /*show*/
-        opacity: 1;
+    .header-user-menu.header-show {*/ /*show*/
+        /*opacity: 1;
         transform: scaleY(1);
         pointer-events: auto;
     }
 
-.header-user-menu-link { /*user-menu-link*/
-    padding: 0.75rem 1rem;
+.header-user-menu-link {*/ /*user-menu-link*/
+    /*padding: 0.75rem 1rem;
     cursor: pointer;
     font-size: var(--font-base);
     text-decoration: none;
@@ -112,9 +112,9 @@
 .flag-icon {
     width: 25px;
     height: 18px;
-    cursor: pointer;
+    cursor: pointer;*/
     /*border: 1px solid white;*/
-    border-radius: 3px;
+    /*border-radius: 3px;
     transition: transform 0.2s ease;
 }
 
@@ -145,4 +145,4 @@
         .user-menu.show {
             transform: translateX(-50%) scaleY(1);
         }
-}
+}*/

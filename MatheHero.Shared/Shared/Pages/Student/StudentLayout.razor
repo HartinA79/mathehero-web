@@ -1,0 +1,78 @@
+﻿@page "/mainstudent"
+@using MatheHero.Shared.Helper
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Services
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Pages.Navigation
+@using MatheHero.Shared.Shared.Service
+
+@inject IFormFactor FormFactor
+@inject IAuthService _authService
+@inject NavigationManager Navigation
+@inject IPlatformService Platform
+@inject AuthStateService AuthStateService
+
+@if (isInitialized)
+{
+	<div class="main-layout">
+		<!-- Navigation + Content Area (Header via MainLayout) -->
+		<div class="flex flex-col min-h-full" style="@(Navigation.Uri.EndsWith("/") ? "" : "justify-content:center;")">
+			<!-- Top Navigation für Schüler -->
+			@* <StudentNavMenu />  *@
+
+			<!-- Content Bereich -->
+			<main>
+			@Body
+			</main>
+		</div>
+	</div>
+}
+else
+{
+	<div class="login-popup-container">
+		<div class="login-popup-body">
+			<p>Kein Zugriff</p>
+			<p class="btn-menu-primary" @onclick="Logout">Abmelden</p>
+		</div>
+	</div>
+}
+
+@code {
+	[Parameter] public RenderFragment? Body { get; set; }
+
+	private string factor => FormFactor.GetFormFactor();
+	private string platform => FormFactor.GetPlatform();
+
+	private bool isAuthorized = false;
+
+	private bool isInitialized = false;
+
+	private AuthResult authResult = new AuthResult();
+
+	private UserModel userModel = new UserModel();
+
+	protected override async Task OnInitializedAsync()
+	{
+
+		userModel = AuthStateService.GetCurrentUserStatus();
+		authResult = AuthStateService.GetCurrentAuthStatus();
+
+		StateHasChanged();
+	
+
+		isInitialized = true;
+	}
+
+	private async Task Logout()
+	{
+		await _authService.LogoutAsync();
+
+		AuthStateService.Clear();
+
+		if (Platform.IsRunningInMaui())
+			Navigation.NavigateTo("/login");
+		else
+			Navigation.NavigateTo("/login", forceLoad: true);
+	}
+}

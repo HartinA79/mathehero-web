@@ -1,0 +1,144 @@
+﻿@using MatheHero.Shared.Helper
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Student.Components
+@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Shared.Service
+
+@inject AuthStateService AuthStateService
+@inject IFirestoreService FirestoreService
+@inject NavigationManager Navigation
+@inject AvatarService AvatarService
+@inject IStringLocalizer<Setting> _localizer
+
+<div class="card flex flex-column gap-3">
+    <h3 class="text-center">
+        <i class="fa fa-user-edit"></i> @_localizer[SettingResourceKeys.ProfilBearbeiten]
+    </h3>
+
+    @if (!string.IsNullOrEmpty(ToastMessage))
+    {
+        <div class="card bg-white" style="border-left: 4px solid @(IsError ? "red" : "green"); padding: var(--space-2);">
+            @ToastMessage
+        </div>
+    }
+
+    <div>
+        <label for="username">@_localizer[SettingResourceKeys.Benutzername]</label>
+        <input id="username" type="text" @bind="UserName" />
+    </div>
+
+    <div class="mt-3">
+        <label>@_localizer[SettingResourceKeys.AvatarAuswaehlen]</label>
+        <div class="avatar-grid">
+            @foreach (var avatar in AvatarService.Avatare)
+            {
+                <img src="@avatar.Link" alt="Avatar" class="@(SelectedAvatar == avatar.Link ? "selected" : "")" @onclick="() => SelectAvatar(avatar.Link)" />
+            }
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <label>@_localizer[SettingResourceKeys.Klassenstufe]</label>
+        <div class="grid grid-2 gap-2">
+            <button type="button" class="btn-choose @GetButtonClass(1)" @onclick="@(() => SelectKlasse(1))">@_localizer[SettingResourceKeys.Klasse1]</button>
+            <button type="button" class="btn-choose @GetButtonClass(2)" @onclick="@(() => SelectKlasse(2))">@_localizer[SettingResourceKeys.Klasse2]</button>
+            <button type="button" class="btn-choose @GetButtonClass(3)" @onclick="@(() => SelectKlasse(3))">@_localizer[SettingResourceKeys.Klasse3]</button>
+            <button type="button" class="btn-choose @GetButtonClass(4)" @onclick="@(() => SelectKlasse(4))">@_localizer[SettingResourceKeys.Klasse4]</button>
+        </div>
+    </div>
+
+    <button class="btn btn-selected mt-3" @onclick="SaveProfile">@_localizer[SettingResourceKeys.ProfilSpeichern]</button>
+
+</div>
+
+
+@code {
+    [Parameter] public EventCallback OnClose { get; set; }
+
+    private string UserName;
+    private string SelectedAvatar;
+    private int SelectedKlasse;
+    private string ToastMessage;
+    private bool IsError;
+    private UserModel _currentUser;
+    private AuthResult _currentAuth;
+
+
+    protected override void OnInitialized()
+    {
+        _currentUser = AuthStateService.GetCurrentUserStatus();
+        UserName = _currentUser.UserName;
+        SelectedAvatar = _currentUser.AvatarPfad;
+        SelectedKlasse = _currentUser.Klassenstufe;
+    }
+
+    private void SelectAvatar(string avatarPath)
+    {
+        SelectedAvatar = avatarPath;
+    }
+
+    private async Task SelectKlasse(int clickedClass)
+    {
+        SelectedKlasse = clickedClass;
+        _currentUser.Klassenstufe = clickedClass;
+        await Task.CompletedTask;
+    }
+
+    private string GetButtonClass(int clickedClass)
+    {
+        return SelectedKlasse == clickedClass ? "btn-selected" : "btn-disabled";
+    }
+
+    private async Task SaveProfile()
+    {
+        _currentAuth = AuthStateService.GetCurrentAuthStatus();
+
+        try
+        {
+            var updatedUser = new UserModel
+                {
+                    UserId = _currentUser.UserId,
+                    UserName = UserName,
+                    AvatarPfad = SelectedAvatar
+                };
+
+            _currentUser.UserName = UserName;
+            _currentUser.AvatarPfad = SelectedAvatar;
+            _currentUser.Klassenstufe = SelectedKlasse;
+
+            var response = await FirestoreService.UpdateUserAsync(_currentAuth.IdToken, _currentUser);
+
+            if (response.Success)
+            {
+                // ToastMessage = "Profil erfolgreich gespeichert!";
+                ToastMessage = _localizer[SettingResourceKeys.SpeichernMessageSuccess];
+                IsError = false;
+            }
+            else
+            {
+                ToastMessage = $"{_localizer[SettingResourceKeys.SpeichernMessageError]}: {response.Message}";
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // ToastMessage = "Fehler beim Speichern: " + ex.Message;
+            ToastMessage = $"{_localizer[SettingResourceKeys.SpeichernMessageError]}: {ex.Message}";
+            IsError = true;
+        }
+
+        StateHasChanged();
+
+        await Task.Delay(3000);
+        ToastMessage = string.Empty;
+        StateHasChanged();
+
+        if (!IsError)
+        {
+            var current = Navigation.Uri;
+            Navigation.NavigateTo("/basepage");
+            await Task.Delay(50);
+            Navigation.NavigateTo(current, forceLoad: false);
+        }
+    }
+}

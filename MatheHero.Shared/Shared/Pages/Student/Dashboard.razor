@@ -1,0 +1,105 @@
+﻿@page "/dashboard"
+@using MatheHero.Shared.Helper
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages
+@using System.Globalization
+@layout StudentLayout
+
+@inject IStringLocalizer<BaseStringLocalizer> _baseLocalizer
+@inject AuthStateService AuthStateService
+
+<div class="container my-4">
+    <div class="flex flex-center flex-column gap-3">
+        <!-- Persönliche Begrüßung -->
+        @* <section class="card flex flex-center gap-2"> *@
+            <NavLink href="/student/settings" class="card flex flex-center gap-2 btn" style="cursor:pointer;">
+                <img src="@currentUser.AvatarPfad" class="avatar-icon" alt="User Avatar">
+                <div>
+                    <h2>@($"{_baseLocalizer[BaseStringLocalizerResourceKeys.WelcomeUser]} {currentUser.UserName}!")</h2>
+                    <p class="welcome-text">@_baseLocalizer[BaseStringLocalizerResourceKeys.WelcomeMessage]</p>
+                </div>
+            </NavLink>
+            
+        @* </section> *@
+
+        <!-- Karten mit Schnellzugriff -->
+        <section class="grid grid-2 gap-3">
+            <NavLink href="/student/exercises" class="card flex flex-column flex-center btn">
+                <i class="fa fa-pencil-alt fa-2x"></i>
+                <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Uebungsaufgaben]</span>
+            </NavLink>
+            <NavLink href="/student/learning" class="card flex flex-column flex-center btn">
+                <i class="fa fa-book-open fa-2x"></i>
+                <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Lernmaterial]</span>
+            </NavLink>
+            <NavLink href="/student/games" class="card flex flex-column flex-center btn">
+                <i class="fa fa-gamepad fa-2x"></i>
+                <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Spiele]</span>
+            </NavLink>
+            <NavLink href="/student/messages" class="card flex flex-column flex-center btn">
+                <i class="fa fa-envelope fa-2x"></i>
+                <span>@_baseLocalizer[BaseStringLocalizerResourceKeys.Nachrichten]</span>
+            </NavLink>
+        </section>
+
+        <!-- Fortschrittsbereich -->
+        <section class="card" style="width:100%;">
+            <h3>@_baseLocalizer[BaseStringLocalizerResourceKeys.LernfortschrittHeader]</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%;"></div>
+            </div>
+            <p class="mt-2">@($"{@_baseLocalizer[BaseStringLocalizerResourceKeys.LernfortschrittMessageStart]} 60% {@_baseLocalizer[BaseStringLocalizerResourceKeys.LernfortschrittMessageEnd]}")</p>
+        </section>
+
+        <!-- Zu den Einstellungen -->
+        @* <NavLink href="/student/settings" class="btn btn-outline mt-1 flex flex-center gap-1" style="width:100%;background-color:#fff;"> *@
+        <NavLink href="/student/settings" class="card flex flex-center gap-2 btn" style="width:100%;">
+            <i class="fa fa-cog"></i>
+            @_baseLocalizer[BaseStringLocalizerResourceKeys.Einstellungen]
+        </NavLink>
+    </div>
+</div>
+
+@code {
+    private UserModel currentUser;
+
+    private AuthResult currentAuth;
+
+    private bool _isInitialized = false;
+
+    private bool _isShowMenu = false;
+
+    private string currentCulture;
+
+    private List<(string Code, string DisplayName, string FlagPath)> _availableCultures = new()
+    {
+        ("de-DE", "Deutsch", "_content/MatheHero.Shared/css/icons/Icon_DE.svg"),
+        ("en-US", "English", "_content/MatheHero.Shared/css/icons/Icon_EN.svg"),
+        ("it-IT", "Italiano", "_content/MatheHero.Shared/css/icons/Icon_IT.svg")
+    };
+
+    protected override void OnInitialized()
+    {
+        currentCulture = CultureInfo.CurrentUICulture.Name;
+
+        currentUser = AuthStateService.GetCurrentUserStatus();
+        currentAuth = AuthStateService.GetCurrentAuthStatus();
+
+        _isInitialized = true;
+        StateHasChanged();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        currentCulture = CultureInfo.CurrentUICulture.Name;
+
+        currentUser = AuthStateService.GetCurrentUserStatus();
+        currentAuth = AuthStateService.GetCurrentAuthStatus();
+
+        _isInitialized = true;
+        StateHasChanged();
+    }
+
+}

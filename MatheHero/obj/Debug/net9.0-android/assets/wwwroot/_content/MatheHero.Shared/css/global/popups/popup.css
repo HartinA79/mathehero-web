@@ -1,42 +1,148 @@
-.popup-overlay {
+/*.popup-overlay {
     position: fixed;
     left: 0;
+    top: 0;
     height: 100vh;
     width: 100vw;
     background-color: transparent;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     z-index: 1000;
     overflow: auto;
     padding-top: 2rem;
 }
-.web {
-    top: 100px;
-}
 
-.maui {
-    top: 100px;
-}
-
-.popup-content-web {
-    background: white;
-    max-height: 85vh;
+.popup-content {
+    background: var(--col_white);
     max-width: 90vw;
-    width: 90vw;
+    height: auto;
     overflow: auto;
-    padding: 1rem;
+    padding: 1rem 5rem;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-.popup-content-maui {
-    background: white;
+.popup-content.web {
     max-height: 75vh;
-    max-width: 90vw;
-    width: 90vw;
-    overflow: auto;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    width: 35vw;
 }
+
+    .popup-content.maui {
+        max-height: 60vh;
+        width: 90vw;
+        padding: 1rem 2rem;
+    }
+
+.school-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.school-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .school-item:hover {
+        background-color: #f0f0f0;
+    }
+
+.selected-school {
+    background-color: #e9f7ef;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.form-group {
+    padding-bottom: 15px !important;
+}
+
+.choose-login-container .btn {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+hr.my-4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid var(--col_disabled);
+}
+
+.popup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+    .popup-grid button {
+        width: 100%;
+    }*/
+
+    /* .popup-avatar-grid { ... } kannst du bei Bedarf wieder aktivieren */
+
+    /*.popup-grid img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        border: 2px solid transparent;
+    }
+
+        .popup-grid img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .popup-grid img.selected {
+            transform: scale(1.15);
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+        }*/
+
+/* RESPONSIVE */
+
+/*@media (max-width: 768px) {
+    .popup-content {
+        padding: 20px;
+        width: 90%;
+        max-height: 85vh;
+    }
+}
+
+@media (min-width: 600px) {
+    
+}
+
+@media (min-width: 1024px) {
+    
+}
+
+@media (max-height: 600px) {
+    .popup-content {
+        max-height: calc(90vh - var(--header_height));
+        padding: 15px;
+    }
+
+    .popup-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 5px;
+    }
+
+        .popup-grid img {
+            width: 60px;
+            height: 60px;
+        }
+}*/

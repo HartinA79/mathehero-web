@@ -5,7 +5,9 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Sha
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_ToastOK.svg
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\app.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_IT.svg
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\text\text.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_ToastWarnung.svg
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\links\links.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\button\toggleSwitch.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\UserInfo_close.svg
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\popups\popup.css
@@ -14,7 +16,6 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Sha
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_Info_white.svg
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\page\companyScreen.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\button\menuButton.css
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\popups\loginPopup.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_EN.svg
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\button\circleButton.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_DE.svg
@@ -23,6 +24,7 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Sha
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\general\globalVariables.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_Chat.svg
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_ToastFehler.svg
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\responsive.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\icons\Icon_Book.svg
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\wwwroot\css\global\page\mainLayout.css
 wwwroot\app.css
@@ -33,12 +35,14 @@ wwwroot\css\global\button\circleButton.css
 wwwroot\css\global\button\loginButton.css
 wwwroot\css\global\button\menuButton.css
 wwwroot\css\global\button\toggleSwitch.css
+wwwroot\css\global\links\links.css
 wwwroot\css\global\navigation\mainNavigation.css
 wwwroot\css\global\page\companyScreen.css
 wwwroot\css\global\page\loadingScreen.css
 wwwroot\css\global\page\mainLayout.css
-wwwroot\css\global\popups\loginPopup.css
 wwwroot\css\global\popups\popup.css
+wwwroot\css\global\responsive.css
+wwwroot\css\global\text\text.css
 wwwroot\css\icons\Icon_Book.svg
 wwwroot\css\icons\Icon_Chat.svg
 wwwroot\css\icons\Icon_DE.svg
@@ -57,5 +61,8 @@ wwwroot\css\images\MainBackground.png
 wwwroot\css\images\MainBackground.png.meta
 wwwroot\css\images\MatheHeroCharacter.png
 wwwroot\favicon.png
+wwwroot\fonts\ComicNeue-Bold.ttf
+wwwroot\fonts\ComicNeue-Italic.ttf
+wwwroot\fonts\ComicNeue-Regular.ttf
 wwwroot\fonts\Humor.ttf
 wwwroot\fonts\Humor.ttf.meta

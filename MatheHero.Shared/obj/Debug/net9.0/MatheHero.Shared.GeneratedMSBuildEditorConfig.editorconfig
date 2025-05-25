@@ -116,12 +116,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXEJhc2VTdHJpbmdMb2NhbGl6ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Navigation/MainNavigation.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXE5hdmlnYXRpb25cTWFpbk5hdmlnYXRpb24ucmF6b3I=
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Navigation/StudentNavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXE5hdmlnYXRpb25cU3R1ZGVudE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/MainStudent.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcTWFpblN0dWRlbnQucmF6b3I=
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/Exercises.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xFeGVyY2lzZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/Games.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xHYW1lcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/Learning.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xMZWFybmluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/Messages.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xNZXNzYWdlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/Setting.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xTZXR0aW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/SettingComponents/AppSettingsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xTZXR0aW5nQ29tcG9uZW50c1xBcHBTZXR0aW5nc0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/SettingComponents/ClassJoinComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xTZXR0aW5nQ29tcG9uZW50c1xDbGFzc0pvaW5Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/SettingComponents/LanguageSettingsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xTZXR0aW5nQ29tcG9uZW50c1xMYW5ndWFnZVNldHRpbmdzQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Components/SettingComponents/ProfileSettingsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcQ29tcG9uZW50c1xTZXR0aW5nQ29tcG9uZW50c1xQcm9maWxlU2V0dGluZ3NDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Student/StudentLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VzXFN0dWRlbnRcU3R1ZGVudExheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ahart/Documents/HAvision/MatheHeroNeu/MatheHero/MatheHero/MatheHero.Shared/Shared/Pages/Teacher/MainTeacher.razor]

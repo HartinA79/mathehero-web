@@ -1,5 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Text.Json;
 using MatheHero.Shared.Helper;
@@ -77,10 +78,16 @@ namespace MatheHero.Shared.Shared.Service
             if (documentElement.ValueKind == JsonValueKind.Undefined)
                 return new UserModel();
 
-            var fields = documentElement.GetProperty("document").GetProperty("fields");
+            var document = documentElement.GetProperty("document");
+            var namePath = document.GetProperty("name").GetString();
+
+            var dokumentId = namePath?.Split('/').Last() ?? "";
+
+            var fields = document.GetProperty("fields");
 
             UserModel user = new UserModel
             {
+                DokumentId = dokumentId,
                 AvatarPfad = fields.GetProperty("AvatarPfad").GetProperty("stringValue").GetString() ?? "",
                 Email = fields.GetProperty("Email").GetProperty("stringValue").GetString() ?? "",
                 Klassenstufe = int.Parse(fields.GetProperty("KlassenStufe").GetProperty("integerValue").GetString() ?? "0"),
@@ -549,6 +556,67 @@ namespace MatheHero.Shared.Shared.Service
                     Success = true,
                     Message = "Dokument erfolgreich erstellt",
                     DocumentId = docId
+                };
+            }
+            catch (Exception ex)
+            {
+                return new FirestoreResult
+                {
+                    Success = false,
+                    Message = $"{ex.Message}"
+                };
+            }
+        }
+
+        public async Task<FirestoreResult> UpdateUserAsync(string idToken, UserModel user)
+        {
+            var url = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/users/{user.DokumentId}?updateMask.fieldPaths=AvatarPfad&updateMask.fieldPaths=UserName&updateMask.fieldPaths=KlassenStufe";
+
+
+            var payload = new
+            {
+                fields = new Dictionary<string, object>
+                {
+                    { "AvatarPfad", new { stringValue = user.AvatarPfad ?? "" } },
+                    { "UserName", new { stringValue = user.UserName ?? "" } },
+                    { "KlassenStufe", new {integerValue = user.Klassenstufe} }
+                },
+             };
+
+            var json = JsonSerializer.Serialize(payload);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            try
+            {
+                var request = new HttpRequestMessage(HttpMethod.Patch, url);
+                request.Headers.Add("Authorization", $"Bearer {idToken}");
+                request.Content = content;
+
+                var response = await _httpClient.SendAsync(request);
+
+                //var response = await _httpClient.PutAsync(url, content);
+                var responseBody = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var error = JsonSerializer.Deserialize<JsonElement>(responseBody);
+                    var errorMessage = error.GetProperty("error").GetProperty("message").GetString();
+                    return new FirestoreResult
+                    {
+                        Success = false,
+                        Message = $"UpdateUser: {errorMessage}"
+                    };
+                }
+
+                //var result = JsonSerializer.Deserialize<JsonElement>(responseBody);
+                //var fullDocName = result.GetProperty("name").GetString();
+                //var docId = fullDocName?.Split('/').Last();
+
+                return new FirestoreResult
+                {
+                    Success = true,
+                    Message = "User erfolgreich aktualisiert",
+                    DocumentId = user.DokumentId
                 };
             }
             catch (Exception ex)

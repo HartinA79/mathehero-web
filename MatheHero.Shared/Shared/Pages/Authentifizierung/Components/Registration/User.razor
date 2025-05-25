@@ -14,28 +14,28 @@
 @inject ToastService ToastService
 
 <div class="form-group">
-	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.Benutzername]</label>
+	<label class="popup-text-label">@_localizer[RegistrationResourceKeys.Benutzername]</label>
 	<input type="text" class="form-control mb-2" @bind="Model.UserName" placeholder="@_localizer[RegistrationResourceKeys.PlaceholderBenutzername]" />
 
-	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.Email]</label>
+	<label class="popup-text-label">@_localizer[RegistrationResourceKeys.Email]</label>
 	<input type="text" class="form-control mb-2" @bind="Model.Email" placeholder="@_localizer[RegistrationResourceKeys.PlaceholderEmail]" />
 
-	<label class="popup-subheader-text">@_localizer[RegistrationResourceKeys.Passwort]</label>
+	<label class="popup-text-label">@_localizer[RegistrationResourceKeys.Passwort]</label>
 	<input type="text" class="form-control mb-2" @bind="Model.Password" placeholder="@_localizer[RegistrationResourceKeys.PlaceholderPasswort]" />
 </div>
 
 @if (isLoading)
 {
 	<div class="spinner-overlay">
-		<div class="spinner-border text-primary" role="status">
+		<div class="spinner-border" role="status">
 			<span class="visually-hidden">Lade...</span>
 		</div>
 	</div>
 }
 
-<div class="text-center mt-1">
+<div class="mt-2 d-flex gap-2">
 	@* <button class="btn btn-menu-primary" @onclick="OnBack">@_localizer[RegistrationResourceKeys.Zurueck]</button> *@
-	<button class="btn btn-menu-primary" @onclick="RegisterClicked">@_localizer[RegistrationResourceKeys.Weiter]</button>
+	<button class="btn-login flex-1" @onclick="RegisterClicked">@_localizer[RegistrationResourceKeys.Weiter]</button>
 </div>
 
 @code {

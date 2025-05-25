@@ -1,4 +1,4 @@
-html, body {
+/*html, body {
     font-family: 'Humor', sans-serif;
     height: 100%;
     margin: 0;
@@ -7,12 +7,9 @@ html, body {
 }
 
 .body {
-    margin: 0;
-    padding: 0;
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    overflow: hidden;
 }
     body.company-screen-background {
         background-color: white;
@@ -22,10 +19,6 @@ html, body {
 body.main-content-background {
     background: url('../../images/MainBackground.png') no-repeat center center fixed;
     background-size: cover;
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
 }
 
 .custom-spaceline {
@@ -68,29 +61,18 @@ a, .btn-link {
         background-color: var(--col_selected);
     }
 
-.btn-selected {
-    width: 7em;
-    height: var(--button_standardsize);
-    background: var(--col_selected);
-    /*color: var(--col_white);*/
-    font-size: var(--text_size_M);
-    font-weight: 200;
-    border: 1px solid var(--col_highlight);
-    border-radius: 5px;
-}
-
 .spinner-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.6); /* halbtransparentes Weiß */
-    display: flex;
+    background-color: rgba(255, 255, 255, 0.6);*/ /* halbtransparentes Weiß */
+    /*display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1050; /* höher als alles andere */
-}
+    z-index: 1050;*/ /* höher als alles andere */
+/*}
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -136,7 +118,7 @@ h1:focus {
     }
 
     .custom-spaceline {
-        height: 20px;
+        height: 10px;
     }
 }
 
@@ -148,4 +130,4 @@ h1:focus {
     .custom-spaceline {
         height: 30px;
     }
-}
+}*/

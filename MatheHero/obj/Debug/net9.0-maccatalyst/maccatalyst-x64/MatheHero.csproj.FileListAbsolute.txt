@@ -281,8 +281,8 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\bin
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\it-IT\MatheHero.Shared.resources.dll
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\scopedcss\bundle\MatheHero.styles.css
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\xdce9ar1uh-obgb1x923p.gz
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\nwlh1oojlt-iioic14d3h.gz
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\zg1t9rospf-5fcvsqxczv.gz
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\nwlh1oojlt-ivy7dhjnck.gz
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\zg1t9rospf-8e9tan0s9s.gz
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\staticwebassets.build.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\staticwebassets.development.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\staticwebassets.build.endpoints.json
@@ -293,9 +293,9 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\staticwebassets\msbuild.buildTransitive.MatheHero.props
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\staticwebassets.pack.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\staticwebassets.upToDateCheck.txt
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\publish\zg1t9rospf-5fcvsqxczv.br
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\publish\zg1t9rospf-8e9tan0s9s.br
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\publish\xdce9ar1uh-obgb1x923p.br
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\publish\nwlh1oojlt-iioic14d3h.br
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\compressed\publish\nwlh1oojlt-ivy7dhjnck.br
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\staticwebassets.publish.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\staticwebassets.publish.endpoints.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\mauiimage.inputs
@@ -341,6 +341,7 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MatheHero.AssemblyInfo.cs
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MatheHero.csproj.CoreCompileInputs.cache
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MatheHero.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MatheHero.sourcelink.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\XamlC.stamp
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MatheHero.csproj.Up2Date
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\MatheHero.dll

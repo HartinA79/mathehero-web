@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ivy7dhjnck"},{"Name":"integrity","Value":"sha256-Tq35eBrEqPUp1/MBOwdCw3yRXFQj6U1NXYdm\u002BUm1N2M="},{"Name":"label","Value":"index.html"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"926"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022Tq35eBrEqPUp1/MBOwdCw3yRXFQj6U1NXYdm\u002BUm1N2M=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 03:27:22 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="MatheHero.ggc7zrc2a5.styles.css">
+    <StaticWebAssetEndpoint Include="MatheHero.8e9tan0s9s.styles.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.styles.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ggc7zrc2a5"},{"Name":"integrity","Value":"sha256-0Mk0DZmiuC9eYJvkKJ8e81VfZ8gdwfcvEYcv/MB8eWU="},{"Name":"label","Value":"MatheHero.styles.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"83"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00220Mk0DZmiuC9eYJvkKJ8e81VfZ8gdwfcvEYcv/MB8eWU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 07:11:02 GMT"},{"Name":"Link","Value":"\u003C_content/MatheHero.Shared/MatheHero.Shared.atixt52v5g.bundle.scp.css\u003E; rel=\u0022preload\u0022; as=\u0022style\u0022"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8e9tan0s9s"},{"Name":"integrity","Value":"sha256-0NqBd1jT1NlwR6VqxxbdnYsHTD2ZzPTJlMj0yK/Bi4w="},{"Name":"label","Value":"MatheHero.styles.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"83"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00220NqBd1jT1NlwR6VqxxbdnYsHTD2ZzPTJlMj0yK/Bi4w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 04:50:33 GMT"},{"Name":"Link","Value":"\u003C_content/MatheHero.Shared/MatheHero.Shared.omsygzxpbh.bundle.scp.css\u003E; rel=\u0022preload\u0022; as=\u0022style\u0022"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="MatheHero.styles.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.styles.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0Mk0DZmiuC9eYJvkKJ8e81VfZ8gdwfcvEYcv/MB8eWU="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"83"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00220Mk0DZmiuC9eYJvkKJ8e81VfZ8gdwfcvEYcv/MB8eWU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 17 May 2025 07:11:02 GMT"},{"Name":"Link","Value":"\u003C_content/MatheHero.Shared/MatheHero.Shared.atixt52v5g.bundle.scp.css\u003E; rel=\u0022preload\u0022; as=\u0022style\u0022"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0NqBd1jT1NlwR6VqxxbdnYsHTD2ZzPTJlMj0yK/Bi4w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"83"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00220NqBd1jT1NlwR6VqxxbdnYsHTD2ZzPTJlMj0yK/Bi4w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 24 May 2025 04:50:33 GMT"},{"Name":"Link","Value":"\u003C_content/MatheHero.Shared/MatheHero.Shared.omsygzxpbh.bundle.scp.css\u003E; rel=\u0022preload\u0022; as=\u0022style\u0022"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

@@ -9,8 +9,18 @@
 @inject IPlatformService Platform
 @inject IJSRuntime JS
 
-<div class="company-screen-container">
+@* <div class="company-screen-container">
 	<img src="_content/MatheHero.Shared/css/images/HAvision.png" alt="Ladevorgang" class="company-picture" />
+</div> *@
+
+<!-- ─────────────────────────────────────────────────────────────
+	 ZENTRIERTE LOGO-SEITE
+	 • Flex-Container füllt den Viewport
+	 • Logo skaliert max. 60 % Breite, max. 320 px
+───────────────────────────────────────────────────────────── -->
+
+<div class="full-screen no-offset flex flex-center bg-white">
+	<img src="_content/MatheHero.Shared/css/images/HAvision.png" alt="Ladevorgang" style="max-width:60vw; width:320px; height:auto;" />
 </div>
 
 @code {

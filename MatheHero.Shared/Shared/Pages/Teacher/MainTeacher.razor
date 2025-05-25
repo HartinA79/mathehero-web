@@ -14,8 +14,8 @@
 
 @if (isAuthorized)
 {
-	<div class="popup-overlay @(Platform.IsRunningInMaui() ? "maui" : "web")" @onclick="ClosePopup">
-		<div class="@(Platform.IsRunningInMaui() ? "popup-content-maui" : "popup-content-web")" @onclick:stopPropagation>
+	<div class="popup-overlay" @onclick="ClosePopup">
+		<div class="popup-content @(Platform.IsRunningInMaui() ? "maui" : "web")" @onclick:stopPropagation>
 			<h1>Lehrerseite</h1>
 			<p>Dies ist ein zentriertes Popup.</p>
 			<p>Dies ist ein zentriertes Popup.</p>

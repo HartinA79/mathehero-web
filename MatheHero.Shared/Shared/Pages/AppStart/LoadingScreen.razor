@@ -17,12 +17,27 @@
 @inject AuthStateService AuthStateService
 @inject IJSRuntime JS
 
-<div class="loading-screen-container">
+@* <div class="loading-screen-container">
 	<div class="loading-screen-content">
 		<h1 class="header-text">MATHE - HERO</h1>
 		<img src="_content/MatheHero.Shared/css/images/MatheHeroCharacter.png" alt="App-Image" class="loading-image" />
 		<progress max="@MaxValue" value="@ProgressValue"></progress>
 		<p class="label-text">@_localizer[LoadingScreenResourceKeys.LabelText]</p>
+	</div>
+</div> *@
+
+<!-- ─────────────────────────────────────────────────────────────
+	 LADEN-SCREEN
+	 • Karte zentriert, max. 24 rem breit
+	 • Progressbar volle Breite der Karte
+───────────────────────────────────────────────────────────── -->
+
+<div class="flex flex-center" style="min-height: 100dvh;">
+	<div class="card flex flex-column flex-center text-center" style="width:100%; max-width:24rem;">
+		<h1 class="mb-2" style="font-weight: 700;">MATHE - HERO</h1>
+		<img src="_content/MatheHero.Shared/css/images/MatheHeroCharacter.png" alt="App-Image" class="mb-2" style="width:50%;max-width:200px;height:auto;" />
+		<progress max="@MaxValue" value="@ProgressValue" style="width:100%;height:1rem;" class="mb-1"></progress>
+		<p class="mt-1">@_localizer[LoadingScreenResourceKeys.LabelText]</p>
 	</div>
 </div>
 
@@ -68,16 +83,16 @@
 					if (Platform.IsRunningInMaui())
 					{
 						if (AuthStateService.CurrentUser.Rolle == "Lehrer")
-							Navigation.NavigateTo("/mainteacher");
+							Navigation.NavigateTo("/dashboard");
 						else if (AuthStateService.CurrentUser.Rolle == "Schüler")
-							Navigation.NavigateTo("/mainstudent");
+							Navigation.NavigateTo("/dashboard");
 					}
 					else
 					{
 						if (AuthStateService.CurrentUser.Rolle == "Lehrer")
-							Navigation.NavigateTo("/mainteacher", forceLoad: true);
+							Navigation.NavigateTo("/dashboard", forceLoad: true);
 						else if (AuthStateService.CurrentUser.Rolle == "Schüler")
-							Navigation.NavigateTo("/mainstudent", forceLoad: true);
+							Navigation.NavigateTo("/dashboard", forceLoad: true);
 					}
 				}
 				else

@@ -1,0 +1,63 @@
+﻿@using MatheHero.Shared.Resources.Shared.Pages.Student.Components
+@using MatheHero.Shared.Shared.Interface
+@using Microsoft.JSInterop
+@using MatheHero.Shared.Services
+@using System.Globalization
+
+@inject NavigationManager Navigation
+@inject IStringLocalizer<Setting> _localizer
+@inject IJSRuntime JS
+@inject ILanguageService LanguageService
+@inject IPlatformService Platform
+
+<div class="card flex flex-column gap-3">
+    <h3 class="text-center">
+        <i class="fa fa-language"></i> @_localizer[SettingResourceKeys.SpracheAuswaehlen]
+    </h3>
+
+    <div class="flex flex-center gap-3">
+
+        <button class="@GetButtonClass("de-DE")" @onclick="@(() => ChangeCulture("de-DE"))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_DE.svg" alt="Deutsch" class="flag-icon" />
+            <span>@_localizer[SettingResourceKeys.SpracheDeutsch]</span>
+        </button>
+
+        <button class="@GetButtonClass("en-US")" @onclick="@(() => ChangeCulture("en-US"))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_EN.svg" alt="English" class="flag-icon" />
+            <span>@_localizer[SettingResourceKeys.SpracheEnglisch]</span>
+        </button>
+
+        <button class="@GetButtonClass("it-IT")" @onclick="@(() => ChangeCulture("it-IT"))">
+            <img src="_content/MatheHero.Shared/css/icons/Icon_IT.svg" alt="Italiano" class="flag-icon" />
+            <span>@_localizer[SettingResourceKeys.SpracheItalienisch]</span>
+        </button>
+    </div>
+</div>
+
+@code {
+    private string CurrentCulture = CultureInfo.CurrentUICulture.Name;
+
+    private async Task ChangeCulture(string cultureCode)
+    {
+        LanguageService.SetCulture(cultureCode);
+
+        if (Platform.IsRunningInMaui())
+        {
+            var current = Navigation.Uri;
+            Navigation.NavigateTo("/basepage");
+            await Task.Delay(50);
+            Navigation.NavigateTo(current, forceLoad: false);
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("setCulture", cultureCode);
+        }
+    }
+
+    private string GetButtonClass(string cultureCode)
+    {
+        return CurrentCulture == cultureCode
+            ? "btn btn-outline btn-selected flex flex-column flex-center"
+            : "btn btn-outline flex flex-column flex-center";
+    }
+}

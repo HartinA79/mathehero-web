@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vtubfqn3bd</Fingerprint>
-      <Integrity>07dx8DphI9Q3VuNRWb5SVVRW27GK0rlJFAJbmkbjLD8=</Integrity>
+      <Fingerprint>akcfhr4e1s</Fingerprint>
+      <Integrity>WqqSi3bVDz0GyjfUgI+JPnRwA4e4aFMLr1IWanCjNyk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lp85f7nsyi</Fingerprint>
-      <Integrity>WRaipPVM3Gw2ayMspeA70Iq/Hi+wPe8BifPInigSb3k=</Integrity>
+      <Fingerprint>9ywlx0ejiq</Fingerprint>
+      <Integrity>7wRn2TRDFIDFNamduA3/3FYluJY+32kVJWjMgOQCI4Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\button\loginButton.css'))</OriginalItemSpec>
@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ap92ywexkf</Fingerprint>
-      <Integrity>np/2zIiUqrZTRGhZGtXHLEpA2re3LCyHguR2Qp7bgiE=</Integrity>
+      <Fingerprint>ddl8tjztcy</Fingerprint>
+      <Integrity>MfcHT8+DnlFliCrCtuepZSNpd2QULcDiyPEm3O7C4lM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\button\menuButton.css'))</OriginalItemSpec>
@@ -144,6 +144,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\button\toggleSwitch.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\links\links.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MatheHero.Shared</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MatheHero.Shared</BasePath>
+      <RelativePath>css/global/links/links.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qu51cw3a0c</Fingerprint>
+      <Integrity>HnCLRpG1SkDJW+l07rLUriZbme5fk3Y92zuH+uuXB7Q=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\links\links.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\navigation\mainNavigation.css'))">
       <SourceType>Package</SourceType>
       <SourceId>MatheHero.Shared</SourceId>
@@ -156,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7mirguw96l</Fingerprint>
-      <Integrity>AeGm/Juegtq9xYdQ8x0IAruHOTq+XXmJXrF/n+njawE=</Integrity>
+      <Fingerprint>0waa6vqiap</Fingerprint>
+      <Integrity>oBch8oldTlMhxdzoZXO9wKiO63ezLd3k3eftMEE80dQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\navigation\mainNavigation.css'))</OriginalItemSpec>
@@ -174,8 +192,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n42v5ugbe0</Fingerprint>
-      <Integrity>hzlR4y8M9shlCwAU3wvCNDladRTgPC9Bl19ktBh5ZXI=</Integrity>
+      <Fingerprint>bzefnyd2s5</Fingerprint>
+      <Integrity>aXeNtfKKKMqgo0g1N/mqDvwku0yJ/mzBE1ou2WuFrJU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\page\companyScreen.css'))</OriginalItemSpec>
@@ -192,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lc26arpx7j</Fingerprint>
-      <Integrity>m0iqNssvgrndAt+QINX8BtKoBnakBRqSsZUemZHbxi8=</Integrity>
+      <Fingerprint>b6v9zgkltz</Fingerprint>
+      <Integrity>7TbcoB5PihfAOrytwW+LRXnrzraesMAeAxWT3MtqmH0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\page\loadingScreen.css'))</OriginalItemSpec>
@@ -210,29 +228,11 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>k2qt4dl03d</Fingerprint>
-      <Integrity>PFHZsTo7FT0JbYIIqXS6ZtCp6nX7xbN/dp/1ImYlLt4=</Integrity>
+      <Fingerprint>d6p2ykf3cl</Fingerprint>
+      <Integrity>CzKFEQ12nSi45+2JQhmE2Xqc0bRXo+tgHjjhbZrsR/E=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\page\mainLayout.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\popups\loginPopup.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>MatheHero.Shared</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/MatheHero.Shared</BasePath>
-      <RelativePath>css/global/popups/loginPopup.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1gd2d06usj</Fingerprint>
-      <Integrity>kb38u0LgxCsuR+xLS/XD6+axRBoguur3lKt0Zh2McA0=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\popups\loginPopup.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\popups\popup.css'))">
       <SourceType>Package</SourceType>
@@ -246,11 +246,47 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4r2pwxs15n</Fingerprint>
-      <Integrity>MB46BbtKIfUy0Vf5WIypQHXWXIY2IOjHI/Iealv+awQ=</Integrity>
+      <Fingerprint>85rfpm5ir1</Fingerprint>
+      <Integrity>1CcvCv3fERCIWpSBh5p7nrgjt+NiGIyRq2TEd943sHQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\popups\popup.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\responsive.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MatheHero.Shared</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MatheHero.Shared</BasePath>
+      <RelativePath>css/global/responsive.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>a4ea6m99i7</Fingerprint>
+      <Integrity>Buxek9EE2O/r4fjK3tEZJbY4knUXmphJ1u3gcjjPk34=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\responsive.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\text\text.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MatheHero.Shared</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MatheHero.Shared</BasePath>
+      <RelativePath>css/global/text/text.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hv2lpb5ib1</Fingerprint>
+      <Integrity>zZaPDskrCS8kM/PiXLeQqpCUUww8q+NgzzTilBsLjVM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\text\text.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\icons\Icon_Book.svg'))">
       <SourceType>Package</SourceType>
@@ -576,6 +612,60 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\ComicNeue-Bold.ttf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MatheHero.Shared</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MatheHero.Shared</BasePath>
+      <RelativePath>fonts/ComicNeue-Bold.ttf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>thrzj2oqil</Fingerprint>
+      <Integrity>D08ILhu8LmHS69+pt2dKCEg9uXjppdYeE9pHIltCBKQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\ComicNeue-Bold.ttf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\ComicNeue-Italic.ttf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MatheHero.Shared</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MatheHero.Shared</BasePath>
+      <RelativePath>fonts/ComicNeue-Italic.ttf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>rkiz33qysd</Fingerprint>
+      <Integrity>NcidBXodRMj6ZosUXktzzxWFoSm1KKekXWHeaqtemco=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\ComicNeue-Italic.ttf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\ComicNeue-Regular.ttf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MatheHero.Shared</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MatheHero.Shared</BasePath>
+      <RelativePath>fonts/ComicNeue-Regular.ttf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>v0e3bkwqck</Fingerprint>
+      <Integrity>v6ThfOg9i9o8rMwlor5Voh+J8U2ilehmqCAuu/u2n6s=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\ComicNeue-Regular.ttf'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\Humor.ttf'))">
       <SourceType>Package</SourceType>
       <SourceId>MatheHero.Shared</SourceId>
@@ -612,23 +702,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fonts\Humor.ttf.meta'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.Shared.pqutx30653.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.Shared.omsygzxpbh.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>MatheHero.Shared</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MatheHero.Shared</BasePath>
-      <RelativePath>MatheHero.Shared.pqutx30653.bundle.scp.css</RelativePath>
+      <RelativePath>MatheHero.Shared.omsygzxpbh.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>pqutx30653</Fingerprint>
-      <Integrity>H5JmdzHyQHnIpNipGe6EFOctDLgJkmWOaYWaCe524lQ=</Integrity>
+      <Fingerprint>omsygzxpbh</Fingerprint>
+      <Integrity>kG5U3aH4nPedmW3eU/xI7QNGWwenkgQjiHzZW89W+Kc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.Shared.pqutx30653.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MatheHero.Shared.omsygzxpbh.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

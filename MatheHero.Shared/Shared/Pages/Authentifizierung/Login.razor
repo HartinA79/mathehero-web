@@ -1,16 +1,24 @@
 ﻿@page "/login"
 @using MatheHero.Shared.Models
 @using MatheHero.Shared.Resources.Shared.Pages.Authentifizierung
+@using MatheHero.Shared.Shared.Interface
 @using MatheHero.Shared.Shared.Pages.Authentifizierung
 @using MatheHero.Shared.Shared.Pages.Authentifizierung.Components
 @using MatheHero.Shared.Shared.Pages.Authentifizierung.Components.Login
 @using Microsoft.Extensions.Localization
 
 @inject IStringLocalizer<Login> _localizer
+@inject IPlatformService Platform
 
-<div class="login-popup-container">
-	<div class="login-popup-body">
-		<h3 class="popup-header-text">
+<!-- ─────────────────────────────────────────────────────────────
+     LOGIN-POPUP
+     • Vollbild-Wrapper ohne Overlay-Verdunklung
+     • Card max. 24 rem breit, zentriert
+───────────────────────────────────────────────────────────── -->
+
+<div class="overlay-screen @(Platform.IsRunningInMaui() ? "maui" : "web")">
+	<div class="card @(Platform.IsRunningInMaui() ? "maui" : "web") text-center">
+		<h3 class="mb-2" style="font-weight:700;">
 			@if (currentView == LoginView.Gast) {
 				@_localizer[LoginResourceKeys.AnmeldungGast]
 			} 
@@ -36,7 +44,7 @@
 	private RenderFragment RenderActiveComponent() => currentView switch
 	{
 		LoginView.Email => @<EmailLogin OnBack="()=>currentView = LoginView.Choose" />,
-		LoginView.Google => @<GoogleLogin OnBack="()=>currentView = LoginView.Choose" />,
+		// LoginView.Google => @<GoogleLogin OnBack="()=>currentView = LoginView.Choose" />,
 		LoginView.Gast => @<GastLogin OnBack="()=>currentView = LoginView.Choose" />,
 		_ => @<ChooseLogin OnSelectLogin="OnSelectLogin" />
 	};

@@ -34,5 +34,5 @@
     --col_button_login: linear-gradient(to bottom, var(--col_main_light), var(--col_white));
     --button_standardsize: 40px;
     /*Hintergrund*/
-    --header_height: 80px;
+    --header_height: 100px;
 }
