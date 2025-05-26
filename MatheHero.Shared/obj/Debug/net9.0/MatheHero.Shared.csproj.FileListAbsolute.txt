@@ -19,6 +19,12 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Sha
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.BaseStringLocalizer.de-DE.resources
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.BaseStringLocalizer.en-US.resources
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.BaseStringLocalizer.it-IT.resources
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Exercises.de-DE.resources
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Exercises.en-US.resources
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Exercises.it-IT.resources
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Setting.de-DE.resources
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Setting.en-US.resources
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Setting.it-IT.resources
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Toast.Toast.de-DE.resources
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Toast.Toast.en-US.resources
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Toast.Toast.it-IT.resources
@@ -50,6 +56,7 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Sha
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\compressed\4cg6t1t9qd-b6v9zgkltz.gz
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\compressed\zxcsicecnz-d6p2ykf3cl.gz
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\compressed\k259a03fck-85rfpm5ir1.gz
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\compressed\z2lrbrktyb-bp8enjlqsc.gz
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\compressed\ddwoqtlhgq-hv2lpb5ib1.gz
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\compressed\z7a87awve9-clevhvqpt2.gz
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\compressed\y3kg53eial-zr4yz052nl.gz
@@ -80,7 +87,3 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Sha
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\refint\MatheHero.Shared.dll
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.pdb
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\ref\MatheHero.Shared.dll
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\compressed\z2lrbrktyb-a4ea6m99i7.gz
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Setting.de-DE.resources
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Setting.en-US.resources
-C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\MatheHero.Shared.Resources.Shared.Pages.Student.Components.Setting.it-IT.resources

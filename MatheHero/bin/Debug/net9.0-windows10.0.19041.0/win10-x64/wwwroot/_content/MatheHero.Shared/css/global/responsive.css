@@ -39,12 +39,11 @@ html,body{
     font-size:clamp(1rem,.875rem + .25vw,1.125rem);
     line-height:1.6;
     color:var(--default-text-color,#2E2A1C);
-    background:var(--col_highlight,#F2EDDC);
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
 }
 
-body{
+body {
     background:url("../images/MainBackground.png") no-repeat center center fixed,var(--col_highlight,#F2EDDC);
     background-size:cover;
 }
@@ -84,7 +83,14 @@ body{
     max-width:1200px;
     margin-inline:auto;
     padding-inline:var(--space-2);
-} 
+}
+
+.exercise-container {
+    width: 100%;
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-inline: var(--space-2);
+}
 
 .flex{
     display:flex;
@@ -118,14 +124,15 @@ body{
 }
 
 .grid-2 {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    /*grid-template-columns: repeat(2,1fr);*/
 } 
 
 .grid-3{
     grid-template-columns:repeat(3,1fr);
 } 
 
-@media(max-width:400px){
+@media(max-width:350px){
     .grid-2,.grid-3{
         grid-template-columns:1fr;
     }
@@ -243,8 +250,11 @@ body{
 
 .welcome-text{
     font-size:.9rem;
-} 
+}
 
+.fa {
+    color: #584E34 !important;
+}
 
 
 /* Navbar toggler */

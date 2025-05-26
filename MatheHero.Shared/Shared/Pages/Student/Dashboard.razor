@@ -3,23 +3,45 @@
 @using MatheHero.Shared.Models
 @using MatheHero.Shared.Resources.Shared.Pages
 @using System.Globalization
+@using MatheHero.Shared.Shared.Interface
 @layout StudentLayout
 
 @inject IStringLocalizer<BaseStringLocalizer> _baseLocalizer
 @inject AuthStateService AuthStateService
+@inject IFirestoreService FirestoreService
 
 <div class="container my-4">
     <div class="flex flex-center flex-column gap-3">
         <!-- Persönliche Begrüßung -->
         @* <section class="card flex flex-center gap-2"> *@
-            <NavLink href="/student/settings" class="card flex flex-center gap-2 btn" style="cursor:pointer;">
-                <img src="@currentUser.AvatarPfad" class="avatar-icon" alt="User Avatar">
-                <div>
-                    <h2>@($"{_baseLocalizer[BaseStringLocalizerResourceKeys.WelcomeUser]} {currentUser.UserName}!")</h2>
-                    <p class="welcome-text">@_baseLocalizer[BaseStringLocalizerResourceKeys.WelcomeMessage]</p>
-                </div>
-            </NavLink>
-            
+        <NavLink href="/student/settings" class="card flex flex-center gap-2 btn" style="cursor:pointer;">
+            <img src="@currentUser.AvatarPfad" class="avatar-icon" alt="User Avatar">
+            <div>
+                <h2>@($"{_baseLocalizer[BaseStringLocalizerResourceKeys.WelcomeUser]} {currentUser.UserName}!")</h2>
+                @if (currentUser.SchulId != null)
+                {
+                    <p class="welcome-text">
+                        <strong>@_baseLocalizer[BaseStringLocalizerResourceKeys.DeineSchule]</strong>
+                        <span style="font-size: 0.8em;">@currentSchule.Name, @currentSchule.ZipCode @currentSchule.Ort</span>
+                    </p>
+                }
+                <p class="welcome-text">
+                    <strong>@_baseLocalizer[BaseStringLocalizerResourceKeys.DeineKlassenstufe]</strong>
+                    <span style="font-size: 0.8em;">@GetClassName(currentUser.Klassenstufe)</span>
+                </p>
+                @if (currentUser.ClassCode != "")
+                {
+                    <p class="welcome-text">
+                        <strong>@_baseLocalizer[BaseStringLocalizerResourceKeys.DeineKlasse]</strong>
+                        <span style="font-size:0.8em;">@currentClass</span>
+                    </p>
+                }
+
+                <p class="welcome-text mt-3">@_baseLocalizer[BaseStringLocalizerResourceKeys.WelcomeMessage]</p>
+
+            </div>
+        </NavLink>
+
         @* </section> *@
 
         <!-- Karten mit Schnellzugriff -->
@@ -65,11 +87,27 @@
 
     private AuthResult currentAuth;
 
+    private SchuleModel currentSchule = new();
+
+    private string currentClass;
+
     private bool _isInitialized = false;
 
     private bool _isShowMenu = false;
 
     private string currentCulture;
+
+    private string GetClassName(int classNumber)
+    {
+        return classNumber switch
+        {
+            1 => _baseLocalizer[BaseStringLocalizerResourceKeys.Klasse1],
+            2 => _baseLocalizer[BaseStringLocalizerResourceKeys.Klasse2],
+            3 => _baseLocalizer[BaseStringLocalizerResourceKeys.Klasse3],
+            4 => _baseLocalizer[BaseStringLocalizerResourceKeys.Klasse4],
+            _ => $"{classNumber}"
+        };
+    }
 
     private List<(string Code, string DisplayName, string FlagPath)> _availableCultures = new()
     {
@@ -78,12 +116,16 @@
         ("it-IT", "Italiano", "_content/MatheHero.Shared/css/icons/Icon_IT.svg")
     };
 
-    protected override void OnInitialized()
+    protected override async void OnInitialized()
     {
         currentCulture = CultureInfo.CurrentUICulture.Name;
 
         currentUser = AuthStateService.GetCurrentUserStatus();
         currentAuth = AuthStateService.GetCurrentAuthStatus();
+
+        currentSchule = await FirestoreService.GetSchoolByIdAsync(currentAuth.IdToken, currentUser.SchulId);
+
+        currentClass = await FirestoreService.GetClassByIdAsync(currentAuth.IdToken, currentUser.ClassCode);
 
         _isInitialized = true;
         StateHasChanged();

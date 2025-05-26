@@ -132,8 +132,29 @@
   <data name="ButtonUebungsaufgaben" xml:space="preserve">
     <value>Übungsaufgaben</value>
   </data>
+  <data name="DeineKlasse" xml:space="preserve">
+    <value>Klassenraum:</value>
+  </data>
+  <data name="DeineKlassenstufe" xml:space="preserve">
+    <value>Deine Klassenstufe:</value>
+  </data>
+  <data name="DeineSchule" xml:space="preserve">
+    <value>Deine Schule:</value>
+  </data>
   <data name="Einstellungen" xml:space="preserve">
     <value>Einstellungen</value>
+  </data>
+  <data name="Klasse1" xml:space="preserve">
+    <value>1. Klasse</value>
+  </data>
+  <data name="Klasse2" xml:space="preserve">
+    <value>2. Klasse</value>
+  </data>
+  <data name="Klasse3" xml:space="preserve">
+    <value>3. Klasse</value>
+  </data>
+  <data name="Klasse4" xml:space="preserve">
+    <value>4. Klasse</value>
   </data>
   <data name="KlasseBeitreten" xml:space="preserve">
     <value>Klassencode</value>

@@ -96,7 +96,7 @@
 
 					ToastService.ShowToast(_localizer[RegistrationResourceKeys.SuccessUser], MessageType.DEFAULT, ToastType.Success);
 
-					Navigation.NavigateTo("/home");
+					Navigation.NavigateTo("/login");
 				}
 			}
 		}
@@ -113,9 +113,9 @@
 			AuthStateService.SetUser(result, userDoc);
 
 			if (Platform.IsRunningInMaui())
-				Navigation.NavigateTo("/home");
+				Navigation.NavigateTo("/dashboard");
 			else
-				Navigation.NavigateTo("/home", forceLoad: true);
+				Navigation.NavigateTo("/dashboard", forceLoad: true);
 		}
 	}
 }

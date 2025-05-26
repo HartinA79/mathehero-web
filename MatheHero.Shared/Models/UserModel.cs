@@ -27,5 +27,7 @@ namespace MatheHero.Shared.Models
         public string UserName { get; set; }
 
         public string LizenzId { get; set; }
+
+        public Dictionary<string, int> Progress { get; set; } = new();
     }
 }

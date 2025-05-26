@@ -12,7 +12,21 @@
 
         public const string ButtonUebungsaufgaben = nameof(ButtonUebungsaufgaben);
 
+        public const string DeineKlasse = nameof(DeineKlasse);
+
+        public const string DeineKlassenstufe = nameof(DeineKlassenstufe);
+
+        public const string DeineSchule = nameof(DeineSchule);
+
         public const string Einstellungen = nameof(Einstellungen);
+
+        public const string Klasse1 = nameof(Klasse1);
+
+        public const string Klasse2 = nameof(Klasse2);
+
+        public const string Klasse3 = nameof(Klasse3);
+
+        public const string Klasse4 = nameof(Klasse4);
 
         public const string Profil = nameof(Profil);
 

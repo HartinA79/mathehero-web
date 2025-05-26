@@ -1,5 +1,86 @@
-﻿<h3>AppSettingsComponent</h3>
+﻿@using MatheHero.Shared.Resources.Shared.Pages.Student.Components
+@using MatheHero.Shared.Shared.Interface
+@using Microsoft.JSInterop
+
+@inject IJSRuntime JS
+@inject IStringLocalizer<Setting> _localizer
+@inject IPlatformService Platform
+@inject NavigationManager Navigation
+
+<div class="card flex flex-column gap-3">
+    <h3 class="text-center">
+        <i class="fa fa-sliders-h"></i> @_localizer[SettingResourceKeys.AppEinstellungen]
+    </h3>
+
+    @if (!string.IsNullOrEmpty(ToastMessage))
+    {
+        <div class="card bg-white mt-2" style="border-left: 4px solid green; padding: var(--space-2);">
+            @ToastMessage
+        </div>
+    }
+
+    <div>
+        <label for="volume">@_localizer[SettingResourceKeys.Lautstaerke]</label>
+        <input id="volume" type="range" min="0" max="100" @bind="Volume" class="form-range" />
+        <p>@($"{Volume}%")</p>
+    </div>
+
+    <div class="mt-3">
+        <label style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="checkbox" id="stayLoggedIn" @bind="StayLoggedIn" style="margin: 0; width:8rem;" />
+            @_localizer[SettingResourceKeys.AngemeldetBleiben]
+        </label>
+    </div>
+
+    <button class="btn-login mt-3" @onclick="SaveSettings">@_localizer[SettingResourceKeys.EinstellungenSpeichern]</button>
+</div>
 
 @code {
+    private int Volume = 50;
+    private bool StayLoggedIn = false;
+    private string ToastMessage;
 
+    protected override async Task OnInitializedAsync()
+    {
+        if (Platform.IsRunningInMaui())
+        {
+            // Verwende Dependency-Injection-Service für MAUI-Einstellungen (z.B. über ein IPreferencesService-Interface)
+            Volume = await JS.InvokeAsync<int>("nativeApp.getPreference", "app_volume", 50);
+            StayLoggedIn = await JS.InvokeAsync<bool>("nativeApp.getPreference", "stay_logged_in", false);
+        }
+        else
+        {
+            var volumeValue = await JS.InvokeAsync<string>("localStorage.getItem", "app_volume");
+            var stayLoggedValue = await JS.InvokeAsync<string>("localStorage.getItem", "stay_logged_in");
+
+            Volume = int.TryParse(volumeValue, out var vol) ? vol : 50;
+            StayLoggedIn = stayLoggedValue == "true";
+        }
+    }
+
+    private async Task SaveSettings()
+    {
+        if (Platform.IsRunningInMaui())
+        {
+            // Verwende JS-Interop-Aufruf oder natives MAUI-Interface
+            await JS.InvokeVoidAsync("nativeApp.setPreference", "app_volume", Volume);
+            await JS.InvokeVoidAsync("nativeApp.setPreference", "stay_logged_in", StayLoggedIn);
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("localStorage.setItem", "app_volume", Volume);
+            await JS.InvokeVoidAsync("localStorage.setItem", "stay_logged_in", StayLoggedIn.ToString().ToLower());
+        }
+
+        ToastMessage = _localizer[SettingResourceKeys.EinstellungenGespeichert];
+        StateHasChanged();
+        await Task.Delay(3000);
+        ToastMessage = string.Empty;
+        StateHasChanged();
+
+        var current = Navigation.Uri;
+        Navigation.NavigateTo("/basepage");
+        await Task.Delay(50);
+        Navigation.NavigateTo(current, forceLoad: false);
+    }
 }

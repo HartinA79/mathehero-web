@@ -1,5 +1,89 @@
 ﻿@page "/student/exercises"
 
+@using MatheHero.Shared.Helper
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages
+@using MatheHero.Shared.Resources.Shared.Pages.Student.Components
+@using MatheHero.Shared.Shared.Interface
+
+@inject IStringLocalizer<BaseStringLocalizer> _baseLocalizer
+@inject IStringLocalizer<Exercises> _localizer
+@inject IFirestoreService FirestoreService
+
 @layout StudentLayout
 
-<h2 class="mb-4">Übungsaufgaben</h2>
+<div class="exercise-container my-4">
+    <div class="flex flex-column gap-3">
+        <div class="flex justify-start" style="position: sticky; top: var(--space-2); z-index: 10;">
+            <NavLink class="card btn flex flex-column gap-1" style="width:100%; max-width:1400px; text-decoration: none; color: inherit; background-color:#C2AC74" href="/dashboard">
+                <i class="fa fa-arrow-left" style="margin-right: 0.5rem;"></i> Zurück zum Dashboard
+            </NavLink>
+        </div>
+
+        <h2 class="card text-center gap-3" style="width:100%; max-width: 800px;">
+            <i class="fa fa-tasks"></i>
+            @_baseLocalizer[BaseStringLocalizerResourceKeys.Uebungsaufgaben]
+        </h2>
+
+        <section class="flex flex-column gap-3">
+            @if (exerciseCategories != null)
+            {@* 
+                foreach (var category in exerciseCategories)
+                {
+                    <div class="card flex flex-column gap-1" style="width:100%; max-width:1400px;">
+                        <h3><i class="@category.Icon" style="margin-right: 0.7rem;"></i>@category.Name</h3>
+                        <div class="grid grid-1 gap-1">
+                            @foreach (var subcategory in category.Subcategories)
+                            {
+                                <NavLink class="btn btn-outline flex flex-center" href="@($"/student/exercises/{@subcategory.DokumentId}")">
+                                    @subcategory.Name
+                                </NavLink>
+                            }
+                        </div>
+                    </div>
+                } *@
+                foreach (var category in exerciseCategories)
+                {
+                    if (category.Subcategories != null && category.Subcategories.Any())
+                    {
+                        <div class="card flex flex-column gap-1" style="width:100%; max-width:1400px;">
+                            <h3><i class="@category.Icon" style="margin-right: 0.7rem;"></i>@category.Name</h3>
+                            <div class="grid grid-1 gap-1">
+                                @foreach (var subcategory in category.Subcategories)
+                                {
+                                    <NavLink class="btn btn-outline flex flex-center" href="@($"/student/exercises/{subcategory.DokumentId}?isSubCategory=true")" style="height:80px;">
+                                        @subcategory.Name
+                                    </NavLink>
+                                }
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <NavLink class="card btn flex flex-column gap-1" style="width:100%; max-width:1400px; text-decoration: none; color: inherit;"
+                                 href="@($"/student/exercises/{category.DokumentId}?isSubCategory=false")">
+                            <h3><i class="@category.Icon" style="margin-right: 0.7rem;"></i>@category.Name</h3>
+                        </NavLink>
+                    }
+                }
+            }
+            else
+            {
+                <p>@_localizer[ExercisesResourceKeys.NoExercisesAvailable]</p>
+            }
+        </section>
+
+    </div>
+</div>
+
+@code {
+    private List<ExerciseModel> exerciseCategories = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Lade die Kategorien und Unterkategorien von Firestore
+        exerciseCategories = await FirestoreService.GetAllExerciseCategoriesAsync();
+
+        exerciseCategories = exerciseCategories.OrderBy(c => c.Index).ToList();
+    }
+}

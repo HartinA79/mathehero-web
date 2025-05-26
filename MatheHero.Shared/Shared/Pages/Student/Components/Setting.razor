@@ -42,10 +42,35 @@
                 <span>@_localizer[SettingResourceKeys.SpracheAendern]</span>
             </button>
 
+            <button class="card btn flex flex-column flex-center" @onclick="() => LoadComponent(typeof(LicenseSettingsComponent))">
+                <i class="fa fa-certificate fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.Lizenzen]</span>
+            </button>
+
             <button class="card btn flex flex-column flex-center" @onclick="Logout">
                 <i class="fa fa-sign-out-alt fa-2x"></i>
                 <span>@_localizer[SettingResourceKeys.Abmelden]</span>
             </button>
+
+            <NavLink href="/dashboard" class="card btn flex flex-column flex-center">
+                <i class="fa fa-user-shield fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.Datenschutz]</span>
+            </NavLink>
+
+            <NavLink href="/dashboard" class="card btn flex flex-column flex-center">
+                <i class="fa fa-file-contract fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.Nutzungsbestimmungen]</span>
+            </NavLink>
+
+            <NavLink href="/dashboard" class="card btn flex flex-column flex-center">
+                <i class="fa fa-info-circle fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.Impressum]</span>
+            </NavLink>
+
+            <NavLink href="/dashboard" class="card btn flex flex-column flex-center">
+                <i class="fa fa-info fa-2x"></i>
+                <span>@_localizer[SettingResourceKeys.AppVersion]</span>
+            </NavLink>
 
             <NavLink href="/dashboard" class="card btn flex flex-column flex-center">
                 <i class="fa fa-arrow-left fa-2x"></i>

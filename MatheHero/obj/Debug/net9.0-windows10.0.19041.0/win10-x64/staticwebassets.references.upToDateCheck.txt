@@ -12,3 +12,13 @@ C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Sha
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\ahart\Documents\HAvision\MatheHeroNeu\MatheHero\MatheHero\MatheHero.Shared\obj\Debug\net9.0\staticwebassets.build.json

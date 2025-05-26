@@ -26,11 +26,19 @@ namespace MatheHero.Shared.Shared.Interface
 
         Task<List<SchuleModel>> GetAllSchoolsAsync();
 
+        Task<List<ExerciseModel>> GetAllExerciseCategoriesAsync();
+
+        Task<SchuleModel> GetSchoolByIdAsync(string idToken, string schulId);
+
+        Task<string> GetClassByIdAsync(string idToken, string classId);
+
         Task<(List<SchuleModel> Schulen, string LastName)> GetSchoolsPageAsync(string? startAfterName = null, int pageSize = 100);
 
         Task<FirestoreResult> AddNewUser(UserModel user);
 
         Task<FirestoreResult> UpdateUserAsync(string idToken, UserModel user);
+
+        Task<FirestoreResult> JoinClassAsync(string userId, string classCode);
 
         Task<List<T>> GetDocumentByFieldAsync<T>(string idToken, string collection, string field, string value);
 

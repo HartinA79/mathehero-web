@@ -133,7 +133,7 @@
     <value>Einstellungen</value>
   </data>
   <data name="KlasseBeitreten" xml:space="preserve">
-    <value>Einer Klasse beitreten</value>
+    <value>Klassenraum beitreten</value>
   </data>
   <data name="ProfilAendern" xml:space="preserve">
     <value>Profil ändern</value>
@@ -185,5 +185,77 @@
   </data>
   <data name="Klassenstufe" xml:space="preserve">
     <value>Klassenstufe ändern</value>
+  </data>
+  <data name="SchuleAendern" xml:space="preserve">
+    <value>Schule ändern</value>
+  </data>
+  <data name="LandWaehlen" xml:space="preserve">
+    <value>Wähle dein Land:</value>
+  </data>
+  <data name="PlaceholderLandWaehlen" xml:space="preserve">
+    <value>Bitte Land wählen...</value>
+  </data>
+  <data name="RegionWaehlen" xml:space="preserve">
+    <value>Wähle deine Region:</value>
+  </data>
+  <data name="PlaceholderRegionWaehlen" xml:space="preserve">
+    <value>Bitte Region wählen...</value>
+  </data>
+  <data name="SchuleWaehlen" xml:space="preserve">
+    <value>Wähle deine Schule:</value>
+  </data>
+  <data name="PlaceholderSchuleWaehlen" xml:space="preserve">
+    <value>Suchbegriff eingeben...</value>
+  </data>
+  <data name="PlaceholderSearchInfo" xml:space="preserve">
+    <value>Nach Ort, Schulname oder Postleitzzahl suchen:</value>
+  </data>
+  <data name="GewaehlteSchule" xml:space="preserve">
+    <value>Ausgewählte Schule:</value>
+  </data>
+  <data name="KlassenCode" xml:space="preserve">
+    <value>Gib hier den Klassencode, den du von deinem Lehrer bekommen hast, ein:</value>
+  </data>
+  <data name="KlassenCodePlaceholder" xml:space="preserve">
+    <value>Klassencode eingeben...</value>
+  </data>
+  <data name="KlasseBeitretenButton" xml:space="preserve">
+    <value>Beitreten</value>
+  </data>
+  <data name="KlassenCodeFehlt" xml:space="preserve">
+    <value>Du hast keinen Klassencode eingegeben!</value>
+  </data>
+  <data name="KlasseBeigetretenSuccess" xml:space="preserve">
+    <value>Du bist erfolgreich der Klasse beigetreten.</value>
+  </data>
+  <data name="KlasseBeigetretenError" xml:space="preserve">
+    <value>Fehler beim Beitreten der Klasse:</value>
+  </data>
+  <data name="Lautstaerke" xml:space="preserve">
+    <value>Lautstärke</value>
+  </data>
+  <data name="AngemeldetBleiben" xml:space="preserve">
+    <value>Angemeldet bleiben</value>
+  </data>
+  <data name="EinstellungenSpeichern" xml:space="preserve">
+    <value>Einstellungen speichern</value>
+  </data>
+  <data name="EinstellungenGespeichert" xml:space="preserve">
+    <value>Einstellungen wurden erfolgreich gespeichert.</value>
+  </data>
+  <data name="Lizenzen" xml:space="preserve">
+    <value>Lizenz</value>
+  </data>
+  <data name="Datenschutz" xml:space="preserve">
+    <value>Datenschutz</value>
+  </data>
+  <data name="Nutzungsbestimmungen" xml:space="preserve">
+    <value>Nutzungsbestimmungen</value>
+  </data>
+  <data name="Impressum" xml:space="preserve">
+    <value>Impressum</value>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>App-Version</value>
   </data>
 </root>

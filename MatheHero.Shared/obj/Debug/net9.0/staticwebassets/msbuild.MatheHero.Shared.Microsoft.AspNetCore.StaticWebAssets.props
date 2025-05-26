@@ -264,8 +264,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a4ea6m99i7</Fingerprint>
-      <Integrity>Buxek9EE2O/r4fjK3tEZJbY4knUXmphJ1u3gcjjPk34=</Integrity>
+      <Fingerprint>bp8enjlqsc</Fingerprint>
+      <Integrity>cWljo+YX7d+0Ks+8Qp6TMxvTpxuO42KrwDHf2r3p+zQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\global\responsive.css'))</OriginalItemSpec>

@@ -133,7 +133,7 @@
     <value>Impostazioni</value>
   </data>
   <data name="KlasseBeitreten" xml:space="preserve">
-    <value>Unisciti a una classe</value>
+    <value>Unisciti alla classe</value>
   </data>
   <data name="ProfilAendern" xml:space="preserve">
     <value>Modifica profilo</value>
@@ -185,5 +185,77 @@
   </data>
   <data name="Klassenstufe" xml:space="preserve">
     <value>Camiare il livello di classe</value>
+  </data>
+  <data name="SchuleAendern" xml:space="preserve">
+    <value>Cambiare scuola</value>
+  </data>
+  <data name="LandWaehlen" xml:space="preserve">
+    <value>Scegli il tuo paese:</value>
+  </data>
+  <data name="PlaceholderLandWaehlen" xml:space="preserve">
+    <value>Seleziona un paese...</value>
+  </data>
+  <data name="RegionWaehlen" xml:space="preserve">
+    <value>Scegli la tua regione:</value>
+  </data>
+  <data name="PlaceholderRegionWaehlen" xml:space="preserve">
+    <value>Seleziona una regione...</value>
+  </data>
+  <data name="SchuleWaehlen" xml:space="preserve">
+    <value>Scegli la tua scuola:</value>
+  </data>
+  <data name="PlaceholderSchuleWaehlen" xml:space="preserve">
+    <value>Inserisci termine di ricerca...</value>
+  </data>
+  <data name="PlaceholderSearchInfo" xml:space="preserve">
+    <value>Cerca per città, nome della scuola o codice postale:</value>
+  </data>
+  <data name="GewaehlteSchule" xml:space="preserve">
+    <value>Scuola selezionata:</value>
+  </data>
+  <data name="KlassenCode" xml:space="preserve">
+    <value>Inserisci qui il codice della classe che hai ricevuto dal tuo insegnante:</value>
+  </data>
+  <data name="KlassenCodePlaceholder" xml:space="preserve">
+    <value>Inserisci il codice della classe…</value>
+  </data>
+  <data name="KlasseBeitretenButton" xml:space="preserve">
+    <value>Iscriviti</value>
+  </data>
+  <data name="KlassenCodeFehlt" xml:space="preserve">
+    <value>Non hai inserito alcun codice!</value>
+  </data>
+  <data name="KlasseBeigetretenSuccess" xml:space="preserve">
+    <value>Sei stato iscritto con successo alla classe.</value>
+  </data>
+  <data name="KlasseBeigetretenError" xml:space="preserve">
+    <value>Errore durante l’iscrizione alla classe:</value>
+  </data>
+  <data name="Lautstaerke" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="AngemeldetBleiben" xml:space="preserve">
+    <value>Resta connesso</value>
+  </data>
+  <data name="EinstellungenSpeichern" xml:space="preserve">
+    <value>Salva impostazioni</value>
+  </data>
+  <data name="EinstellungenGespeichert" xml:space="preserve">
+    <value>Impostazioni salvate con successo.</value>
+  </data>
+  <data name="Lizenzen" xml:space="preserve">
+    <value>Licenza</value>
+  </data>
+  <data name="Datenschutz" xml:space="preserve">
+    <value>Informativa sulla privacy</value>
+  </data>
+  <data name="Nutzungsbestimmungen" xml:space="preserve">
+    <value>Termini di utilizzo</value>
+  </data>
+  <data name="Impressum" xml:space="preserve">
+    <value>Note legali</value>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Versione app</value>
   </data>
 </root>

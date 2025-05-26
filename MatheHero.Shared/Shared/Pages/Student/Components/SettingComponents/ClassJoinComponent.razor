@@ -1,5 +1,87 @@
-﻿<h3>ClassJoinComponent</h3>
+﻿@using MatheHero.Shared.Shared.Interface
+@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Student.Components
+@inject IFirestoreService FirestoreService
+@inject IStringLocalizer<Setting> _localizer
+@inject NavigationManager Navigation
+@inject AuthStateService AuthStateService
+
+<div class="card flex flex-column gap-3">
+    <h3 class="text-center">
+        <i class="fa fa-users"></i> @_localizer[SettingResourceKeys.KlasseBeitreten]
+    </h3>
+
+    @if (!string.IsNullOrEmpty(ToastMessage))
+    {
+        <div class="card bg-white" style="border-left: 4px solid @(IsError ? "red" : "green"); padding: var(--space-2);">
+            @ToastMessage
+        </div>
+    }
+
+    <div>
+        <label for="classCode">@_localizer[SettingResourceKeys.KlassenCode]</label>
+        <input id="classCode" type="text" class="form-control" @bind="ClassCode" placeholder="@_localizer[SettingResourceKeys.KlassenCodePlaceholder]" />
+    </div>
+
+    <button class="btn-login mt-3" @onclick="JoinClass">@_localizer[SettingResourceKeys.KlasseBeitretenButton]</button>
+</div>
 
 @code {
+    private string ClassCode;
+    private string ToastMessage;
+    private bool IsError;
+    private UserModel currentUser;
 
+    protected override void OnInitialized()
+    {
+        currentUser = AuthStateService.GetCurrentUserStatus();
+    }
+
+    private async Task JoinClass()
+    {
+        if (string.IsNullOrWhiteSpace(ClassCode))
+        {
+            ToastMessage = _localizer[SettingResourceKeys.KlassenCodeFehlt];
+            IsError = true;
+            StateHasChanged();
+            await Task.Delay(3000);
+            ToastMessage = string.Empty;
+            StateHasChanged();
+            return;
+        }
+
+        try
+        {
+            var result = await FirestoreService.JoinClassAsync(currentUser.DokumentId, ClassCode);
+
+            if (result.Success)
+            {
+                ToastMessage = _localizer[SettingResourceKeys.KlasseBeigetretenSuccess];
+                IsError = false;
+            }
+            else
+            {
+                ToastMessage = $"{_localizer[SettingResourceKeys.KlasseBeigetretenError]}: {result.Message}";
+                IsError = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            ToastMessage = $"{_localizer[SettingResourceKeys.KlasseBeigetretenError]}: {ex.Message}";
+            IsError = true;
+        }
+
+        StateHasChanged();
+        await Task.Delay(3000);
+        ToastMessage = string.Empty;
+        StateHasChanged();
+
+        if (!IsError)
+        {
+            var current = Navigation.Uri;
+            Navigation.NavigateTo("/basepage");
+            await Task.Delay(50);
+            Navigation.NavigateTo(current, forceLoad: false);
+        }
+    }
 }

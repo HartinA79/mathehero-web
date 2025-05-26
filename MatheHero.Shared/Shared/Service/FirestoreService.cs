@@ -6,6 +6,8 @@ using System.Text.Json;
 using MatheHero.Shared.Helper;
 using MatheHero.Shared.Models;
 using MatheHero.Shared.Shared.Interface;
+using MatheHero.Shared.Shared.Pages.Authentifizierung.Components.Registration;
+using MatheHero.Shared.Shared.Pages.Authentifizierung.Components.Settings;
 
 namespace MatheHero.Shared.Shared.Service
 {
@@ -90,6 +92,7 @@ namespace MatheHero.Shared.Shared.Service
                 DokumentId = dokumentId,
                 AvatarPfad = fields.GetProperty("AvatarPfad").GetProperty("stringValue").GetString() ?? "",
                 Email = fields.GetProperty("Email").GetProperty("stringValue").GetString() ?? "",
+                ClassCode = fields.GetProperty("KlassenCode").GetProperty("stringValue").GetString() ?? "",
                 Klassenstufe = int.Parse(fields.GetProperty("KlassenStufe").GetProperty("integerValue").GetString() ?? "0"),
                 Rolle = fields.GetProperty("Rolle").GetProperty("stringValue").GetString() ?? "",
                 SchulId = fields.GetProperty("SchulId").GetProperty("stringValue").GetString() ?? "",
@@ -132,6 +135,7 @@ namespace MatheHero.Shared.Shared.Service
                     {
                         user.AvatarPfad = GetString(fields, "AvatarPfad");
                         user.Email = GetString(fields, "Email");
+                        user.ClassCode = GetString(fields, "KlassenCode");
                         user.Klassenstufe = GetInt(fields, "KlassenStufe");
                         user.Rolle = GetString(fields, "Rolle");
                         user.SchulId = GetString(fields, "SchulId");
@@ -472,6 +476,155 @@ namespace MatheHero.Shared.Shared.Service
             return schools;
         }
 
+        public async Task<List<ExerciseModel>> GetAllExerciseCategoriesAsync()
+        {
+            var categories = new List<ExerciseModel>();
+
+            var url = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/category";
+
+            var response = await _httpClient.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+
+            var stream = await response.Content.ReadAsStreamAsync();
+            var json = await JsonDocument.ParseAsync(stream);
+
+            if (json.RootElement.TryGetProperty("documents", out var docs))
+            {
+                foreach (var doc in docs.EnumerateArray())
+                {
+                    var cat = new ExerciseModel();
+
+                    if (doc.TryGetProperty("name", out var nameProp))
+                    {
+                        var fullName = nameProp.GetString();
+                        cat.DokumentId = fullName?.Split('/').Last() ?? "";
+                    }
+
+                    if (doc.TryGetProperty("fields", out var fields))
+                    {
+                        cat.Name = GetString(fields, "name");
+                        cat.Index = GetInt(fields, "index");
+                        cat.Icon = GetString(fields, "icon");
+
+                        if (fields.TryGetProperty("createdAt", out var createdAtProp) &&
+                            createdAtProp.TryGetProperty("timestampValue", out var timestamp))
+                        {
+                            cat.CreatedAt = DateTime.Parse(timestamp.GetString() ?? "");
+                        }
+                    }
+
+                    categories.Add(cat);
+                }
+            }
+
+            var urlSubcategories = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/subcategory";
+
+            var responseSubcategories = await _httpClient.GetAsync(urlSubcategories);
+            responseSubcategories.EnsureSuccessStatusCode();
+
+            var streamSubcategories = await responseSubcategories.Content.ReadAsStreamAsync();
+            var jsonSubcategories = await JsonDocument.ParseAsync(streamSubcategories);
+
+            var allSubcategories = new List<SubcategoryModel>();
+
+            if (jsonSubcategories.RootElement.TryGetProperty("documents", out var docsSub))
+            {
+                foreach (var doc in docsSub.EnumerateArray())
+                {
+                    var sub = new SubcategoryModel();
+
+                    if (doc.TryGetProperty("name", out var nameProp))
+                    {
+                        var fullName = nameProp.GetString();
+                        sub.DokumentId = fullName?.Split('/').Last() ?? "";
+                    }
+
+                    if (doc.TryGetProperty("fields", out var fields))
+                    {
+                        var categoryId = GetString(fields, "categoryId");
+
+                        sub.Name = GetString(fields, "name");
+                        sub.Index = GetInt(fields, "index");
+
+                        var matchingCategory = categories.FirstOrDefault(c => c.DokumentId == categoryId);
+                        if (matchingCategory != null)
+                        {
+                            matchingCategory.Subcategories.Add(sub);
+                        }
+                    }
+                }
+            }
+
+            foreach (var category in categories)
+            {
+                category.Subcategories = category.Subcategories.OrderBy(s => s.Index).ToList();
+            }
+
+            return categories;
+        }
+
+        public async Task<SchuleModel> GetSchoolByIdAsync(string idToken, string schulId)
+        {
+            var schule = new SchuleModel();
+
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", idToken);
+
+            var url = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/schools/{schulId}";
+
+            var response = await _httpClient.GetAsync(url);
+
+            response.EnsureSuccessStatusCode();
+
+            var stream = await response.Content.ReadAsStreamAsync();
+            var json = await JsonDocument.ParseAsync(stream);
+
+            var root = json.RootElement;
+
+            if (root.TryGetProperty("name", out var nameProp))
+            {
+                var fullName = nameProp.GetString();
+                schule.DocumentId = fullName?.Split('/').Last() ?? "";
+            }
+
+            if (root.TryGetProperty("fields", out var fields))
+            {
+                schule.Name = GetString(fields, "name");
+                schule.Adresse = GetString(fields, "address");
+                schule.Land = GetString(fields, "country");
+                schule.Ort = GetString(fields, "location");
+                schule.Region = GetString(fields, "region");
+                schule.SchulNummer = GetInt(fields, "schoolNumber");
+                schule.ZipCode = GetInt(fields, "zipCode");
+            }
+
+            return schule;
+        }
+
+        public async Task<string> GetClassByIdAsync(string idToken, string classId)
+        {
+            string className = "";
+
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", idToken);
+
+            var url = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/classes/{classId}";
+
+            var response = await _httpClient.GetAsync(url);
+
+            response.EnsureSuccessStatusCode();
+
+            var stream = await response.Content.ReadAsStreamAsync();
+            var json = await JsonDocument.ParseAsync(stream);
+
+            var root = json.RootElement;
+
+            if (root.TryGetProperty("fields", out var fields))
+            {
+                className = GetString(fields, "name");
+            }
+
+            return className;
+        }
+
         public async Task<List<T>> GetDocumentByFieldAsync<T>(string idToken, string collection, string field, string value)
         {
             //var idToken = await _authService.GetIdTokenAsync();
@@ -519,6 +672,7 @@ namespace MatheHero.Shared.Shared.Service
                 {
                     { "AvatarPfad", new { stringValue = user.AvatarPfad ?? "" } },
                     { "Email", new { stringValue = user.Email ?? "" } },
+                    { "KlassenCode", new { stringValue = user.ClassCode ?? "" } },
                     { "KlassenStufe", new { integerValue = user.Klassenstufe } },
                     { "Rolle", new { stringValue = user.Rolle ?? "" } },
                     { "SchulId", new { stringValue = user.SchulId ?? "" } },
@@ -568,9 +722,49 @@ namespace MatheHero.Shared.Shared.Service
             }
         }
 
+        public async Task<FirestoreResult> CreateUserAsync(UserModel newUser)
+        {
+            var userDoc = new Dictionary<string, object>
+            {
+                { "avatarPfad", newUser.AvatarPfad },
+                { "email", newUser.Email },
+                { "klassenstufe", newUser.Klassenstufe },
+                { "rolle", newUser.Rolle },
+                { "schulId", newUser.SchulId },
+                { "classCode", newUser.ClassCode },
+                { "userId", newUser.UserId },
+                { "userName", newUser.UserName },
+                { "lizenzId", newUser.LizenzId },
+                { "progress", FirestoreHelper.ToFirestoreMap(newUser.Progress) }
+            };
+
+            try
+            {
+                var url = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/users/{newUser.UserId}";
+
+                var content = new StringContent(JsonSerializer.Serialize(new { fields = FirestoreHelper.ToFirestoreFields(userDoc) }), Encoding.UTF8, "application/json");
+                var response = await _httpClient.PatchAsync(url, content);
+                response.EnsureSuccessStatusCode();
+
+                return new FirestoreResult
+                {
+                    Success = true,
+                    Message = "Erfolgreich erstellt"
+                };
+            } 
+            catch (Exception ex)
+            {
+                return new FirestoreResult
+                {
+                    Success = false,
+                    Message = ex.Message
+                };
+            }
+        }
+
         public async Task<FirestoreResult> UpdateUserAsync(string idToken, UserModel user)
         {
-            var url = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/users/{user.DokumentId}?updateMask.fieldPaths=AvatarPfad&updateMask.fieldPaths=UserName&updateMask.fieldPaths=KlassenStufe";
+            var url = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/users/{user.DokumentId}?updateMask.fieldPaths=AvatarPfad&updateMask.fieldPaths=UserName&updateMask.fieldPaths=KlassenStufe&updateMask.fieldPaths=SchulId";
 
 
             var payload = new
@@ -579,7 +773,8 @@ namespace MatheHero.Shared.Shared.Service
                 {
                     { "AvatarPfad", new { stringValue = user.AvatarPfad ?? "" } },
                     { "UserName", new { stringValue = user.UserName ?? "" } },
-                    { "KlassenStufe", new {integerValue = user.Klassenstufe} }
+                    { "KlassenStufe", new {integerValue = user.Klassenstufe} },
+                    { "SchulId", new {stringValue = user.SchulId ?? ""} }
                 },
              };
 
@@ -625,6 +820,111 @@ namespace MatheHero.Shared.Shared.Service
                 {
                     Success = false,
                     Message = $"{ex.Message}"
+                };
+            }
+        }
+
+        public async Task<FirestoreResult> JoinClassAsync(string userId, string classCode)
+        {
+            try
+            {
+                // Prüfen, ob der Klassencode existiert
+                var classUrl = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/classes/{classCode}";
+
+                var response = await _httpClient.GetAsync(classUrl);
+                var json = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return new FirestoreResult
+                    {
+                        Success = false,
+                        Message = "Klasse nicht gefunden."
+                    };
+                }
+
+                var jsonDoc = JsonDocument.Parse(json);
+                var root = jsonDoc.RootElement;
+
+                var classId = root.GetProperty("name").GetString()?.Split('/').Last() ?? "";
+
+                // Update des Users
+                var userUpdateUrl = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/users/{userId}?updateMask.fieldPaths=KlassenCode";
+                var updatePayload = new
+                {
+                    fields = new Dictionary<string, object>
+                {
+                    { "KlassenCode", new { stringValue = classId } }
+                }
+                };
+
+                var updateJson = JsonSerializer.Serialize(updatePayload);
+                var updateContent = new StringContent(updateJson, Encoding.UTF8, "application/json");
+                var updateRequest = new HttpRequestMessage(new HttpMethod("PATCH"), userUpdateUrl)
+                {
+                    Content = updateContent
+                };
+
+                var updateResponse = await _httpClient.SendAsync(updateRequest);
+
+                if (!updateResponse.IsSuccessStatusCode)
+                {
+                    var error = await updateResponse.Content.ReadAsStringAsync();
+                    return new FirestoreResult
+                    {
+                        Success = false,
+                        Message = $"Fehler beim Aktualisieren des Benutzers: {error}"
+                    };
+                }
+
+                return new FirestoreResult
+                {
+                    Success = true,
+                    Message = "Erfolgreich beigetreten."
+                };
+            }
+            catch (Exception ex)
+            {
+                return new FirestoreResult
+                {
+                    Success = false,
+                    Message = ex.Message
+                };
+            }
+        }
+
+        public async Task<FirestoreResult> CreateClassAsync(ClassModel newClass)
+        {
+            var classDoc = new Dictionary<string, object>
+            {
+                { "name", newClass.Name },
+                { "teacherId", newClass.TeacherId },
+                { "createdAt", new Dictionary<string, object> { { "timestampValue", newClass.CreatedAt.ToUniversalTime().ToString("o") } } },
+                { "unlockedCategories", FirestoreHelper.ToFirestoreArray(newClass.UnlockedCategories) },
+                { "unlockedSubcategories", FirestoreHelper.ToFirestoreArray(newClass.UnlockedSubcategories) }
+            };
+
+            try
+            {
+                var url = $"https://firestore.googleapis.com/v1/projects/{_projectId}/databases/(default)/documents/classes/{newClass.DokumentId}";
+
+                var content = new StringContent(JsonSerializer.Serialize(new { fields = FirestoreHelper.ToFirestoreFields(classDoc) }), Encoding.UTF8, "application/json");
+                var response = await _httpClient.PatchAsync(url, content);
+
+                response.EnsureSuccessStatusCode();
+
+                return new FirestoreResult
+                {
+                    Success = true,
+                    Message = "Erfolgreich erstellt"
+                };
+            }
+            catch (Exception ex)
+            {
+                return new FirestoreResult
+                {
+                    Success = false,
+                    Message = ex.Message
                 };
             }
         }

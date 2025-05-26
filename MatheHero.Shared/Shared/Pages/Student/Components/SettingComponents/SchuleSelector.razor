@@ -1,0 +1,153 @@
+﻿@using MatheHero.Shared.Models
+@using MatheHero.Shared.Resources.Shared.Pages.Student.Components
+@using MatheHero.Shared.Shared.Interface
+@using System.Globalization
+
+@inject IFirestoreService FirestoreService
+@inject IStringLocalizer<Setting> _localizer
+
+@if (IsInitialized)
+{
+    <div class="form-group">
+        <label>@_localizer[SettingResourceKeys.LandWaehlen]</label>
+        <select class="form-control mb-2" @bind="SelectedCountryId">
+            <option value="">@_localizer[SettingResourceKeys.PlaceholderLandWaehlen]</option>
+            @foreach (var country in Countries)
+            {
+                <option value="@country.DokumentId">@country.Name</option>
+            }
+        </select>
+
+        @if (Regions.Any())
+        {
+            <label>@_localizer[SettingResourceKeys.RegionWaehlen]</label>
+            <select class="form-control mb-2" @bind="SelectedRegionId">
+                <option value="">@_localizer[SettingResourceKeys.PlaceholderRegionWaehlen]</option>
+                @foreach (var region in Regions)
+                {
+                    <option value="@region.DokumentId">@region.Name</option>
+                }
+            </select>
+        }
+
+        @if (Schools.Any())
+        {
+            <label>@_localizer[SettingResourceKeys.SchuleWaehlen]</label>
+            <input class="form-control mb-2" @bind="SearchTerm" @oninput="FilterSchools" placeholder="@_localizer[SettingResourceKeys.PlaceholderSearchInfo]" />
+
+            @if (SelectedSchool is null) {
+                <div class="school-list">
+                    @foreach (var school in FilteredSchools)
+                    {
+                        <div class="school-item" @onclick="() => SelectSchool(school)">
+                            <strong>@school.Name</strong><br />
+                            <small>@school.Adresse, @school.ZipCode @school.Ort</small>
+                        </div>
+                    }
+                </div>
+            }
+        }
+
+        @if (SelectedSchool != null)
+        {
+            <div class="selected-school mt-2">
+                <p class="mb-1">@_localizer[SettingResourceKeys.GewaehlteSchule]</p>
+                <strong>@SelectedSchool.Name</strong><br />
+                <small>@SelectedSchool.Adresse, @SelectedSchool.ZipCode @SelectedSchool.Ort</small>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Parameter] public string SelectedSchoolId { get; set; }
+    [Parameter] public EventCallback<string> OnSchoolSelected { get; set; }
+
+    private List<LandModel> Countries = new();
+    private List<RegionModel> Regions = new();
+    private List<SchuleModel> Schools = new();
+    private List<SchuleModel> FilteredSchools = new();
+
+    private string selectedCountryId;
+    private string SelectedCountryId
+    {
+        get => selectedCountryId;
+        set
+        {
+            if (selectedCountryId != value)
+            {
+                selectedCountryId = value;
+                _ = OnCountryChanged();
+            }
+        }
+    }
+
+    private string selectedRegionId;
+    private string SelectedRegionId
+    {
+        get => selectedRegionId;
+        set
+        {
+            if (selectedRegionId != value)
+            {
+                selectedRegionId = value;
+                _ = OnRegionChanged();
+            }
+        }
+    }
+
+    private string SearchTerm = "";
+    private SchuleModel? SelectedSchool;
+    private bool IsInitialized = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Countries = await FirestoreService.GetAllCountriesByLanguageAsync(CultureInfo.CurrentCulture.Name);
+        IsInitialized = true;
+    }
+
+    private async Task OnCountryChanged()
+    {
+        Regions = await FirestoreService.GetAllRegionsByCountryAsync(SelectedCountryId, CultureInfo.CurrentCulture.Name);
+        Schools.Clear();
+        FilteredSchools.Clear();
+        SelectedRegionId = "";
+        SelectedSchool = null;
+        StateHasChanged();
+    }
+
+    private async Task OnRegionChanged()
+    {
+        Schools = await FirestoreService.GetSchoolsByCountryAndRegionAsync(SelectedCountryId, SelectedRegionId);
+        FilteredSchools = Schools;
+        SelectedSchool = null;
+        StateHasChanged();
+    }
+
+    private void FilterSchools(ChangeEventArgs e)
+    {
+        SelectedSchool = null;
+        SearchTerm = e.Value?.ToString() ?? "";
+        if (string.IsNullOrWhiteSpace(SearchTerm))
+        {
+            FilteredSchools = Schools;
+        }
+        else
+        {
+            var lowerSearch = SearchTerm.ToLower();
+            FilteredSchools = Schools.Where(x =>
+                (!string.IsNullOrWhiteSpace(x.Name) && x.Name.ToLower().Contains(lowerSearch)) ||
+                (!string.IsNullOrWhiteSpace(x.Adresse) && x.Adresse.ToLower().Contains(lowerSearch)) ||
+                (!string.IsNullOrWhiteSpace(x.Ort) && x.Ort.ToLower().Contains(lowerSearch)) ||
+                x.ZipCode.ToString().Contains(lowerSearch)
+            ).ToList();
+        }
+    }
+
+    private async Task SelectSchool(SchuleModel school)
+    {
+        SelectedSchool = school;
+        SelectedSchoolId = school.DocumentId;
+        await OnSchoolSelected.InvokeAsync(SelectedSchoolId);
+    }
+}
